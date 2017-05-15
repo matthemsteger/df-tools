@@ -1,0 +1,11 @@
+// import {~lb}{#objectTypes}{className},{~s}{/objectTypes}{~rb} from '';{~r}{~n}
+{~r}{~n}
+let objectType = {~lb}{~rb};{~r}{~n}
+this.OR([{~r}{~n}
+{#objectTypes}{tab}{~lb}{~r}{~n}
+{tab}{tab}ALT: () => {~lb}{~r}{~n}
+{tab}{tab}{tab}objectType = this.CONSUME({className});{~r}{~n}
+{tab}{tab}{~rb}{~r}{~n}
+{tab}{~rb},{~r}{~n}
+{/objectTypes}
+]);{~r}{~n}

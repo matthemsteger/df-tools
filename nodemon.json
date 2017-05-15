@@ -1,0 +1,10 @@
+{
+	"verbose": false,
+	"ext": "js",
+	"watch": ["src", "test"],
+	"env": {
+		"DEBUG": "df:*",
+		"DEBUG_COLORS": "1"
+	},
+	"exec": "mocha --recursive --reporter min --compilers js:babel-register"
+}

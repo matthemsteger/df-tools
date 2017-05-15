@@ -1,0 +1,75 @@
+// import {~lb}{#expectations}{className}, {~s}{/expectations}{~rb} from '';{~r}{~n}
+{~r}{~n}
+{~r}{~n}
+const foundTokenNames = [];
+this.MANY(() => {~lb}
+	this.OR([
+{#expectations}
+{tab}{tab}{~lb}
+{tab}{tab}{tab}GATE() {~lb}
+{tab}{tab}{tab}{tab}return foundTokenNames.indexOf({classNameImportObject}.{className}) === -1;
+{tab}{tab}{tab}{~rb},
+{tab}{tab}{tab}ALT: () => {~lb}
+{tab}{tab}{tab}{tab}const dfToken = this.SUBRULE(this.{classVarName});
+{tab}{tab}{tab}{tab}foundTokens.push({classNameImportObject}.{className});
+{tab}{tab}{tab}{~rb}
+{tab}{tab}{~rb},
+{/expectations}
+{tab}]);
+{~rb});
+// if we havent found a required token, throw an error
+{~r}{~n}
+{#expectations}
+{~r}{~n}
+this.{classVarName} = this.RULE("{classVarName}", () => {
+	this.CONSUME(TokenOpen);
+	const nameToken = this.CONSUME({classNameImportObject}.{className});
+	// in template if args > 0, then we need a many
+	{@gt key=args.length value=0}
+	const argTokens = [];
+	this.MANY(() => {
+		this.CONSUME(TokenArgSeperator);
+		const argToken = this.CONSUME(TokenArgument);
+		argTokens.push(argToken);
+	});
+
+	if (argTokens.length !== {numArgs}) {
+		throw this.SAVE_ERROR(new chevrotainExceptions.MismatchedTokenException(`This token requires {numArgs} arguments, but found ${argTokens.length}`, nameToken));
+	}
+
+	{/gt}
+	this.CONSUME(TokenClose);
+
+	return {nameToken, name: nameToken.image, argTokens, args: _.map(argTokens, 'image')};
+
+});
+{/expectations}
+
+// const foundTokens = []
+// MANY
+// -> OR
+// -> -> GATE -> if doesnt already exist in found
+// -> -> ALT -> SUBRULE class token, push result to found
+// -> -> ..
+// at the end of many, if we dont have one of the required, throw with final token
+// return foundTokens or process them
+//
+// for each class we need a consume for the token
+// consume start
+// consume name
+// consume x args using MANY sep, arg
+// at the end of the rule if arg count is wrong, throw
+
+EXAMPLE OF THROWING AN ERROR
+// getImage will return the string of the token.
+const getImage = chevrotain.getImage
+const getStartOffset = chevrotain.getStartOffset
+const LABEL_MAX_LENGTH = 52;
+
+this.RULE("label ", () => { 
+   let myTextToken = this.CONSUME(text); 
+   if (getImage(myTextToken).length > LABEL_MAX_LENGTH) {
+     const message = `Labels cannot be longer than ${LABEL_MAX_LENGTH} characters`;
+     throw this.SAVE_ERROR(new chevrotain.exceptions.MismatchedTokenException(message, textToken));
+   } 
+});

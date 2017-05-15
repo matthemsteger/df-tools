@@ -1,0 +1,862 @@
+{
+	"TITLE": {
+		"numArgs": 1,
+		"args": [
+			"LARGE ISLAND"
+		],
+		"className": "Title",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"DIM": {
+		"numArgs": 2,
+		"args": [
+			"257",
+			"257"
+		],
+		"className": "Dim",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"EMBARK_POINTS": {
+		"numArgs": 1,
+		"args": [
+			"1504"
+		],
+		"className": "EmbarkPoints",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"END_YEAR": {
+		"numArgs": 1,
+		"args": [
+			"1050"
+		],
+		"className": "EndYear",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"BEAST_END_YEAR": {
+		"numArgs": 2,
+		"args": [
+			"300",
+			"80"
+		],
+		"className": "BeastEndYear",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"REVEAL_ALL_HISTORY": {
+		"numArgs": 1,
+		"args": [
+			"1"
+		],
+		"className": "RevealAllHistory",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"CULL_HISTORICAL_FIGURES": {
+		"numArgs": 1,
+		"args": [
+			"0"
+		],
+		"className": "CullHistoricalFigures",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"ELEVATION": {
+		"numArgs": 4,
+		"args": [
+			"1",
+			"400",
+			"1600",
+			"1600"
+		],
+		"className": "Elevation",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"RAINFALL": {
+		"numArgs": 4,
+		"args": [
+			"0",
+			"100",
+			"400",
+			"400"
+		],
+		"className": "Rainfall",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"TEMPERATURE": {
+		"numArgs": 4,
+		"args": [
+			"25",
+			"75",
+			"400",
+			"400"
+		],
+		"className": "Temperature",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"DRAINAGE": {
+		"numArgs": 4,
+		"args": [
+			"0",
+			"100",
+			"400",
+			"400"
+		],
+		"className": "Drainage",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"VOLCANISM": {
+		"numArgs": 4,
+		"args": [
+			"0",
+			"100",
+			"400",
+			"400"
+		],
+		"className": "Volcanism",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"SAVAGERY": {
+		"numArgs": 4,
+		"args": [
+			"0",
+			"100",
+			"400",
+			"400"
+		],
+		"className": "Savagery",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"ELEVATION_FREQUENCY": {
+		"numArgs": 6,
+		"args": [
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		"className": "ElevationFrequency",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"RAIN_FREQUENCY": {
+		"numArgs": 6,
+		"args": [
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		"className": "RainFrequency",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"DRAINAGE_FREQUENCY": {
+		"numArgs": 6,
+		"args": [
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		"className": "DrainageFrequency",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"TEMPERATURE_FREQUENCY": {
+		"numArgs": 6,
+		"args": [
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		"className": "TemperatureFrequency",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"SAVAGERY_FREQUENCY": {
+		"numArgs": 6,
+		"args": [
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		"className": "SavageryFrequency",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"VOLCANISM_FREQUENCY": {
+		"numArgs": 6,
+		"args": [
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		"className": "VolcanismFrequency",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"POLE": {
+		"numArgs": 1,
+		"args": [
+			"NORTH_AND_OR_SOUTH"
+		],
+		"className": "Pole",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"MINERAL_SCARCITY": {
+		"numArgs": 1,
+		"args": [
+			"2500"
+		],
+		"className": "MineralScarcity",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"MEGABEAST_CAP": {
+		"numArgs": 1,
+		"args": [
+			"75"
+		],
+		"className": "MegabeastCap",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"SEMIMEGABEAST_CAP": {
+		"numArgs": 1,
+		"args": [
+			"150"
+		],
+		"className": "SemimegabeastCap",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"TITAN_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"33"
+		],
+		"className": "TitanNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"TITAN_ATTACK_TRIGGER": {
+		"numArgs": 3,
+		"args": [
+			"80",
+			"0",
+			"100000"
+		],
+		"className": "TitanAttackTrigger",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"DEMON_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"52"
+		],
+		"className": "DemonNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"NIGHT_TROLL_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"26"
+		],
+		"className": "NightTrollNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"BOGEYMAN_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"26"
+		],
+		"className": "BogeymanNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"VAMPIRE_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"26"
+		],
+		"className": "VampireNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"WEREBEAST_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"26"
+		],
+		"className": "WerebeastNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"SECRET_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"52"
+		],
+		"className": "SecretNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"REGIONAL_INTERACTION_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"52"
+		],
+		"className": "RegionalInteractionNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"DISTURBANCE_INTERACTION_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"52"
+		],
+		"className": "DisturbanceInteractionNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"EVIL_CLOUD_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"26"
+		],
+		"className": "EvilCloudNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"EVIL_RAIN_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"26"
+		],
+		"className": "EvilRainNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"GENERATE_DIVINE_MATERIALS": {
+		"numArgs": 1,
+		"args": [
+			"1"
+		],
+		"className": "GenerateDivineMaterials",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"GOOD_SQ_COUNTS": {
+		"numArgs": 3,
+		"args": [
+			"24",
+			"244",
+			"0"
+		],
+		"className": "GoodSqCounts",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"EVIL_SQ_COUNTS": {
+		"numArgs": 3,
+		"args": [
+			"24",
+			"244",
+			"0"
+		],
+		"className": "EvilSqCounts",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"PEAK_NUMBER_MIN": {
+		"numArgs": 1,
+		"args": [
+			"12"
+		],
+		"className": "PeakNumberMin",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"PARTIAL_OCEAN_EDGE_MIN": {
+		"numArgs": 1,
+		"args": [
+			"0"
+		],
+		"className": "PartialOceanEdgeMin",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"COMPLETE_OCEAN_EDGE_MIN": {
+		"numArgs": 1,
+		"args": [
+			"4"
+		],
+		"className": "CompleteOceanEdgeMin",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"VOLCANO_MIN": {
+		"numArgs": 1,
+		"args": [
+			"4"
+		],
+		"className": "VolcanoMin",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"REGION_COUNTS": {
+		"numArgs": 4,
+		"args": [
+			"HILLS",
+			"2016",
+			"3",
+			"2"
+		],
+		"className": "RegionCounts",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 9
+	},
+	"EROSION_CYCLE_COUNT": {
+		"numArgs": 1,
+		"args": [
+			"250"
+		],
+		"className": "ErosionCycleCount",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"RIVER_MINS": {
+		"numArgs": 2,
+		"args": [
+			"100",
+			"100"
+		],
+		"className": "RiverMins",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"PERIODICALLY_ERODE_EXTREMES": {
+		"numArgs": 1,
+		"args": [
+			"1"
+		],
+		"className": "PeriodicallyErodeExtremes",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"OROGRAPHIC_PRECIPITATION": {
+		"numArgs": 1,
+		"args": [
+			"1"
+		],
+		"className": "OrographicPrecipitation",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"SUBREGION_MAX": {
+		"numArgs": 1,
+		"args": [
+			"3500"
+		],
+		"className": "SubregionMax",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"CAVERN_LAYER_COUNT": {
+		"numArgs": 1,
+		"args": [
+			"3"
+		],
+		"className": "CavernLayerCount",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"CAVERN_LAYER_OPENNESS_MIN": {
+		"numArgs": 1,
+		"args": [
+			"0"
+		],
+		"className": "CavernLayerOpennessMin",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"CAVERN_LAYER_OPENNESS_MAX": {
+		"numArgs": 1,
+		"args": [
+			"100"
+		],
+		"className": "CavernLayerOpennessMax",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"CAVERN_LAYER_PASSAGE_DENSITY_MIN": {
+		"numArgs": 1,
+		"args": [
+			"0"
+		],
+		"className": "CavernLayerPassageDensityMin",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"CAVERN_LAYER_PASSAGE_DENSITY_MAX": {
+		"numArgs": 1,
+		"args": [
+			"100"
+		],
+		"className": "CavernLayerPassageDensityMax",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"CAVERN_LAYER_WATER_MIN": {
+		"numArgs": 1,
+		"args": [
+			"0"
+		],
+		"className": "CavernLayerWaterMin",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"CAVERN_LAYER_WATER_MAX": {
+		"numArgs": 1,
+		"args": [
+			"100"
+		],
+		"className": "CavernLayerWaterMax",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"HAVE_BOTTOM_LAYER_1": {
+		"numArgs": 1,
+		"args": [
+			"1"
+		],
+		"className": "HaveBottomLayer1",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"HAVE_BOTTOM_LAYER_2": {
+		"numArgs": 1,
+		"args": [
+			"1"
+		],
+		"className": "HaveBottomLayer2",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"LEVELS_ABOVE_GROUND": {
+		"numArgs": 1,
+		"args": [
+			"15"
+		],
+		"className": "LevelsAboveGround",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"LEVELS_ABOVE_LAYER_1": {
+		"numArgs": 1,
+		"args": [
+			"5"
+		],
+		"className": "LevelsAboveLayer1",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"LEVELS_ABOVE_LAYER_2": {
+		"numArgs": 1,
+		"args": [
+			"1"
+		],
+		"className": "LevelsAboveLayer2",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"LEVELS_ABOVE_LAYER_3": {
+		"numArgs": 1,
+		"args": [
+			"1"
+		],
+		"className": "LevelsAboveLayer3",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"LEVELS_ABOVE_LAYER_4": {
+		"numArgs": 1,
+		"args": [
+			"1"
+		],
+		"className": "LevelsAboveLayer4",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"LEVELS_ABOVE_LAYER_5": {
+		"numArgs": 1,
+		"args": [
+			"2"
+		],
+		"className": "LevelsAboveLayer5",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"LEVELS_AT_BOTTOM": {
+		"numArgs": 1,
+		"args": [
+			"1"
+		],
+		"className": "LevelsAtBottom",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"CAVE_MIN_SIZE": {
+		"numArgs": 1,
+		"args": [
+			"5"
+		],
+		"className": "CaveMinSize",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"CAVE_MAX_SIZE": {
+		"numArgs": 1,
+		"args": [
+			"25"
+		],
+		"className": "CaveMaxSize",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"MOUNTAIN_CAVE_MIN": {
+		"numArgs": 1,
+		"args": [
+			"40"
+		],
+		"className": "MountainCaveMin",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"NON_MOUNTAIN_CAVE_MIN": {
+		"numArgs": 1,
+		"args": [
+			"60"
+		],
+		"className": "NonMountainCaveMin",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"ALL_CAVES_VISIBLE": {
+		"numArgs": 1,
+		"args": [
+			"0"
+		],
+		"className": "AllCavesVisible",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"SHOW_EMBARK_TUNNEL": {
+		"numArgs": 1,
+		"args": [
+			"2"
+		],
+		"className": "ShowEmbarkTunnel",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"TOTAL_CIV_NUMBER": {
+		"numArgs": 1,
+		"args": [
+			"40"
+		],
+		"className": "TotalCivNumber",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"TOTAL_CIV_POPULATION": {
+		"numArgs": 1,
+		"args": [
+			"15000"
+		],
+		"className": "TotalCivPopulation",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"SITE_CAP": {
+		"numArgs": 1,
+		"args": [
+			"1500"
+		],
+		"className": "SiteCap",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"PLAYABLE_CIVILIZATION_REQUIRED": {
+		"numArgs": 1,
+		"args": [
+			"1"
+		],
+		"className": "PlayableCivilizationRequired",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"ELEVATION_RANGES": {
+		"numArgs": 3,
+		"args": [
+			"33000",
+			"4032",
+			"2016"
+		],
+		"className": "ElevationRanges",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"RAIN_RANGES": {
+		"numArgs": 3,
+		"args": [
+			"2016",
+			"4032",
+			"2016"
+		],
+		"className": "RainRanges",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"DRAINAGE_RANGES": {
+		"numArgs": 3,
+		"args": [
+			"2016",
+			"4032",
+			"2016"
+		],
+		"className": "DrainageRanges",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"SAVAGERY_RANGES": {
+		"numArgs": 3,
+		"args": [
+			"2016",
+			"4032",
+			"2016"
+		],
+		"className": "SavageryRanges",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	},
+	"VOLCANISM_RANGES": {
+		"numArgs": 3,
+		"args": [
+			"2016",
+			"4032",
+			"2016"
+		],
+		"className": "VolcanismRanges",
+		"variableArgs": false,
+		"argNumVariations": [],
+		"ocurrences": 1
+	}
+}

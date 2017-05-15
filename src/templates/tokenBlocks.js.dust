@@ -1,0 +1,13 @@
+{#allTokens}
+{~r}{~n}
+export class {#makeClassName text="{args[0]}" /} extends {baseTokenClass} {~lb}{~r}{~n}
+{tab}static PATTERN = /({args[1]}\b|{args[0]}\b)/i;{~r}{~n}
+{?includeLongerAlt}{tab}static LONGER_ALT = {longerAlt};{~r}{~n}{/includeLongerAlt}
+{~rb}{~r}{~n}
+{/allTokens}
+
+{!
+each allToken is a dfToken
+name = raw tag name
+args = array of value in an argument
+!}

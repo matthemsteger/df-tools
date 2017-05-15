@@ -1,0 +1,65 @@
+Civilized World Population
+
+	38102 Dwarves
+	151357 Humans
+	37888 Elves
+	230340 Goblins
+	2306 Kobolds
+
+	Total: 459993
+
+Sites
+
+1: Smoburar, "Conjuredmalign", dark fortress
+	Owner: The Circular Torments, goblins
+	Parent Civ: The Wretched Cruelties, goblins
+	lady: Ngerxung Hatedfactions the Contingent Fang, goblin
+	3 dwarves
+	12 humans
+	1 elf
+	1 warthog fiend
+	11134 goblins
+	2526 trolls
+	2526 blizzard men
+	2526 beak dogs
+	1 goblin visitor
+	3 human prisoners
+	2 dwarf prisoners
+
+Outdoor Animal Populations (Including Undead)
+	33933 sea serpents
+	712572 gigantic squids
+	271456 squid men
+	283822 sea otters
+	407184 giant nautiluses
+	203592 nautilus men
+	Unnumbered honey bees
+	Unnumbered bumblebees
+	Unnumbered ants
+	Unnumbered termites
+
+Underground Animal Populations (Including Undead)
+	2977087 gorlaks
+	1489460 trolls
+	462349 giant cave spiders
+	1344053 giant rats
+	1007661 giant bats
+	1280592 giant cave swallows
+	1087531 naked mole dogs
+	791930 large rats
+	2048490 giant moles
+	1815922 troglodytes
+	Unnumbered lizard devils
+	Unnumbered winged brutes
+	Unnumbered cockatoo demons
+	Unnumbered stegosaurid devils
+	Unnumbered vomit fiends
+	Unnumbered water brutes
+	Unnumbered shadow fiends
+	Unnumbered lizard demons
+	Unnumbered snow brutes
+	Unnumbered winged brutes
+	Unnumbered wolf demons
+	Unnumbered brutes of steam
+	Unnumbered marmot fiends
+	24660110 fire snakes

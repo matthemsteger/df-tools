@@ -1,0 +1,4 @@
+{~r}{~n}
+export class {classname} extends Token {~lb}{~r}{~n}
+{tab}static PATTERN = /{tokenName}/;{~r}{~n}
+{~rb}{~r}{~n}
