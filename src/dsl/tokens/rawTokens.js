@@ -4,6 +4,10 @@ export class BaseRawToken extends Token {
 	static PATTERN = Lexer.NA;
 }
 
+export class ObjectTypeToken extends BaseRawToken {
+	static PATTERN = Lexer.NA;
+}
+
 export class Absorption extends BaseRawToken {
 	static PATTERN = /ABSORPTION/;
 }
@@ -332,7 +336,7 @@ export class BloodMapDescriptor extends BaseRawToken {
 	static PATTERN = /BLOOD_MAP_DESCRIPTOR/;
 }
 
-export class Body extends BaseRawToken {
+export class Body extends ObjectTypeToken {
 	static PATTERN = /BODY/;
 }
 
@@ -344,7 +348,7 @@ export class BodyAppearanceModifier extends BaseRawToken {
 	static PATTERN = /BODY_APPEARANCE_MODIFIER/;
 }
 
-export class BodyDetailPlan extends BaseRawToken {
+export class BodyDetailPlan extends ObjectTypeToken {
 	static PATTERN = /BODY_DETAIL_PLAN/;
 }
 
@@ -416,7 +420,7 @@ export class Buildingdestroyer extends BaseRawToken {
 	static PATTERN = /BUILDINGDESTROYER/;
 }
 
-export class BuildingWorkshop extends BaseRawToken {
+export class BuildingWorkshop extends ObjectTypeToken {
 	static PATTERN = /BUILDING_WORKSHOP/;
 }
 
@@ -660,11 +664,11 @@ export class ColonyExternal extends BaseRawToken {
 	static PATTERN = /COLONY_EXTERNAL/;
 }
 
-export class Color extends BaseRawToken {
+export class Color extends ObjectTypeToken {
 	static PATTERN = /COLOR/;
 }
 
-export class ColorPattern extends BaseRawToken {
+export class ColorPattern extends ObjectTypeToken {
 	static PATTERN = /COLOR_PATTERN/;
 }
 
@@ -760,7 +764,7 @@ export class CpColor extends BaseRawToken {
 	static PATTERN = /CP_COLOR/;
 }
 
-export class Creature extends BaseRawToken {
+export class Creature extends ObjectTypeToken {
 	static PATTERN = /CREATURE/;
 }
 
@@ -776,7 +780,7 @@ export class CreatureTile extends BaseRawToken {
 	static PATTERN = /CREATURE_TILE/;
 }
 
-export class CreatureVariation extends BaseRawToken {
+export class CreatureVariation extends ObjectTypeToken {
 	static PATTERN = /CREATURE_VARIATION/;
 }
 
@@ -1008,7 +1012,7 @@ export class EntersBlood extends BaseRawToken {
 	static PATTERN = /ENTERS_BLOOD/;
 }
 
-export class Entity extends BaseRawToken {
+export class Entity extends ObjectTypeToken {
 	static PATTERN = /ENTITY/;
 }
 
@@ -1552,7 +1556,7 @@ export class IndoorWood extends BaseRawToken {
 	static PATTERN = /INDOOR_WOOD/;
 }
 
-export class Inorganic extends BaseRawToken {
+export class Inorganic extends ObjectTypeToken {
 	static PATTERN = /INORGANIC/;
 }
 
@@ -1564,7 +1568,7 @@ export class Intelligent extends BaseRawToken {
 	static PATTERN = /INTELLIGENT/;
 }
 
-export class Interaction extends BaseRawToken {
+export class Interaction extends ObjectTypeToken {
 	static PATTERN = /INTERACTION/;
 }
 
@@ -1668,23 +1672,23 @@ export class ItemsWeaponRanged extends BaseRawToken {
 	static PATTERN = /ITEMS_WEAPON_RANGED/;
 }
 
-export class ItemAmmo extends BaseRawToken {
+export class ItemAmmo extends ObjectTypeToken {
 	static PATTERN = /ITEM_AMMO/;
 }
 
-export class ItemArmor extends BaseRawToken {
+export class ItemArmor extends ObjectTypeToken {
 	static PATTERN = /ITEM_ARMOR/;
 }
 
-export class ItemFood extends BaseRawToken {
+export class ItemFood extends ObjectTypeToken {
 	static PATTERN = /ITEM_FOOD/;
 }
 
-export class ItemGloves extends BaseRawToken {
+export class ItemGloves extends ObjectTypeToken {
 	static PATTERN = /ITEM_GLOVES/;
 }
 
-export class ItemHelm extends BaseRawToken {
+export class ItemHelm extends ObjectTypeToken {
 	static PATTERN = /ITEM_HELM/;
 }
 
@@ -1692,7 +1696,7 @@ export class ItemImprovementModifier extends BaseRawToken {
 	static PATTERN = /ITEM_IMPROVEMENT_MODIFIER/;
 }
 
-export class ItemPants extends BaseRawToken {
+export class ItemPants extends ObjectTypeToken {
 	static PATTERN = /ITEM_PANTS/;
 }
 
@@ -1700,15 +1704,15 @@ export class ItemReactionProduct extends BaseRawToken {
 	static PATTERN = /ITEM_REACTION_PRODUCT/;
 }
 
-export class ItemShield extends BaseRawToken {
+export class ItemShield extends ObjectTypeToken {
 	static PATTERN = /ITEM_SHIELD/;
 }
 
-export class ItemShoes extends BaseRawToken {
+export class ItemShoes extends ObjectTypeToken {
 	static PATTERN = /ITEM_SHOES/;
 }
 
-export class ItemSiegeammo extends BaseRawToken {
+export class ItemSiegeammo extends ObjectTypeToken {
 	static PATTERN = /ITEM_SIEGEAMMO/;
 }
 
@@ -1720,19 +1724,19 @@ export class ItemThief extends BaseRawToken {
 	static PATTERN = /ITEM_THIEF/;
 }
 
-export class ItemTool extends BaseRawToken {
+export class ItemTool extends ObjectTypeToken {
 	static PATTERN = /ITEM_TOOL/;
 }
 
-export class ItemToy extends BaseRawToken {
+export class ItemToy extends ObjectTypeToken {
 	static PATTERN = /ITEM_TOY/;
 }
 
-export class ItemTrapcomp extends BaseRawToken {
+export class ItemTrapcomp extends ObjectTypeToken {
 	static PATTERN = /ITEM_TRAPCOMP/;
 }
 
-export class ItemWeapon extends BaseRawToken {
+export class ItemWeapon extends ObjectTypeToken {
 	static PATTERN = /ITEM_WEAPON/;
 }
 
@@ -2024,7 +2028,7 @@ export class MaterialSize extends BaseRawToken {
 	static PATTERN = /MATERIAL_SIZE/;
 }
 
-export class MaterialTemplate extends BaseRawToken {
+export class MaterialTemplate extends ObjectTypeToken {
 	static PATTERN = /MATERIAL_TEMPLATE/;
 }
 
@@ -2488,7 +2492,7 @@ export class PickedTile extends BaseRawToken {
 	static PATTERN = /PICKED_TILE/;
 }
 
-export class Plant extends BaseRawToken {
+export class Plant extends ObjectTypeToken {
 	static PATTERN = /PLANT/;
 }
 
@@ -2620,7 +2624,7 @@ export class Ranged extends BaseRawToken {
 	static PATTERN = /RANGED/;
 }
 
-export class Reaction extends BaseRawToken {
+export class Reaction extends ObjectTypeToken {
 	static PATTERN = /REACTION/;
 }
 
@@ -2864,7 +2868,7 @@ export class SetTlGroup extends BaseRawToken {
 	static PATTERN = /SET_TL_GROUP/;
 }
 
-export class Shape extends BaseRawToken {
+export class Shape extends ObjectTypeToken {
 	static PATTERN = /SHAPE/;
 }
 
@@ -3228,7 +3232,7 @@ export class SwimsLearned extends BaseRawToken {
 	static PATTERN = /SWIMS_LEARNED/;
 }
 
-export class SymbolToken extends BaseRawToken {
+export class SymbolToken extends ObjectTypeToken {
 	static PATTERN = /SYMBOL/;
 }
 
@@ -3416,7 +3420,7 @@ export class TissueStyleUnit extends BaseRawToken {
 	static PATTERN = /TISSUE_STYLE_UNIT/;
 }
 
-export class TissueTemplate extends BaseRawToken {
+export class TissueTemplate extends ObjectTypeToken {
 	static PATTERN = /TISSUE_TEMPLATE/;
 }
 
@@ -3508,7 +3512,7 @@ export class TransferArtifactStatus extends BaseRawToken {
 	static PATTERN = /TRANSFER_ARTIFACT_STATUS/;
 }
 
-export class Translation extends BaseRawToken {
+export class Translation extends ObjectTypeToken {
 	static PATTERN = /TRANSLATION/;
 }
 
@@ -3848,7 +3852,7 @@ export class WoodWeapons extends BaseRawToken {
 	static PATTERN = /WOOD_WEAPONS/;
 }
 
-export class Word extends BaseRawToken {
+export class Word extends ObjectTypeToken {
 	static PATTERN = /WORD/;
 }
 

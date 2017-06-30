@@ -5,6 +5,8 @@ import _ from 'lodash';
 import {discoverInstall} from './../../../model/install';
 
 function determineFileType(name, ext) {
+	let foundType;
+
 	[
 		{type: 'detailedMap', endsWith: 'detailed', ext: '.bmp'},
 		{type: 'worldHistory', endsWith: 'world_history', ext: '.txt'},
@@ -13,11 +15,11 @@ function determineFileType(name, ext) {
 		{type: 'worldGenParams', endsWith: 'world_gen_param', ext: '.txt'}
 	].forEach(({type, endsWith, ext: defExt}) => { // eslint-disable-line consistent-return
 		if (_.endsWith(name, endsWith) && ext === defExt) {
-			return type;
+			foundType = type;
 		}
 	});
 
-	return null;
+	return foundType;
 }
 
 export default async function getExportsForRegion({dfRootPath, region} = {}) {

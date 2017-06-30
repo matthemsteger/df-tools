@@ -16,6 +16,7 @@ Promise.promisifyAll(fs);
 const debug = _debug('df:worldgen');
 
 export async function genWorld({dfRootPath, config, id = null} = {}) {
+	debug('starting genWorld with dfRootPath:%s, config:%s, id:%s', dfRootPath, config, id);
 	// verify df executable
 	// verify config exists
 	// figure out next id number available
@@ -32,13 +33,13 @@ export async function genWorld({dfRootPath, config, id = null} = {}) {
 	const finalExecutablePath = / /.test(install.executablePath) ? `"${install.executablePath}"` : install.executablePath;
 
 	const gamelogPath = path.resolve(dfRootPath, 'gamelog.txt');
-	const {size: initialGamelogSize} = await fs.stat(gamelogPath);
+	const {size: initialGamelogSize} = await fs.statAsync(gamelogPath);
 
 	// dwarf fortress never sends stdout or stderr itself
 	// it always sends back a non-0 random integer return code
 	// the OS will return proper non-0 return codes (1) if there is a problem with the command
 	try {
-		const [stdout, stderr] = await Promise.fromCallback((callback) => exec(`${finalExecutablePath} -gen ${worldGenId} RANDOM ${config}`, {
+		const [stdout, stderr] = await Promise.fromCallback((callback) => exec(`${finalExecutablePath} -gen ${worldGenId} RANDOM "${config}"`, {
 			cwd: install.path
 		}, callback), {multiArgs: true});
 
@@ -77,8 +78,8 @@ export async function genWorld({dfRootPath, config, id = null} = {}) {
 	// find the world info
 	const regionFilePaths = await getExportsForRegion({dfRootPath, region: worldGenId});
 	const {worldSitesAndPops: worldSitesAndPopsPath, worldHistory: worldHistoryPath} = regionFilePaths;
-	const worldSitesAndPops = parseWorldSitesAndPops({filePath: worldSitesAndPopsPath});
-	const worldHistory = parseWorldHistory({filePath: worldHistoryPath});
+	const worldSitesAndPops = await parseWorldSitesAndPops({filePath: worldSitesAndPopsPath});
+	const worldHistory = await parseWorldHistory({filePath: worldHistoryPath});
 
 	return new WorldGenResult({
 		worldSitesAndPops,

@@ -152,6 +152,7 @@ Sites
 	4 goblins
 19: Ukerg¢smer Zanor Dakon, "Wavedumbral the Heart of Omens", lair
 	1 saltwater crocodile
+	1 troll of twilight
 20: Bonitilari, "The Larval Arrow", labyrinth
 	1 minotaur
 21: Nogsang”sm K”kzulast, "Pridestrikes the Assaulted Savagery", shrine

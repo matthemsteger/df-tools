@@ -23,7 +23,7 @@ describe('RegionWorldSitesPopsParser integration tests', function () {
 		const result = parser.parseWorldPopFile();
 		debug('result is %O', result);
 		debug('parser is %O', parser.errors);
-		expect(result).to.be.an.instanceof(WorldSitesAndPops);
 		expect(parser).to.have.property('errors').that.is.an('array').with.lengthOf(0);
+		expect(result).to.be.an.instanceof(WorldSitesAndPops);
 	});
 });

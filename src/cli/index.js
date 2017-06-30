@@ -7,6 +7,7 @@ import * as generateRawTagExpectationsCommand from './commands/generateRawTagExp
 import * as generateTokenOrBlockCommand from './commands/generateTokenOrBlock';
 import * as testWorldGenCommand from './commands/testWorldGen';
 import * as testTemplateEngineCommand from './commands/testTemplateEngine';
+import * as parseWorldSitesAndPops from './commands/parseWorldSitesAndPops';
 
 const debug = _debug('df:cli:commands:index');
 
@@ -19,6 +20,7 @@ const argv = yargs
 	.command(testWorldGenCommand)
 	.command(generateTokenOrBlockCommand)
 	.command(testTemplateEngineCommand)
+	.command(parseWorldSitesAndPops)
 	.demandCommand(1, 'You need to specify at least one command')
 	.help()
 	.argv;

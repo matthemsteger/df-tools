@@ -25,6 +25,7 @@ Sites
 	1 goblin visitor
 	3 human prisoners
 	2 dwarf prisoners
+	1 troll of twilight
 
 Outdoor Animal Populations (Including Undead)
 	33933 sea serpents

@@ -11,6 +11,8 @@ function createTokenHierarchyCheckIterator(baseTokenConstructor) {
 	};
 }
 
+// this is edited to not do the creature names
+
 /*
 _.chain(rawTokens)
 			.map((tokenClass, key) => ({key, tokenClass}))

@@ -401,6 +401,7 @@ export class Turkey extends CreatureNameToken {
 
 export class Troll extends CreatureNameToken {
 	static PATTERN = /(trolls\b|troll\b)/i;
+	static LONGER_ALT = OtherWorldlyCreature;
 }
 
 export class Troglodyte extends CreatureNameToken {

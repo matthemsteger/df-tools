@@ -4,7 +4,7 @@ import path from 'path';
 import Promise from 'bluebird';
 import _debug from 'debug';
 import RawLexer from './../../../src/dsl/lexers/rawLexer';
-import GenericRawParser from './../../../src/dsl/parsers/genericRawParser';
+import GenericRawParser from './../../../src/dsl/parsers/raws/genericRawParser';
 
 Promise.promisifyAll(fs);
 const debug = _debug('df:test:dsl:int-worldGenLexer');
