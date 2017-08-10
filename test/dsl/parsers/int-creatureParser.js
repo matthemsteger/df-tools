@@ -14,7 +14,8 @@ describe('rawCreaturesParser integration tests', function () {
 		const result = rawCreaturesParser.file.parse(rawtext);
 		debug('parser result is %O', result);
 
-		expect(result).to.not.be.null;
-		expect(result).to.have.property('rawObjects').that.is.an('array').with.lengthOf(2);
+		expect(result).to.be.an('object');
+		expect(result).to.have.property('status', true);
+		expect(result).to.have.property('value').that.is.an('object');
 	});
 });

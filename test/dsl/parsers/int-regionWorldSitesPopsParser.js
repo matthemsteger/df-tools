@@ -11,7 +11,7 @@ import WorldSitesAndPops from './../../../src/model/worldSitesAndPops';
 Promise.promisifyAll(fs);
 const debug = _debug('df:test:dsl:int-regionWorldSitesPopsParser');
 
-describe('RegionWorldSitesPopsParser integration tests', function () {
+describe.skip('RegionWorldSitesPopsParser integration tests', function () {
 	it('should parse properly a world sites file', async function () {
 		const fakeRegionBuffer = await fs.readFileAsync(path.resolve(__dirname, './../data/world_sites_and_pops_test.txt'));
 		const fakeRegionText = iconv.decode(fakeRegionBuffer, 'cp437');

@@ -3,7 +3,7 @@ creature_fanciful
 [OBJECT:CREATURE]
 
 [CREATURE:CHIMERA]
-	[NAME:chimera:chimeras:chimeric]
+	[NAME:chimera:chimeras:chimeric] comment blah
 	[CREATURE_TILE:'C'][COLOR:2:0:1]
 	[FANCIFUL]
 	[DOES_NOT_EXIST]

@@ -19,7 +19,7 @@ describe('RegionWorldSitesPopsLexer integration tests', function () {
 
 		const result = lexer.tokenize(fakeRegionText);
 		if (_.get(result, 'errors.length') > 0) debug('lexer errors: %O', result.errors);
-		expect(result).to.have.property('tokens').that.is.an('array').with.lengthOf(2089);
+		expect(result).to.have.property('tokens').that.is.an('array').with.lengthOf(2090);
 		expect(result).to.have.property('errors').that.is.an('array').with.lengthOf(0);
 	});
 

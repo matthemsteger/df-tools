@@ -7,6 +7,8 @@ export const isLanguageToken = R.flip(R.contains)(['[', ']', ':']);
 
 export const comment = P.regexp(/[^\]\s]+(?![^[]*])/);
 
+export const commentOrWhitespace = P.regexp(/[^\]]*(?![^[]*])/);
+
 export const lbracket = P.string('[');
 
 export const rbracket = P.string(']');
@@ -23,13 +25,33 @@ export function spaceAll(parsers) {
 	return parsers.map((parser) => spaced(parser));
 }
 
+function spacedWithComments(parser) {
+	// this should be a many since any amount of crap should be skipped
+	return commentOrWhitespace
+		.then(parser)
+		.skip(commentOrWhitespace);
+}
+
+function spaceAllWithComments(parsers) {
+	return parsers.map((parser) => spacedWithComments(parser));
+}
+
 export const tokenArgument = P.regexp(/[^:\]]+/);
 
 export function createTokenParser(name, numArgs = 0) {
+	// will need to take a NaN or equiv here as numArgs and then gather arguments
+	// for dynamic tags that dont have a set amount of args
+	let tokenArgumentParser;
+	if (Number.isNaN(numArgs)) {
+		tokenArgumentParser = P.seq(...[colon, tokenArgument]).atLeast(1);
+	} else {
+		tokenArgumentParser = P.seq(...[colon, tokenArgument]).times(numArgs);
+	}
+
 	const seq = [
 		lbracket,
 		P.string(name),
-		...R.flatten(R.times(() => [colon, tokenArgument], numArgs)),
+		tokenArgumentParser,
 		rbracket
 	];
 
@@ -37,7 +59,8 @@ export function createTokenParser(name, numArgs = 0) {
 		.map(
 			R.compose(
 				R.tail,
-				R.reject(isLanguageToken)
+				R.reject(isLanguageToken),
+				R.flatten
 			)
 		)
 		.node(name);
@@ -69,11 +92,11 @@ function convertDefinition(definition) {
 	// [2] - (boolean) - required
 	// [3] - (boolean) - required (when children)
 	// tokens are assumed optional
-	const defTokenParser = createTokenParser(definition[0], definition[1]);
+	const defTokenParser = spacedWithComments(createTokenParser(definition[0], definition[1]));
 	if (definition.length < 3 || R.is(Boolean, definition[2])) return defTokenParser;
 
 	const numRequired = R.filter(R.any(R.both(R.is(Boolean), R.equals(true))), definition[2]).length;
-	const childTokenParsers = spaceAll(definition[2].map(convertDefinition));
+	const childTokenParsers = spaceAllWithComments(definition[2].map(convertDefinition));
 	return P.seqMap(
 		defTokenParser,
 		P.alt(...childTokenParsers).atLeast(numRequired),
@@ -103,9 +126,9 @@ export function createRawFileParser(rawDefinition) {
 		objects: (lang) => lang.rawObject.many(),
 		rawObject: () => {
 			const numRequired = R.filter(R.any(R.both(R.is(Boolean), R.equals(true))), childrenDefinitions).length;
-			const childTokenParsers = spaceAll(childrenDefinitions.map(convertDefinition));
+			const childTokenParsers = spaceAllWithComments(childrenDefinitions.map(convertDefinition));
 			return P.seqMap(
-				createTokenParser(rawObjectTagName, 1),
+				spacedWithComments(createTokenParser(rawObjectTagName, 1)),
 				P.alt(...childTokenParsers).atLeast(numRequired),
 				(rawObject, children) => ({...rawObject, children})
 			);
