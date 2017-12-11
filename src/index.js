@@ -1,5 +1,4 @@
-import * as install from './model/install';
 import * as api from './api';
 
-const dfTools = {...api, install};
+const dfTools = {...api};
 export default dfTools;

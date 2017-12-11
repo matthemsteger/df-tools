@@ -5,7 +5,7 @@ import BaseLexer, {modes, createLexerDefinition} from './../../../src/dsl/lexers
 
 chai.use(chaiInterface);
 
-describe('main module', function () {
+describe.skip('main module', function () {
 	it('exports a constructor by default', function () {
 		expect(BaseLexer).to.be.a('function');
 	});

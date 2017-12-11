@@ -9,6 +9,7 @@
 		"promise"
 	],
 	"rules": {
+		"linebreak-style": 0,
 		"semi": [2, "always"],
 		"no-tabs": 0,
 		"indent": [2, "tab", {"SwitchCase": 1}],
@@ -16,6 +17,7 @@
 		"object-curly-spacing": [2, "never"],
 		"max-len": 0,
 		"comma-dangle": [2, "never"],
-		"arrow-parens": [2, "always"]
+		"arrow-parens": [2, "always"],
+		"no-underscore-dangle": [2, {"allow": ["__"]}]
 	}
 }

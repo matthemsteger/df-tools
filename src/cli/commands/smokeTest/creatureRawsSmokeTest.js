@@ -3,24 +3,20 @@ import fs from 'fs';
 import path from 'path';
 import glob from 'glob';
 import _debug from 'debug';
-import rawCreaturesParser from './../../dsl/parsers/raws/creatures/rawCreaturesParser';
+import rawCreaturesParser from './../../../dsl/parsers/raws/creatures/rawCreaturesParser';
 
 Promise.promisifyAll(fs);
 const debug = _debug('df:cli:commands:creatureRawsSmokeTest');
 
-export const command = 'smoke-test-creatures-raw';
+export const command = 'creatures-raw';
 export const describe = 'Parse all creatures raws and see if there are any errors';
 export function builder(yargs) {
-	return yargs
-		.option('path', {
-			alias: 'p',
-			demandOption: true
-		});
+	return yargs;
 }
 
 export async function handler(argv) {
 	try {
-		const {path: dfRootPath} = argv;
+		const {'df-root': dfRootPath} = argv;
 		const rawsPath = path.resolve(dfRootPath, 'raw/objects');
 		const rawFileNames = await Promise.fromCallback((callback) => glob(`${rawsPath}/creature_*.txt`, {nodir: true, absolute: true}, callback));
 		const rawResults = await Promise.mapSeries(rawFileNames, async (fileName) => {

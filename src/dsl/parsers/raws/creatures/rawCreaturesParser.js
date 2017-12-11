@@ -1,5 +1,15 @@
 import {createRawFileParser} from './../generic';
 import {definition as materialTemplateDefinition} from './../materials/materialTemplate';
+import {definition as creatureVariationDefinition} from './creatureVariation';
+import {definition as tissueTemplateDefinition} from './tissueTemplate';
+
+const appearanceModifiers = [
+	['APP_MOD_DESC_RANGE', Number.NaN],
+	['APP_MOD_GENETIC_MODEL', 3], // this is not in delivered raws
+	['APP_MOD_IMPORTANCE', 1],
+	['APP_MOD_NOUN', 2],
+	['APP_MOD_RATE', 7]
+];
 
 const castDefinition = [
 	['ADOPTS_OWNER'],
@@ -7,10 +17,7 @@ const castDefinition = [
 	['ALL_ACTIVE'],
 	['AMBUSHPREDATOR'],
 	['AMPHIBIOUS'],
-	['APP_MOD_DESC_RANGE', 1],
-	['APP_MOD_GENETIC_MODEL', 3], // this is not in delivered raws
-	['APP_MOD_IMPORTANCE', 1],
-	['APP_MOD_RATE', 7],
+	...appearanceModifiers,
 	['AQUATIC'],
 	['ARENA_RESTRICTED'],
 	['AT_PEACE_WITH_WILDLIFE'],
@@ -41,8 +48,11 @@ const castDefinition = [
 	['BODY', Number.NaN],
 	['BODY_APPEARANCE_MODIFIER', 8],
 	['BODY_DETAIL_PLAN', Number.NaN, [
+		['USE_TISSUE_TEMPLATE', 2],
 		['REMOVE_MATERIAL', 1],
-		['REMOVE_TISSUE', 1]
+		['REMOVE_TISSUE', 1],
+		['SELECT_TISSUE', 1],
+		...tissueTemplateDefinition
 	]],
 	['BODY_SIZE', 3],
 	['BODYGLOSS', Number.NaN],
@@ -114,7 +124,7 @@ const castDefinition = [
 	['GOBBLE_VERMIN_CREATURE', 2],
 	['GO_TO_END'],
 	['GO_TO_START'],
-	['GO_TO_TAG', 1],
+	['GO_TO_TAG', Number.NaN],
 	['GRASSTRAMPLE', 1],
 	['GRAVITATE_BODY_SIZE', 1],
 	['GRAZER', 1],
@@ -213,7 +223,7 @@ const castDefinition = [
 	['NO_VEGETATION_PERTURB'],
 	['NO_WINTER'],
 	['NOBONES'],
-	['NOBREATH'],
+	['NOBREATHE'],
 	['NOCTURNAL'],
 	['NOEMOTION'],
 	['NOEXERT'],
@@ -255,12 +265,16 @@ const castDefinition = [
 	['REMAINS_COLOR', 1],
 	['REMAINS_ON_VERMIN_BITE_DEATH'],
 	['REMAINS_UNDETERMINED'],
-	['RETRACT_INTO_BP', 2],
+	['RETRACT_INTO_BP', Number.NaN],
 	['RETURNS_VERMIN_KILLS_TO_OWNER'],
 	['ROOT_AROUND', 4],
-	['SECRETION', 7],
+	['SECRETION', Number.NaN],
 	['SELECT_TISSUE_LAYER', Number.NaN, [
+		['TL_RELATIVE_THICKNESS', 1],
+		['TL_MAJOR_ARTERIES'], // TODO: refactor duplicate
+		['TL_HEALING_RATE', 1],
 		['PLUS_TISSUE_LAYER', 3, [
+			['SET_LAYER_TISSUE', 1],
 			['TL_CONNECTS'],
 			['TL_HEALING_RATE'],
 			['TL_MAJOR_ARTERIES'],
@@ -273,7 +287,9 @@ const castDefinition = [
 	['SENSE_CREATURE_CLASS', 3],
 	['SET_BP_GROUP', 2, [
 		['BP_ADD_TYPE', 1],
-		['BP_APPEARANCE_MODIFIER', 8],
+		['BP_APPEARANCE_MODIFIER', 8, [
+			...appearanceModifiers
+		]],
 		['PLUS_BP_GROUP', 2]
 	]],
 	['SET_TL_GROUP', 3, [
@@ -287,7 +303,10 @@ const castDefinition = [
 		['TISSUE_STYLE_UNIT', 2, [
 			['TSU_NOUN', 2]
 		]],
-		['PLUS_TL_GROUP', 3]
+		['PLUS_TL_GROUP', 3],
+		['TISSUE_LAYER_APPEARANCE_MODIFIER', 8, [
+			...appearanceModifiers
+		]]
 	]],
 	['SKILL_LEARN_RATE', 2],
 	['SKILL_LEARN_RATES', 1],
@@ -310,7 +329,11 @@ const castDefinition = [
 	['SYNDROME_DILUTION_FACTOR', 2],
 	['TENDONS', 3],
 	['THICKWEB'],
-	['TISSUE_LAYER', Number.NaN],
+	['TISSUE_LAYER', Number.NaN, [
+		['TL_RELATIVE_THICKNESS', 1] // TODO: refactor duplicate
+	]],
+	['TISSUE_LAYER_UNDER', 3],
+	['TISSUE_LAYER_OVER', 4],
 	['TITAN'],
 	['TRADE_CAPACITY', 1],
 	['TRAINABLE'],
@@ -365,6 +388,7 @@ export default createRawFileParser({
 		['GOOD'],
 		['HFID'],
 		['HIVE_PRODUCT', 6],
+		['ITEMCORPSE', 4],
 		['LARGE_ROAMING'],
 		['LOCAL_POPS_CONTROLLABLE'],
 		['LOCAL_POPS_PRODUCE_HEROES'],
@@ -381,7 +405,8 @@ export default createRawFileParser({
 			['SELECT_ADDITIONAL_CASTE', 1]
 		]],
 		['SELECT_MATERIAL', 1, [
-			['PLUS_MATERIAL', 1]
+			['PLUS_MATERIAL', 1],
+			...materialTemplateDefinition
 		]],
 		['SMELL_TRIGGER', 1],
 		['SOLDIER_ALTTILE', 1],
@@ -389,7 +414,9 @@ export default createRawFileParser({
 		['SPEECH_FEMALE', 1],
 		['SPEECH_MALE', 1],
 		['SPHERE', 1],
-		['TISSUE', 1],
+		['TISSUE', 1, [
+			...tissueTemplateDefinition
+		]],
 		['TRIGGERABLE_GROUP', 2],
 		['UBIQUITOUS'],
 		['UNDERGROUND_DEPTH', Number.NaN],
@@ -397,13 +424,17 @@ export default createRawFileParser({
 		['USE_MATERIAL', 2],
 		['USE_MATERIAL_TEMPLATE', 2, materialTemplateDefinition],
 		['USE_TISSUE', 2],
-		['USE_TISSUE_TEMPLATE', 2],
+		['USE_TISSUE_TEMPLATE', 2, [
+			...tissueTemplateDefinition
+		]],
 		['VERMIN_EATER'],
 		['VERMIN_FISH'],
 		['VERMIN_GROUNDER'],
+		['VERMIN_NOROAM'],
 		['VERMIN_ROTTER'],
 		['VERMIN_SOIL'],
 		['VERMIN_SOIL_COLONY'],
+		...creatureVariationDefinition,
 		...castDefinition
 	]
 });

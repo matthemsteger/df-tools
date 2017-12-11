@@ -5,9 +5,18 @@ export const genericParseInt = R.flip(R.curry(Number.parseInt))(10);
 
 export const isLanguageToken = R.flip(R.contains)(['[', ']', ':']);
 
-export const comment = P.regexp(/[^\]\s]+(?![^[]*])/);
+// export const comment = P.regexp(/[^\]\s]+(?![^[]*])/); orig
+// export const comment = P.regexp(/[^\][\r\n]+(?!.*])/); better
+export const comment = P.regexp(/(?:[^\][\r\n]+(?!.*(?:]|\[))|[^\]\s]+(?![^[]*]))/);
 
-export const commentOrWhitespace = P.regexp(/[^\]]*(?![^[]*])/);
+// export const commentOrWhitespace = P.regexp(/[^\]]*(?![^[]*])/);
+export const commentOrWhitespace = comment.trim(P.optWhitespace).many();
+
+// [^\]]*(?![^[\s]*])
+// \[?[A-Z_]+(?::.*]|]) -> regex for an entire token, allows tokens not starting with [
+// \[?[A-Z_]+(?::[^\]\r\n]+)*] -> even better all tokens
+
+export const rawTag = P.regexp(/\s*(\[?[A-Z_]+(?::[^\]\r\n]+)*])\s*/, 1);
 
 export const lbracket = P.string('[');
 
@@ -38,6 +47,10 @@ function spaceAllWithComments(parsers) {
 
 export const tokenArgument = P.regexp(/[^:\]]+/);
 
+// a token can be surrounded by white space
+// comments can be surrounded by white space
+// comments and whitespace can be anything except [, chars]
+
 export function createTokenParser(name, numArgs = 0) {
 	// will need to take a NaN or equiv here as numArgs and then gather arguments
 	// for dynamic tags that dont have a set amount of args
@@ -49,13 +62,14 @@ export function createTokenParser(name, numArgs = 0) {
 	}
 
 	const seq = [
-		lbracket,
-		P.string(name),
+		P.regexp(/\[?/).desc('optional start bracket'),
+		P.string(name).desc('name'),
 		tokenArgumentParser,
-		rbracket
+		rbracket.desc('end bracket')
 	];
 
 	return P.seq(...seq)
+		.trim(P.optWhitespace)
 		.map(
 			R.compose(
 				R.tail,
@@ -92,7 +106,7 @@ function convertDefinition(definition) {
 	// [2] - (boolean) - required
 	// [3] - (boolean) - required (when children)
 	// tokens are assumed optional
-	const defTokenParser = spacedWithComments(createTokenParser(definition[0], definition[1]));
+	const defTokenParser = createTokenParser(definition[0], definition[1]);
 	if (definition.length < 3 || R.is(Boolean, definition[2])) return defTokenParser;
 
 	const numRequired = R.filter(R.any(R.both(R.is(Boolean), R.equals(true))), definition[2]).length;

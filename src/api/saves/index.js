@@ -1,21 +1,26 @@
 import path from 'path';
-import fs from 'fs';
-import Promise from 'bluebird';
-import _ from 'lodash';
+import R from 'ramda';
+import {of as futureOf} from 'fluture';
+import {fs} from './../../utility/fs';
+import {parseInteger} from './../../utility/numbers';
 
-Promise.promisifyAll(fs);
+/**
+ * Get all save regions for the given object with dfRootPath
+ * @param {string} options.dfRootPath
+ * @returns {Number[]}
+ */
+export const getAllSaveRegions = R.compose(
+	R.map(R.compose(
+		R.sort(R.subtract),
+		R.map(R.compose(parseInteger(10), R.nth(1), R.match(/^region(\d+)$/))),
+		R.filter(R.startsWith('region'))
+	)),
+	fs.readdirFuture,
+	(dfRootPath) => path.resolve(dfRootPath, 'data/save'),
+	R.prop('dfRootPath')
+);
 
-export async function getAllSaveRegions({dfRootPath} = {}) {
-	const savePath = path.resolve(dfRootPath, 'data/save');
-	const dirNames = await fs.readdirAsync(savePath);
-	return _.chain(dirNames)
-		.filter((dirName) => _.startsWith(dirName, 'region'))
-		.map((dirName) => _.trimStart(dirName, 'region'))
-		.map(_.parseInt)
-		.sortBy()
-		.value();
+export function getAllSaves() {
+	return futureOf([]);
 }
 
-export async function getAllSaves() {
-	return [];
-}

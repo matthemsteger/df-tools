@@ -1,13 +1,14 @@
 import path from 'path';
-import fs from 'fs';
-import Promise from 'bluebird';
-import {discoverInstall} from './../../model/install';
+import {fs} from './../../utility/fs';
+import {discoverInstall} from './../../api/install/discoverInstall';
 import WorldGenLexer from './../../dsl/lexers/worldGenLexer';
 import WorldGenParser from './../../dsl/parsers/worldGenParser';
 
-Promise.promisifyAll(fs);
+export default function getWorldGenSettings({dfRootPath}) {
+	// need a parser here
+}
 
-export default async function getWorldGenSettings({dfRootPath} = {}) {
+export async function getWorldGenSettingsAsync({dfRootPath} = {}) {
 	const install = await discoverInstall({dfRootPath});
 	const worldGenSettingsPath = path.resolve(install.path, 'data/init/world_gen.txt');
 	const worldGenText = await fs.readFileAsync(worldGenSettingsPath, 'utf8');

@@ -10,7 +10,7 @@ import RegionWorldSitesPopsLexer from './../../../src/dsl/lexers/regionWorldSite
 Promise.promisifyAll(fs);
 const debug = _debug('df:test:dsl:int-regionWorldSitesPopsLexer');
 
-describe('RegionWorldSitesPopsLexer integration tests', function () {
+describe.skip('RegionWorldSitesPopsLexer integration tests', function () {
 	it('should lex properly a region world sites pops file', async function () {
 		const fakeRegionBuffer = await fs.readFileAsync(path.resolve(__dirname, './../data/world_sites_and_pops_test.txt'));
 		const fakeRegionText = iconv.decode(fakeRegionBuffer, 'cp437');

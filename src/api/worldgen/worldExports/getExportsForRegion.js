@@ -1,38 +1,47 @@
 import glob from 'glob';
-import Promise from 'bluebird';
 import path from 'path';
-import _ from 'lodash';
-import {discoverInstall} from './../../../model/install';
+import R from 'ramda';
+import {encaseN2} from 'fluture';
+import {discoverInstall} from './../../../api/install/discoverInstall';
+
+const globFuture = encaseN2(glob);
+
+const fileTypes = [
+	{type: 'detailedMap', endsWith: 'detailed', ext: '.bmp'},
+	{type: 'worldHistory', endsWith: 'world_history', ext: '.txt'},
+	{type: 'worldMap', endsWith: 'world_map', ext: '.bmp'},
+	{type: 'worldSitesAndPops', endsWith: 'world_sites_and_pops', ext: '.txt'},
+	{type: 'worldGenParams', endsWith: 'world_gen_param', ext: '.txt'}
+];
 
 function determineFileType(name, ext) {
-	let foundType;
-
-	[
-		{type: 'detailedMap', endsWith: 'detailed', ext: '.bmp'},
-		{type: 'worldHistory', endsWith: 'world_history', ext: '.txt'},
-		{type: 'worldMap', endsWith: 'world_map', ext: '.bmp'},
-		{type: 'worldSitesAndPops', endsWith: 'world_sites_and_pops', ext: '.txt'},
-		{type: 'worldGenParams', endsWith: 'world_gen_param', ext: '.txt'}
-	].forEach(({type, endsWith, ext: defExt}) => { // eslint-disable-line consistent-return
-		if (_.endsWith(name, endsWith) && ext === defExt) {
-			foundType = type;
-		}
-	});
-
-	return foundType;
+	return R.find(R.both(
+		R.compose(R.endsWith(R.__, name), R.prop('endsWith')),
+		R.propEq('ext', ext)
+	), fileTypes);
 }
 
-export default async function getExportsForRegion({dfRootPath, region} = {}) {
-	const install = await discoverInstall({dfRootPath});
-	const regionFiles = await Promise.fromCallback((callback) => glob(path.join(install.path, `region${region}-*`), {nodir: true, absolute: true}, callback));
-	const mappedFiles = _.reduce(regionFiles, (map, filePath) => {
-		const {name, ext} = path.parse(filePath);
-		const type = determineFileType(name, ext);
-		_.assign(map, {[type]: filePath});
-		return map;
-	}, {});
+const getRegionsInPath = R.curry((region, installPath) =>
+	globFuture(path.join(installPath, `region${region}`), {nodir: true, absolute: true})
+);
 
-	if (!_.includes(_.keys(mappedFiles), 'worldHistory')) throw new Error(`Region ${region} not found.`);
-
-	return mappedFiles;
+export default function getExportsForRegion({dfRootPath, region}) {
+	return R.compose(
+		R.chain(R.compose(
+			R.map(R.compose(
+				R.when(R.complement(R.has('worldHistory')), () => {
+					throw new Error(`Region ${region} not found.`);
+				}),
+				R.reduce((map, filePath) => {
+					const {name, ext} = path.parse(filePath);
+					const type = determineFileType(name, ext);
+					return R.merge(R.__, {[type]: filePath});
+				}, {})
+			)),
+			getRegionsInPath(region),
+			R.prop('path')
+		)),
+		discoverInstall
+	)({dfRootPath});
 }
+

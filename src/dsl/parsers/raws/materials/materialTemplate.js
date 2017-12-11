@@ -20,6 +20,10 @@ const materialUsageDefinition = [
 	['EVAPORATES'],
 	['GENERATES_MIASMA'],
 	['HORN'],
+	['IF_EXISTS_SET_BOILING_POINT', 1], // creature_next_underground
+	['IF_EXISTS_SET_HEATDAM_POINT', 1], // creature_next_underground
+	['IF_EXISTS_SET_IGNITE_POINT', 1], // creature_next_underground
+	['IF_EXISTS_SET_MELTING_POINT', 1], // creature_next_underground
 	['IMPLIES_ANIMAL_KILL'],
 	['IS_GLASS'],
 	['IS_METAL'],

@@ -1,11 +1,17 @@
 
-export default class CivilizedWorldPopulation {
-	constructor({dwarf = 0, human = 0, elf = 0, goblin = 0, kobold = 0, total = 0} = {}) {
-		this.dwarf = dwarf;
-		this.human = human;
-		this.elf = elf;
-		this.goblin = goblin;
-		this.kobold = kobold;
-		this.total = total;
-	}
+export function civilizedPopulation({race, population = 0}) {
+	return {
+		race,
+		population
+	};
+}
+
+export default function civilizedWorldPopulation({
+	civilizedPopulations = [],
+	total = 0
+} = {}) {
+	return {
+		civilizedPopulations,
+		total
+	};
 }

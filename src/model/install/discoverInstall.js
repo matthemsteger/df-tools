@@ -1,32 +1,65 @@
 import os from 'os';
-import _ from 'lodash';
-import fs from 'fs';
-import Promise from 'bluebird';
+import R from 'ramda';
+import _fs from 'fs';
 import path from 'path';
-import DwarfFortressInstall from './dwarfFortressInstall';
+import {of as futureOf} from 'fluture';
+import {futurifyAll} from './../../utility/futurify';
+import createDwarfFortressInstall from './dwarfFortressInstall';
 
-Promise.promisifyAll(fs);
+const fs = futurifyAll(_fs);
 
-export async function discoverInstallMeta(installPath) {
+/**
+ * figure out if a directory includes a fileName
+ * @param {string} fileName
+ * @param {string} dirPath
+ * @returns {Future<boolean>}
+ */
+const directoryIncludesFile = R.curry((fileName, dirPath) =>
+	R.compose(
+		R.map(R.contains(fileName)),
+		fs.readdirFuture
+	)(dirPath)
+);
+
+/**
+ * @typedef InstallMeta
+ * @property {string} installPath
+ * @property {string} version
+ */
+
+/**
+ * discover the install meta data from the file system at the given path
+ * @param {string} installPath - the install path
+ * @returns {Future<InstallMeta>} 
+ */
+export function discoverInstallMeta(installPath) {
 	const metadata = {installPath};
+	const releaseNotesFileName = 'release notes.txt';
+	const releaseVersionRegex = /Release notes for (\d+.\d+.\d+)/;
 
-	const files = await fs.readdirAsync(installPath);
-	if (_.includes(files, 'release notes.txt')) {
-		const releaseNotesPath = path.resolve(installPath, 'release notes.txt');
-		const releaseNotes = await fs.readFileAsync(releaseNotesPath, {encoding: 'utf8', flag: 'r'});
-		const releaseVersionRegex = /Release notes for (\d+.\d+.\d+)/;
-		const matches = releaseNotes.match(releaseVersionRegex);
-		if (matches && matches.length >= 1) {
-			metadata.version = matches[1];
-		}
-	}
+	return R.compose(
+		R.chain((foundReleaseNotes) => {
+			if (!foundReleaseNotes) return futureOf(metadata);
 
-	return metadata;
+			const releaseNotesPath = path.resolve(installPath, releaseNotesFileName);
+			return R.map((releaseNotes) => {
+				const matches = releaseNotes.match(releaseVersionRegex);
+				if (matches && matches.length >= 1) {
+					metadata.version = matches[1];
+				}
+
+				return metadata;
+			}, fs.readFileFuture(releaseNotesPath, {encoding: 'utf8', flag: 'r'}));
+		}),
+		directoryIncludesFile(releaseNotesFileName)
+	)(installPath);
 }
 
-export default async function discoverInstall({dfRootPath} = {}) {
+export default function discoverInstall({dfRootPath} = {}) {
 	const osType = os.type();
-	const {version} = await discoverInstallMeta(dfRootPath);
-
-	return new DwarfFortressInstall({path: dfRootPath, osType, version});
+	return R.map(
+		({version}) => createDwarfFortressInstall({path: dfRootPath, osType, version}),
+		discoverInstallMeta(dfRootPath)
+	);
 }
+

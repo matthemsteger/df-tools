@@ -1,14 +1,20 @@
-import CivilizedWorldPopulation from './civilizedWorldPopulation';
-import Site from './site';
+import createCivilizedWorldPopulation, {civilizedPopulation} from './civilizedWorldPopulation';
+import site from './site';
 
-export default class WorldSitesAndPops {
-	constructor({civilizedWorldPopulation, sites, outdoorAnimalPopulations, undergroundAnimalPopulations} = {}) {
-		this.civilizedWorldPopulation = civilizedWorldPopulation || new CivilizedWorldPopulation();
-		this.sites = sites;
-		this.outdoorAnimalPopulations = outdoorAnimalPopulations;
-		this.undergroundAnimalPopulations = undergroundAnimalPopulations;
-	}
+export default function worldSitesAndPops({
+	civilizedWorldPopulation,
+	sites,
+	outdoorAnimalPopulations,
+	undergroundAnimalPopulations
+} = {}) {
+	return {
+		civilizedWorldPopulation: createCivilizedWorldPopulation(civilizedWorldPopulation),
+		sites,
+		outdoorAnimalPopulations,
+		undergroundAnimalPopulations
+	};
 }
 
-export {CivilizedWorldPopulation};
-export {Site};
+export {createCivilizedWorldPopulation as civilizedWorldPopulation, civilizedPopulation};
+export {site};
+export {default as civRuler} from './civRuler';
