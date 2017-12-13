@@ -11,14 +11,14 @@ export default function parseWorldSitesAndPops({filePath, creatures}) {
 	return R.compose(
 		R.map(R.compose(
 			R.prop('value'),
-			R.when(R.compliment(R.prop('status')), ({index, expected}) => {
+			R.when(R.complement(R.prop('status')), ({index, expected}) => {
 				debug('parse errors: %o', {index, expected});
 				throw new Error(`Error while parsing ${filePath}.`);
 			}),
 			(contents) => createRegionWorldSitesPopsParser(creatures).file.parse(contents),
 			(fileBuffer) => iconv.decode(fileBuffer, 'cp437')
 		)),
-		fs.readFileFuture,
+		(resolvedPath) => fs.readFileFuture(resolvedPath, null),
 		path.resolve
 	)(filePath);
 }

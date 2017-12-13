@@ -1,22 +1,18 @@
 import path from 'path';
+import R from 'ramda';
 import {fs} from './../../utility/fs';
-import {discoverInstall} from './../../api/install/discoverInstall';
-import WorldGenLexer from './../../dsl/lexers/worldGenLexer';
-import WorldGenParser from './../../dsl/parsers/worldGenParser';
+import worldGenSettingsParser from './../../dsl/parsers/settings/worldGen';
+import {fromParser} from './../../model/settings/worldGen';
 
 export default function getWorldGenSettings({dfRootPath}) {
-	// need a parser here
+	return R.compose(
+		R.map(R.compose(
+			fromParser,
+			R.prop('value'),
+			(contents) => worldGenSettingsParser.file.parse(contents)
+		)),
+		(filePath) => fs.readFileFuture(filePath, 'utf8'),
+		(rootPath) => path.resolve(rootPath, 'data/init/world_gen.txt')
+	)(dfRootPath);
 }
 
-export async function getWorldGenSettingsAsync({dfRootPath} = {}) {
-	const install = await discoverInstall({dfRootPath});
-	const worldGenSettingsPath = path.resolve(install.path, 'data/init/world_gen.txt');
-	const worldGenText = await fs.readFileAsync(worldGenSettingsPath, 'utf8');
-
-	const lexer = new WorldGenLexer();
-	const {tokens} = lexer.tokenize(worldGenText);
-	const parser = new WorldGenParser(tokens, lexer.allTokens);
-
-	const worldGenConfigurations = parser.parseWorldGenFile();
-	return worldGenConfigurations;
-}

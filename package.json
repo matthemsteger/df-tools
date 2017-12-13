@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run lint && npm run mocha",
     "mocha": "mocha --recursive --compilers js:babel-register \"test/**/test-*.js\"",
-    "mocha:integration": "mocha --recursive --grep \"integration:dsl/parsers/settings/worldGen\" --compilers js:babel-register \"test/**/int-*.js\"",
+    "mocha:integration": "mocha --recursive --grep \"integration:api/worldgen\" --compilers js:babel-register \"test/**/int-*.js\"",
     "mocha:integration:debug": "mocha --debug-brk --inspect --recursive --compilers js:babel-register \"test/**/int-*.js\"",
     "mocha:watch:nodemon": "nodemon",
     "mocha:watch": "mocha --recursive --reporter min --compilers js:babel-register --watch \"test/**/test-*.js\"",

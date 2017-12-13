@@ -2,7 +2,10 @@ import glob from 'glob';
 import path from 'path';
 import R from 'ramda';
 import {encaseN2} from 'fluture';
+import _debug from 'debug';
 import {discoverInstall} from './../../../api/install/discoverInstall';
+
+const debug = _debug('df:api:worldgen:worldExports:getExportsForRegion');
 
 const globFuture = encaseN2(glob);
 
@@ -15,6 +18,7 @@ const fileTypes = [
 ];
 
 function determineFileType(name, ext) {
+	debug('determineFileType for name: %s ext:%s', name, ext);
 	return R.find(R.both(
 		R.compose(R.endsWith(R.__, name), R.prop('endsWith')),
 		R.propEq('ext', ext)
@@ -22,7 +26,7 @@ function determineFileType(name, ext) {
 }
 
 const getRegionsInPath = R.curry((region, installPath) =>
-	globFuture(path.join(installPath, `region${region}`), {nodir: true, absolute: true})
+	globFuture(path.join(installPath, `region${region}*`), {nodir: true, absolute: true})
 );
 
 export default function getExportsForRegion({dfRootPath, region}) {
@@ -32,14 +36,17 @@ export default function getExportsForRegion({dfRootPath, region}) {
 				R.when(R.complement(R.has('worldHistory')), () => {
 					throw new Error(`Region ${region} not found.`);
 				}),
+				R.tap((regionExports) => debug('regionExports: %o', regionExports)),
 				R.reduce((map, filePath) => {
 					const {name, ext} = path.parse(filePath);
-					const type = determineFileType(name, ext);
-					return R.merge(R.__, {[type]: filePath});
-				}, {})
+					const {type} = determineFileType(name, ext);
+					return R.merge(map, {[type]: filePath});
+				}, {}),
+				R.tap((paths) => debug('paths: %o', paths))
 			)),
 			getRegionsInPath(region),
-			R.prop('path')
+			R.prop('path'),
+			R.tap((install) => debug('install: %o', install))
 		)),
 		discoverInstall
 	)({dfRootPath});

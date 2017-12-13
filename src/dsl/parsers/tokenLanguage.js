@@ -1,5 +1,8 @@
 import P from 'parsimmon';
 import R from 'ramda';
+import _debug from 'debug';
+
+const debug = _debug('df:dsl:parsers:tokenLanguage');
 
 /**
  * This is the common token language of [BLAH:something:...] and is shared among raws
@@ -70,12 +73,14 @@ export const makeRequiredDefinition = makeDefinition(true);
 export const makeOptionalDefinition = makeDefinition(false);
 
 function convertObjectDefinition(definition) {
-	console.log(definition);
+	debug('converting object definition %o', definition);
 	const {name, args, transform, children} = definition;
 	const defTokenParser = createTokenParser(name, args, transform);
+	debug('defTokenParser is %o', defTokenParser);
 	if (!R.length(children)) return defTokenParser;
 
 	const numRequired = R.compose(R.length, R.filter(R.propEq('required', true)))(children);
+	debug('creating child parsers from children %o', children);
 	const childTokenParsers = spaceAllWithComments(children.map(convertObjectDefinition));
 	return P.seqMap(
 		defTokenParser,
@@ -85,6 +90,7 @@ function convertObjectDefinition(definition) {
 }
 
 export function convertDefinition(definition) {
+	debug('converting definition %o', definition);
 	// definition is an array
 	// [0] - token name
 	// [1] - number of arguments

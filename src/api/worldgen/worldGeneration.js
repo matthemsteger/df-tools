@@ -1,23 +1,118 @@
 import {exec} from 'child_process';
 import path from 'path';
-import fs from 'fs';
-import _ from 'lodash';
-import Promise from 'bluebird';
-import Future from 'fluture';
+import Future, {parallel, both, reject as rejectedFutureOf, of as futureOf} from 'fluture';
 import R from 'ramda';
 import _debug from 'debug';
 import iconv from 'iconv-lite';
+import {fs} from './../../utility/fs';
 import {discoverInstall} from './../../model/install';
 import {getAllSaveRegions} from './../saves';
 import {getExportsForRegion, parseWorldSitesAndPops, parseWorldHistory} from './worldExports';
 import {worldGenResult} from './../../model/worldGen';
 import {getWorldGenSettings} from './../settings';
+import {parseCreatureRaws} from './../raws';
 
-Promise.promisifyAll(fs);
+const debug = _debug('df:api:worldgen:worldGeneration');
 
-const debug = _debug('df:worldgen');
+function runDwarfFortressProcess(executablePath, worldGenId, config, cwd) {
+	debug('runDwarfFortressProcess -> executablePath: %s, worldGenId: %o, config: %s, cwd: %s', executablePath, worldGenId, config, cwd);
+	return Future((reject, resolve) => {
+		const dfProcess = exec(`${executablePath} -gen ${worldGenId} RANDOM "${config}"`, {
+			cwd
+		}, (err, stdout, stderr) => {
+			if (err) return reject(err);
 
-export function genWorld({dfRootPath, config, id = null} = {}) {
+			return resolve({
+				stdout,
+				stderr
+			});
+		});
+
+		return () => {
+			if (dfProcess && !dfProcess.killed) {
+				dfProcess.kill();
+			}
+		};
+	})
+		.chainRej((err) => {
+			if (!err.code || err.code === 1) return rejectedFutureOf(err);
+			return futureOf({});
+		});
+}
+
+function readGameLog(gamelogPath, start) {
+	return Future((reject, resolve) => {
+		fs.createReadStream(gamelogPath, {
+			start
+		})
+			.pipe(iconv.decodeStream('cp437'))
+			.collect((err, logText) => {
+				if (err) reject(err);
+
+				resolve(logText);
+			});
+	});
+}
+
+const parseCreaturesIfNeeded = R.curry((creatures, installPath) => {
+	if (creatures) return futureOf(creatures);
+
+	return parseCreatureRaws(installPath);
+});
+
+export function genWorld({dfRootPath, config, creatures, id = null}) {
+	debug('starting genWorld with dfRootPath:%s, config:%s, id:%s', dfRootPath, config, id);
+
+	return R.chain(([install, worldSettings, usedIds, rawCreatures]) => {
+		debug('install: %o, worldSettings: %o, usedIds: %o', install, worldSettings, usedIds);
+		if (!R.any(R.propEq('title', config), worldSettings)) {
+			return rejectedFutureOf(new Error(`Could not find a world generation configuration named ${config}`));
+		}
+
+		const worldGenId = R.when(R.not, R.always(R.compose(R.inc, R.last)(usedIds)), id);
+		const finalExecutablePath = / /.test(install.executablePath) ? `"${install.executablePath}"` : install.executablePath;
+		const gamelogPath = path.resolve(dfRootPath, 'gamelog.txt');
+		debug('worldGenId: %o, finalExecutablePath: %s, gamelogPath: %s', worldGenId, finalExecutablePath, gamelogPath);
+		return R.chain(({size: initialGamelogSize}) => {
+			return R.chain(({stdout, stderr}) => {
+				debug('stdout is %s, stderr is %s', stdout, stderr);
+				return R.chain((rawGameLog) => {
+					const lastLogEntry = R.compose(
+						R.head,
+						R.reverse,
+						R.filter(R.startsWith('Command Line:')),
+						R.split(/\r?\n/)
+					)(rawGameLog);
+
+					if (R.is(String, lastLogEntry) && lastLogEntry.indexOf('aborted because folder exists') > -1) {
+						return rejectedFutureOf(new Error(`There is already a region${worldGenId}`));
+					}
+
+					return R.chain((regionFilePaths) => {
+						const {worldSitesAndPops: worldSitesAndPopsPath, worldHistory: worldHistoryPath} = regionFilePaths;
+						return R.map(([worldSitesAndPops, worldHistory]) => {
+							const region = `region${worldGenId}`;
+							return {
+								worldSitesAndPops,
+								worldHistory,
+								region,
+								worldSitesAndPopsPath,
+								filePaths: regionFilePaths
+							};
+						}, both(parseWorldSitesAndPops({filePath: worldSitesAndPopsPath, creatures: rawCreatures}), parseWorldHistory({filePath: worldHistoryPath})));
+					}, getExportsForRegion({dfRootPath, region: worldGenId}));
+				}, readGameLog(gamelogPath, initialGamelogSize));
+			}, runDwarfFortressProcess(finalExecutablePath, worldGenId, config, install.path));
+		}, fs.statFuture(gamelogPath));
+	}, parallel(3, R.juxt([discoverInstall, getWorldGenSettings, getAllSaveRegions, R.compose(parseCreaturesIfNeeded(creatures), R.prop('dfRootPath'))])({dfRootPath})));
+}
+
+export function genWorlds({dfRootPath, config, numWorlds = 1}) {
+	//
+}
+
+/*
+export function genWorldAsync({dfRootPath, config, id = null} = {}) {
 	return Future((reject, resolve) => {
 		debug('starting genWorld with dfRootPath:%s, config:%s, id:%s', dfRootPath, config, id);
 
@@ -204,3 +299,5 @@ export async function genWorlds({dfRootPath, config, numWorlds = 1} = {}) {
 
 	return finalResult;
 }
+*/
+

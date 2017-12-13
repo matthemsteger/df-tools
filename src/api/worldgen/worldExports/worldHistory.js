@@ -8,17 +8,21 @@ import readline from 'readline';
 const debug = _debug('df:api:worldgen:worldExports:worldHistory');
 
 export default function parseWorldHistory({filePath}) {
-	// simple parsing, only care about world name
-	const lineReader = readline.createInterface({
-		input: fs.createReadStream(path.resolve(filePath)).pipe(iconv.decodeStream('cp437'))
-	});
-
 	return Future((reject, resolve) => {
+		// simple parsing, only care about world name
+		const input = fs.createReadStream(path.resolve(filePath)).pipe(iconv.decodeStream('cp437'));
+		const lineReader = readline.createInterface({
+			input,
+			crlfDelay: Number.POSITIVE_INFINITY
+		});
+
 		let lineNumber = 0;
 		const worldHistory = {};
 		let cancelled = false;
+		let done = false;
 
 		lineReader.on('line', (line) => {
+			if (cancelled || done) return;
 			lineNumber += 1;
 			debug('reading line %d as %s', lineNumber, line);
 			switch (lineNumber) {
@@ -31,6 +35,7 @@ export default function parseWorldHistory({filePath}) {
 				default:
 					debug('closing reader because at line %d', lineNumber);
 					lineReader.close();
+					done = true;
 			}
 		});
 

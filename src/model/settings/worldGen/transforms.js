@@ -1,10 +1,5 @@
 import R from 'ramda';
-import {
-	makeStringValueTransducer,
-	makeTransducer,
-	makeIntegerValueTransducer,
-	makeCamelCaseTransducer
-} from './../../modelHelpers';
+import {makeCamelCaseTransducer} from './../../modelHelpers';
 import {parseBase10Int} from './../../../utility/numbers';
 
 export function dim({x, y} = {}) {
