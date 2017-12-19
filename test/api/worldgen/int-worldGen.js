@@ -19,4 +19,22 @@ describe('integration:api/worldgen', function () {
 			}
 		);
 	});
+
+	it('should be able to cancel a world generation', function (done) {
+		this.timeout(3 * 60 * 1000); // 3 minutes
+		const cancel = genWorld({
+			dfRootPath: DF_TEST_PATH,
+			config: 'MATT SMALL',
+			creatures
+		}).fork(done, (result) => {
+			debug('result is %O', result);
+			expect.fail(0, 1, 'Expected cancel, but got result');
+			done();
+		});
+
+		setTimeout(() => {
+			cancel();
+			done();
+		}, 2000);
+	});
 });

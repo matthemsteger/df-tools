@@ -1,4 +1,4 @@
-import {Token, Lexer} from 'chevrotain';
+import {Token} from 'chevrotain';
 
 export class LineEnding extends Token {
 	static PATTERN = /\r\n?|\n/;

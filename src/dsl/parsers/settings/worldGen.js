@@ -1,6 +1,6 @@
 import R from 'ramda';
 import createSettingsParser from './createSettingsParser';
-import {makeDefinition, makeRequiredDefinition} from './../tokenLanguage';
+import {makeRequiredDefinition} from './../tokenLanguage';
 import {
 	makeCamelCaseTransducer,
 	makeStringValueTransducer,
@@ -129,90 +129,6 @@ export const definition = {
 		])
 	]
 };
-
-const definitionOld = [
-	['WORLD_GEN', 0, [
-		['TITLE', 1, true],
-		['DIM', 2, true],
-		['EMBARK_POINTS', 1, true],
-		['END_YEAR', 1, true],
-		['BEAST_END_YEAR', 2, true],
-		['REVEAL_ALL_HISTORY', 1, true],
-		['CULL_HISTORICAL_FIGURES', 1, true],
-		['ELEVATION', 4, true],
-		['RAINFALL', 4, true],
-		['TEMPERATURE', 4, true],
-		['DRAINAGE', 4, true],
-		['VOLCANISM', 4, true],
-		['SAVAGERY', 4, true],
-		['ELEVATION_FREQUENCY', 6, true],
-		['RAIN_FREQUENCY', 6, true],
-		['DRAINAGE_FREQUENCY', 6, true],
-		['TEMPERATURE_FREQUENCY', 6, true],
-		['SAVAGERY_FREQUENCY', 6, true],
-		['VOLCANISM_FREQUENCY', 6, true],
-		['POLE', 1, true],
-		['MINERAL_SCARCITY', 1, true],
-		['MEGABEAST_CAP', 1, true],
-		['SEMIMEGABEAST_CAP', 1, true],
-		['TITAN_NUMBER', 1, true],
-		['TITAN_ATTACK_TRIGGER', 3, true],
-		['DEMON_NUMBER', 1, true],
-		['NIGHT_TROLL_NUMBER', 1, true],
-		['BOGEYMAN_NUMBER', 1, true],
-		['VAMPIRE_NUMBER', 1, true],
-		['WEREBEAST_NUMBER', 1, true],
-		['SECRET_NUMBER', 1, true],
-		['REGIONAL_INTERACTION_NUMBER', 1, true],
-		['DISTURBANCE_INTERACTION_NUMBER', 1, true],
-		['EVIL_CLOUD_NUMBER', 1, true],
-		['EVIL_RAIN_NUMBER', 1, true],
-		['GENERATE_DIVINE_MATERIALS', 1, true],
-		['GOOD_SQ_COUNTS', 3, true],
-		['EVIL_SQ_COUNTS', 3, true],
-		['PEAK_NUMBER_MIN', 1, true],
-		['PARTIAL_OCEAN_EDGE_MIN', 1, true],
-		['COMPLETE_OCEAN_EDGE_MIN', 1, true],
-		['VOLCANO_MIN', 1, true],
-		['REGION_COUNTS', 4, true], // there are a bunch of these
-		['EROSION_CYCLE_COUNT', 1, true],
-		['RIVER_MINS', 2, true],
-		['PERIODICALLY_ERODE_EXTREMES', 1, true],
-		['OROGRAPHIC_PRECIPITATION', 1, true],
-		['SUBREGION_MAX', 1, true],
-		['CAVERN_LAYER_COUNT', 1, true],
-		['CAVERN_LAYER_OPENNESS_MIN', 1, true],
-		['CAVERN_LAYER_OPENNESS_MAX', 1, true],
-		['CAVERN_LAYER_PASSAGE_DENSITY_MIN', 1, true],
-		['CAVERN_LAYER_PASSAGE_DENSITY_MAX', 1, true],
-		['CAVERN_LAYER_WATER_MIN', 1, true],
-		['CAVERN_LAYER_WATER_MAX', 1, true],
-		['HAVE_BOTTOM_LAYER_1', 1, true],
-		['HAVE_BOTTOM_LAYER_2', 1, true],
-		['LEVELS_ABOVE_GROUND', 1, true],
-		['LEVELS_ABOVE_LAYER_1', 1, true],
-		['LEVELS_ABOVE_LAYER_2', 1, true],
-		['LEVELS_ABOVE_LAYER_3', 1, true],
-		['LEVELS_ABOVE_LAYER_4', 1, true],
-		['LEVELS_ABOVE_LAYER_5', 1, true],
-		['LEVELS_AT_BOTTOM', 1, true],
-		['CAVE_MIN_SIZE', 1, true],
-		['CAVE_MAX_SIZE', 1, true],
-		['MOUNTAIN_CAVE_MIN', 1, true],
-		['NON_MOUNTAIN_CAVE_MIN', 1, true],
-		['ALL_CAVES_VISIBLE', 1, true],
-		['SHOW_EMBARK_TUNNEL', 1, true],
-		['TOTAL_CIV_NUMBER', 1, true],
-		['TOTAL_CIV_POPULATION', 1, true],
-		['SITE_CAP', 1, true],
-		['PLAYABLE_CIVILIZATION_REQUIRED', 1, true],
-		['ELEVATION_RANGES', 3, true],
-		['RAIN_RANGES', 3, true],
-		['DRAINAGE_RANGES', 3, true],
-		['SAVAGERY_RANGES', 3, true],
-		['VOLCANISM_RANGES', 3, true]
-	]]
-];
 
 export default createSettingsParser(definition);
 

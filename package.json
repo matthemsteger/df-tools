@@ -11,7 +11,7 @@
     "mocha:watch:nodemon": "nodemon",
     "mocha:watch": "mocha --recursive --reporter min --compilers js:babel-register --watch \"test/**/test-*.js\"",
     "lint": "eslint \"**/*.js\" && echo Lint passed.",
-    "coverage": "nyc npm run mocha",
+    "coverage": "nyc --cache npm run mocha && nyc report --reporter=lcov",
     "build": "babel src -d dist",
     "dev": "babel src --watch -d dist",
     "dev:cli": "babel-node src/cli/index.js",

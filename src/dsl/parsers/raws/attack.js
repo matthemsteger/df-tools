@@ -8,7 +8,7 @@ export default createTokenParser('ATTACK', 7).thru(spaced).chain((node) => {
 		attackPrepareRecover
 	]);
 
-	return P.alt(...childTokenParsers).times(childTokenParsers.length).map((children) => {
-		return {children, ...node};
-	});
+	return P.alt(...childTokenParsers).times(childTokenParsers.length).map((children) =>
+		({children, ...node})
+	);
 });

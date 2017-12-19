@@ -24,3 +24,9 @@ export function fakeFuturifiedFs(sandbox) {
 	return setupModuleDependency(sandbox, ['readdirFuture', 'readFileFuture']);
 }
 
+export function setupFakeFsModule(sandbox) {
+	const fsModule = setupModuleDependency(sandbox, ['glob']);
+	fsModule.fs = fakeFuturifiedFs(sandbox);
+	return fsModule;
+}
+

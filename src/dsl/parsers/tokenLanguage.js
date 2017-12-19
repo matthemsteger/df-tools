@@ -29,7 +29,7 @@ export function spaceAllWithComments(parsers) {
 
 export const numRequiredInDefinitions = (definitions) => R.length(R.filter(R.any(R.both(R.is(Boolean), R.equals(true))), definitions));
 
-export function createTokenParser(name, numArgs = 0, transformer) {
+export function createTokenParser(name, numArgs = 0) {
 	// will need to take a NaN or equiv here as numArgs and then gather arguments
 	// for dynamic tags that dont have a set amount of args
 	let tokenArgumentParser;

@@ -10,13 +10,12 @@ export default class StreamEditor extends Transform {
 		this.workingReplacements = _.sortBy(this.replacements, 'startOffset');
 	}
 
-	_transform(chunk, encoding, callback) {
-		// chunk by index
-		// if we have no replacements within this chunk, then write it
-		// if there is a replacement *within* the chunk, simply replace the string
-		// if there is a replacement that spans a chunk, then store it in a queue for next time
-		
-	}
+	// _transform(chunk, encoding, callback) {
+	// chunk by index
+	// if we have no replacements within this chunk, then write it
+	// if there is a replacement *within* the chunk, simply replace the string
+	// if there is a replacement that spans a chunk, then store it in a queue for next time
+	// }
 
 	replacementsForChunk(startOffset, endOffset) {
 		return _.reject(this.replacements, (replacement) =>

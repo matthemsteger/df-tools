@@ -1,7 +1,6 @@
 import R from 'ramda';
 import path from 'path';
-import glob from 'glob';
-import {node} from 'fluture';
+import {glob} from './../../utility/fs';
 
 export const typeToFilePrefixMap = {
 	bodyDetailPlan: 'b_detail_plan',
@@ -36,7 +35,7 @@ export const typeToFilePrefixMap = {
 };
 
 const makeFilesFunction = R.curry((prefix, installPath) =>
-	node((done) => glob(`${prefix}_*.txt`, {cwd: path.resolve(installPath, 'raw/objects'), nodir: true, absolute: true}, done))
+	glob(`${prefix}_*.txt`, {cwd: path.resolve(installPath, 'raw/objects'), nodir: true, absolute: true})
 );
 
 export default R.map((prefix) => makeFilesFunction(prefix), typeToFilePrefixMap);

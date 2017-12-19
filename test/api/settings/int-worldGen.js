@@ -13,6 +13,7 @@ describe('integration:api/settings/worldGen', function () {
 			done,
 			(result) => {
 				debug('result is %O', result);
+				expect(result).to.be.an('object');
 				done();
 			}
 		);
