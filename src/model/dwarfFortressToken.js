@@ -13,8 +13,12 @@ export default class DwarfFortressToken {
 	}
 
 	static fromParsedTokens(nameToken, argsTokens = []) {
-		if (!nameToken) throw new Error('Tried to call fromParsedTokens without nameToken');
-		if (!nameToken.image) throw new Error('Tried to call fromParsedTokens without proper parsedToken');
+		if (!nameToken)
+			throw new Error('Tried to call fromParsedTokens without nameToken');
+		if (!nameToken.image)
+			throw new Error(
+				'Tried to call fromParsedTokens without proper parsedToken'
+			);
 		const {image: name} = nameToken;
 		const args = _.map(argsTokens, 'image');
 

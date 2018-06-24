@@ -71,9 +71,7 @@ const materialUsageDefinition = [
 	['UNDIGGABLE'],
 	['WOOD'],
 	['YARN'],
-	...R.map((contaminant) =>
-		[`${contaminant}_MAP_DISCRIPTOR`]
-	)([
+	...R.map((contaminant) => [`${contaminant}_MAP_DISCRIPTOR`])([
 		'BLOOD',
 		'ICHOR',
 		'GOO',
@@ -129,22 +127,13 @@ export const definition = [
 	['WAFERS'],
 	...R.compose(
 		R.unnest,
-		R.map((modifier) =>
-			[
-				[`${modifier}_YIELD`, 1],
-				[`${modifier}_ELASTICITY`, 1],
-				[`${modifier}_FRACTURE`, 1],
-				[`${modifier}_STRAIN_AT_YIELD`, 1]
-			]
-		)
-	)([
-		'IMPACT',
-		'COMPRESSIVE',
-		'TENSILE',
-		'TORSION',
-		'SHEAR',
-		'BENDING'
-	]),
+		R.map((modifier) => [
+			[`${modifier}_YIELD`, 1],
+			[`${modifier}_ELASTICITY`, 1],
+			[`${modifier}_FRACTURE`, 1],
+			[`${modifier}_STRAIN_AT_YIELD`, 1]
+		])
+	)(['IMPACT', 'COMPRESSIVE', 'TENSILE', 'TORSION', 'SHEAR', 'BENDING']),
 	...materialUsageDefinition,
 	syndromeDefinition
 ];

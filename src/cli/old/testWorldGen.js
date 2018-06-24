@@ -31,24 +31,31 @@ export async function handler(argv) {
 		// const generatedSeed = _.random(0, 99999);
 		const {dir: cwd} = nodePath.parse(path);
 		debug('calling %s with config %s and id %s', path, config, id);
-		const [stdout, stderr] = await Promise.fromCallback((callback) => {
-			const dfProcess = exec(`${path} -gen ${id} RANDOM "${config}"`, {cwd}, callback);
-			dfProcess.on('exit', (code, signal) => {
-				debug('on exit code %s and signal %s', code, signal);
-			});
+		const [stdout, stderr] = await Promise.fromCallback(
+			(callback) => {
+				const dfProcess = exec(
+					`${path} -gen ${id} RANDOM "${config}"`,
+					{cwd},
+					callback
+				);
+				dfProcess.on('exit', (code, signal) => {
+					debug('on exit code %s and signal %s', code, signal);
+				});
 
-			dfProcess.on('error', (err) => {
-				debug(err);
-			});
+				dfProcess.on('error', (err) => {
+					debug(err);
+				});
 
-			dfProcess.stdout.on('data', (data) => {
-				debug('stdout: %o', data);
-			});
+				dfProcess.stdout.on('data', (data) => {
+					debug('stdout: %o', data);
+				});
 
-			dfProcess.stderr.on('data', (data) => {
-				debug('stderr: %o', data);
-			});
-		}, {multiArgs: true});
+				dfProcess.stderr.on('data', (data) => {
+					debug('stderr: %o', data);
+				});
+			},
+			{multiArgs: true}
+		);
 
 		debug('stdout is %o and stderr is %o', stdout, stderr);
 

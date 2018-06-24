@@ -24,7 +24,10 @@ export function renderExpectationsOrBlock(classNameImportObject, expectation) {
 	`;
 }
 
-export function renderExpectationsOptionsBlock(classNameImportObject, expectation) {
+export function renderExpectationsOptionsBlock(
+	classNameImportObject,
+	expectation
+) {
 	const {className} = expectation;
 	const classVarName = _.lowerFirst(className);
 
@@ -51,7 +54,9 @@ export function renderExpectationRuleBlock(classNameImportObject, expectation) {
 		this.${classVarName} = this.RULE('${classVarName}', () => {
 			this.CONSUME(TokenOpen);
 			const nameToken = this.CONSUME(${classNameImportObject}.${className});
-			${ifRender(numArgs > 0, pretty(-3)`
+			${ifRender(
+				numArgs > 0,
+				pretty(-3)`
 			const argTokens = [];
 			this.MANY(() => {
 				this.CONSUME(TokenArgSeperator);
@@ -61,7 +66,8 @@ export function renderExpectationRuleBlock(classNameImportObject, expectation) {
 
 			if (argTokens.length !== ${numArgs}) {
 				throw this.SAVE_ERROR(new chevrotainExceptions.MismatchedTokenException(\`This token requires {numArgs} arguments, but found \${argTokens.length}\`, nameToken));
-			}`).render()}
+			}`
+			).render()}
 
 			this.CONSUME(TokenClose);
 
@@ -71,7 +77,11 @@ export function renderExpectationRuleBlock(classNameImportObject, expectation) {
 	`;
 }
 
-export default async function render(classNameImportObject, expectations, useOr = true) {
+export default async function render(
+	classNameImportObject,
+	expectations,
+	useOr = true
+) {
 	const classNames = _.map(expectations, 'className');
 	return pretty(-2)`
 		${renderImportBlock(classNames)}
@@ -79,17 +89,33 @@ export default async function render(classNameImportObject, expectations, useOr 
 		const foundTokenNames = [];
 		const dfTokens = [];
 		this.MANY(() => {
-			${ifRender(useOr, pretty(-3)`
+			${ifRender(
+				useOr,
+				pretty(-3)`
 			this.OR([
-				${map(expectations, _.partial(renderExpectationsOrBlock, classNameImportObject))}
+				${map(
+					expectations,
+					_.partial(renderExpectationsOrBlock, classNameImportObject)
+				)}
 			]);
-			`).else(pretty(-3)`
-			${map(expectations, _.partial(renderExpectationsOptionsBlock, classNameImportObject))}
-			`).render()}
+			`
+			)
+				.else(
+					pretty(-3)`
+			${map(
+				expectations,
+				_.partial(renderExpectationsOptionsBlock, classNameImportObject)
+			)}
+			`
+				)
+				.render()}
 		});
 
 		// TODO: if we have not found a required token, throw an error
 
-		${map(expectations, _.partial(renderExpectationRuleBlock, classNameImportObject))}
+		${map(
+			expectations,
+			_.partial(renderExpectationRuleBlock, classNameImportObject)
+		)}
 		`;
 }

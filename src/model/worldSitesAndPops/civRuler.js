@@ -1,8 +1,4 @@
-export default function civRuler({
-	race,
-	title,
-	name
-}) {
+export default function civRuler({race, title, name}) {
 	return {
 		race,
 		title,

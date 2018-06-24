@@ -1,11 +1,24 @@
 import {Parser, tokenMatcher} from 'chevrotain';
 import _ from 'lodash';
-import {Comment, TokenOpen, TokenArgSeperator, TokenArgument, TokenClose} from './../../tokens/languageTokens';
-import {BaseRawToken, ObjectToken, ObjectTypeToken} from './../../tokens/rawTokens';
+import {
+	Comment,
+	TokenOpen,
+	TokenArgSeperator,
+	TokenArgument,
+	TokenClose
+} from './../../tokens/languageTokens';
+import {
+	BaseRawToken,
+	ObjectToken,
+	ObjectTypeToken
+} from './../../tokens/rawTokens';
 
 export default class BaseRawParser extends Parser {
 	constructor(tokens, tokenConstructors = []) {
-		const filteredTokens = _.reject(tokens, (token, idx) => tokenMatcher(token, Comment) && idx !== 0);
+		const filteredTokens = _.reject(
+			tokens,
+			(token, idx) => tokenMatcher(token, Comment) && idx !== 0
+		);
 		super(filteredTokens, tokenConstructors, {outputCst: true});
 
 		this.RULE('parseRawFile', () => {
@@ -39,12 +52,19 @@ export default class BaseRawParser extends Parser {
 					// if the next token is one of the objectType tokens, then we dont want to gobble it up
 					let tokenCount = 1;
 					let nextToken = this.LA(tokenCount);
-					while (nextToken && (nextToken.image === '[' || tokenMatcher(nextToken, Comment) === true)) {
+					while (
+						nextToken &&
+						(nextToken.image === '[' ||
+							tokenMatcher(nextToken, Comment) === true)
+					) {
 						tokenCount += 1;
 						nextToken = this.LA(tokenCount);
 					}
 
-					return nextToken && tokenMatcher(nextToken, ObjectTypeToken) === false;
+					return (
+						nextToken &&
+						tokenMatcher(nextToken, ObjectTypeToken) === false
+					);
 				},
 				DEF: () => {
 					this.SUBRULE(this.objectChildTag);

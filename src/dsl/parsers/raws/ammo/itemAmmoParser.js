@@ -6,9 +6,7 @@ export default createRawFileParser({
 		['NAME', 2, true],
 		['CLASS', 1],
 		['SIZE', 1, true],
-		['ATTACK', 7, [
-			['ATTACK_PREPARE_AND_RECOVER', 2]
-		], true]
+		['ATTACK', 7, [['ATTACK_PREPARE_AND_RECOVER', 2]], true]
 	]
 });
 

@@ -1,6 +1,10 @@
 import sysPath from 'path';
 
-export default function createDwarfFortressInstall({path, version, osType} = {}) {
+export default function createDwarfFortressInstall({
+	path,
+	version,
+	osType
+} = {}) {
 	let executablePath;
 	switch (osType) {
 		case 'Windows_NT':
@@ -19,4 +23,3 @@ export default function createDwarfFortressInstall({path, version, osType} = {})
 		executablePath
 	};
 }
-

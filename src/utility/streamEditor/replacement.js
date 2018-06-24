@@ -1,4 +1,3 @@
-
 export default class Replacement {
 	constructor({startOffset, endOffset, replaceText} = {}) {
 		this.startOffset = startOffset;

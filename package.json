@@ -1,71 +1,79 @@
 {
-  "name": "df-tools",
-  "version": "0.0.1",
-  "description": "Dwarf Fortress related tools",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "npm run lint && npm run mocha",
-    "mocha": "mocha --recursive --compilers js:babel-register \"test/**/test-*.js\"",
-    "mocha:integration": "mocha --recursive --grep \"integration:api/worldgen\" --compilers js:babel-register \"test/**/int-*.js\"",
-    "mocha:integration:debug": "mocha --debug-brk --inspect --recursive --compilers js:babel-register \"test/**/int-*.js\"",
-    "mocha:watch:nodemon": "nodemon",
-    "mocha:watch": "mocha --recursive --reporter min --compilers js:babel-register --watch \"test/**/test-*.js\"",
-    "lint": "eslint \"**/*.js\" && echo Lint passed.",
-    "coverage": "nyc --cache npm run mocha && nyc report --reporter=lcov",
-    "build": "babel src -d dist",
-    "dev": "babel src --watch -d dist",
-    "dev:cli": "babel-node src/cli/index.js",
-    "dev:cli:debug": "babel-node --inspect --debug-brk src/cli/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/matthemsteger/df-tools.git"
-  },
-  "keywords": [
-    "dwarf fortress"
-  ],
-  "author": "Matt Hemsteger",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/matthemsteger/df-tools/issues"
-  },
-  "homepage": "https://github.com/matthemsteger/df-tools#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^7.2.3",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-register": "^6.26.0",
-    "chai": "^4.1.1",
-    "chai-interface": "^2.0.3",
-    "eslint": "^4.5.0",
-    "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "mocha": "^3.5.0",
-    "nodemon": "^1.11.0",
-    "nyc": "^11.1.0",
-    "prettier": "^1.8.2",
-    "proxyquire": "^1.8.0",
-    "sinon": "^3.2.1",
-    "sinon-chai": "^2.13.0"
-  },
-  "dependencies": {
-    "bluebird": "^3.5.0",
-    "chevrotain": "^0.32.1",
-    "debug": "^3.0.0",
-    "dustjs-helpers": "^1.7.3",
-    "dustjs-linkedin": "^2.7.5",
-    "fluture": "^7.1.1",
-    "folktale": "^2.0.1",
-    "glob": "^7.1.2",
-    "iconv-lite": "^0.4.18",
-    "lodash": "^4.17.4",
-    "most": "^1.6.2",
-    "parsimmon": "^1.6.2",
-    "ramda": "^0.24.1",
-    "serialize-error": "^2.1.0",
-    "yargs": "^8.0.2"
-  }
+	"name": "df-tools",
+	"version": "0.0.1",
+	"description": "Dwarf Fortress related tools",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "npm run lint && npm run mocha",
+		"mocha": "mocha --recursive -r babel-register \"test/**/*.spec.js\"",
+		"mocha:integration": "mocha --recursive --grep \"integration:api/worldgen\" --compilers js:babel-register \"test/**/int-*.js\"",
+		"mocha:integration:debug": "mocha --debug-brk --inspect --recursive --compilers js:babel-register \"test/**/int-*.js\"",
+		"mocha:watch:nodemon": "nodemon",
+		"mocha:watch": "mocha --recursive --reporter min -r babel-register --watch \"test/**/*.spec.js\"",
+		"lint": "eslint \"**/*.js\" && echo Lint passed.",
+		"coverage": "nyc --cache npm run mocha && nyc report --reporter=lcov",
+		"build": "babel src -d dist",
+		"dev": "babel src --watch -d dist",
+		"dev:cli": "babel-node src/cli/index.js",
+		"dev:cli:debug": "babel-node --inspect --debug-brk src/cli/index.js",
+		"prettier": "prettier",
+		"prepublishOnly": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/matthemsteger/df-tools.git"
+	},
+	"keywords": [
+		"dwarf fortress"
+	],
+	"author": "Matt Hemsteger",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/matthemsteger/df-tools/issues"
+	},
+	"homepage": "https://github.com/matthemsteger/df-tools#readme",
+	"engines": {
+		"node": ">= 8.9"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-eslint": "^8.2.5",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.7.0",
+		"babel-register": "^6.26.0",
+		"chai": "^4.1.2",
+		"chai-interface": "^2.0.3",
+		"eslint": "^4.19.1",
+		"eslint-config-airbnb-base": "^13.0.0",
+		"eslint-config-prettier": "^2.9.0",
+		"eslint-plugin-import": "^2.12.0",
+		"eslint-plugin-prettier": "^2.6.1",
+		"eslint-plugin-promise": "^3.8.0",
+		"mocha": "^5.2.0",
+		"nodemon": "^1.17.5",
+		"nyc": "^12.0.2",
+		"prettier": "^1.13.5",
+		"proxyquire": "^2.0.1",
+		"sinon": "^6.0.0",
+		"sinon-chai": "^3.2.0"
+	},
+	"dependencies": {
+		"bluebird": "^3.5.1",
+		"chevrotain": "^3.6.1",
+		"debug": "^3.1.0",
+		"dustjs-helpers": "^1.7.4",
+		"dustjs-linkedin": "^2.7.5",
+		"fluture": "^8.0.2",
+		"folktale": "^2.1.0",
+		"glob": "^7.1.2",
+		"iconv-lite": "^0.4.23",
+		"lodash": "^4.17.10",
+		"md5-file": "^4.0.0",
+		"most": "^1.7.3",
+		"parsimmon": "^1.11.0",
+		"ramda": "^0.25.0",
+		"serialize-error": "^2.1.0",
+		"yargs": "^11.0.0"
+	}
 }

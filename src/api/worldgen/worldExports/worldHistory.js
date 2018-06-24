@@ -10,7 +10,9 @@ const debug = _debug('df:api:worldgen:worldExports:worldHistory');
 export default function parseWorldHistory({filePath}) {
 	return Future((reject, resolve) => {
 		// simple parsing, only care about world name
-		const input = fs.createReadStream(path.resolve(filePath)).pipe(iconv.decodeStream('cp437'));
+		const input = fs
+			.createReadStream(path.resolve(filePath))
+			.pipe(iconv.decodeStream('cp437'));
 		const lineReader = readline.createInterface({
 			input,
 			crlfDelay: Number.POSITIVE_INFINITY
@@ -56,4 +58,3 @@ export default function parseWorldHistory({filePath}) {
 		};
 	});
 }
-

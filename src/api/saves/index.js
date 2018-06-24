@@ -10,11 +10,19 @@ import {parseInteger} from './../../utility/numbers';
  * @returns {Number[]}
  */
 export const getAllSaveRegions = R.compose(
-	R.map(R.compose(
-		R.sort(R.subtract),
-		R.map(R.compose(parseInteger(10), R.nth(1), R.match(/^region(\d+)$/))),
-		R.filter(R.startsWith('region'))
-	)),
+	R.map(
+		R.compose(
+			R.sort(R.subtract),
+			R.map(
+				R.compose(
+					parseInteger(10),
+					R.nth(1),
+					R.match(/^region(\d+)$/)
+				)
+			),
+			R.filter(R.startsWith('region'))
+		)
+	),
 	fs.readdirFuture,
 	(dfRootPath) => path.resolve(dfRootPath, 'data/save'),
 	R.prop('dfRootPath')
@@ -23,4 +31,3 @@ export const getAllSaveRegions = R.compose(
 export function getAllSaves() {
 	return futureOf([]);
 }
-

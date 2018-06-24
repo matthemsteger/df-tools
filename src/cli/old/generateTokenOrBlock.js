@@ -40,12 +40,28 @@ export function builder(yargs) {
 
 export async function handler(argv) {
 	try {
-		const {raws, template: templatePath, filename, between, o: tokenNamesImportObject, useOr} = argv;
-		const rawFileNames = await Promise.fromCallback((callback) => glob(raws, {nodir: true, absolute: true}, callback));
-		const expectationsCollection = await getExpectations(rawFileNames, between);
+		const {
+			raws,
+			template: templatePath,
+			filename,
+			between,
+			o: tokenNamesImportObject,
+			useOr
+		} = argv;
+		const rawFileNames = await Promise.fromCallback((callback) =>
+			glob(raws, {nodir: true, absolute: true}, callback)
+		);
+		const expectationsCollection = await getExpectations(
+			rawFileNames,
+			between
+		);
 
 		const template = require(templatePath); // eslint-disable-line global-require,import/no-dynamic-require
-		const renderedTemplate = await template.default(tokenNamesImportObject, _.get(_.head(expectationsCollection), 'expectations'), useOr);
+		const renderedTemplate = await template.default(
+			tokenNamesImportObject,
+			_.get(_.head(expectationsCollection), 'expectations'),
+			useOr
+		);
 
 		await fs.writeFileAsync(filename, renderedTemplate);
 		process.exit(0);

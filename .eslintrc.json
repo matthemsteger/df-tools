@@ -1,6 +1,6 @@
 {
 	"parser": "babel-eslint",
-	"extends": "airbnb-base",
+	"extends": ["plugin:prettier/recommended", "airbnb-base"],
 	"env": {
 		"mocha": true,
 		"node": true
@@ -13,11 +13,19 @@
 		"semi": [2, "always"],
 		"no-tabs": 0,
 		"indent": [2, "tab", {"SwitchCase": 1}],
-		"space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
 		"object-curly-spacing": [2, "never"],
-		"max-len": 0,
 		"comma-dangle": [2, "never"],
 		"arrow-parens": [2, "always"],
-		"no-underscore-dangle": [2, {"allow": ["__"]}]
+		"no-underscore-dangle": [2, {"allow": ["__"]}],
+		"import/no-useless-path-segments": 0,
+		"function-paren-newline": 0,
+		"space-before-function-paren": 0,
+		"max-len": 0,
+		"implicit-arrow-linebreak": 0,
+		"curly": 0,
+		"object-curly-newline": 0,
+		"nonblock-statement-body-position": 0,
+		"operator-linebreak": 0,
+		"no-confusing-arrow": 0
 	}
 }

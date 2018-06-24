@@ -7,7 +7,10 @@ const debug = _debug('df:dsl:regionWorldSitesPopsLexer');
 
 function createTokenHierarchyCheckIterator(baseTokenConstructor) {
 	return function checkHierarchy(tokenConstructor) {
-		return Object.prototype.isPrototypeOf.call(baseTokenConstructor, tokenConstructor);
+		return Object.prototype.isPrototypeOf.call(
+			baseTokenConstructor,
+			tokenConstructor
+		);
 	};
 }
 
@@ -26,24 +29,37 @@ const creatureNameTokens = _.chain(worldSitesTokens)
 	.map((tokenClass, key) => ({key, tokenClass}))
 	.orderBy(['key'], ['desc'])
 	.map('tokenClass')
-	.filter(createTokenHierarchyCheckIterator(worldSitesTokens.CreatureNameToken))
+	.filter(
+		createTokenHierarchyCheckIterator(worldSitesTokens.CreatureNameToken)
+	)
 	.value();
 
 // const demonIdx = creatureNameTokens.indexOf(worldSitesTokens.DemonCreature);
 const exoticDemonIdx = creatureNameTokens.indexOf(worldSitesTokens.ExoticDemon);
 creatureNameTokens.splice(exoticDemonIdx, 1);
 
-const otherWorldlyCreatureIdx = creatureNameTokens.indexOf(worldSitesTokens.OtherWorldlyCreature);
+const otherWorldlyCreatureIdx = creatureNameTokens.indexOf(
+	worldSitesTokens.OtherWorldlyCreature
+);
 creatureNameTokens.splice(otherWorldlyCreatureIdx, 1);
 // creatureNameTokens.push(worldSitesTokens.DemonCreature);
 // creatureNameTokens.push(worldSitesTokens.OtherWorldlyCreature);
 
 debug('using %d creature name tokens', creatureNameTokens.length);
-const siteRulerLabels = _.filter(_.values(worldSitesTokens), createTokenHierarchyCheckIterator(worldSitesTokens.SiteRulerLabel));
+const siteRulerLabels = _.filter(
+	_.values(worldSitesTokens),
+	createTokenHierarchyCheckIterator(worldSitesTokens.SiteRulerLabel)
+);
 debug('using %d site ruler labels', siteRulerLabels.length);
 
-const creatureSiteStates = _.filter(_.values(worldSitesTokens), createTokenHierarchyCheckIterator(worldSitesTokens.CreatureSiteState));
-const creatureTypeModifiers = _.filter(_.values(worldSitesTokens), createTokenHierarchyCheckIterator(worldSitesTokens.CreatureTypeModifier));
+const creatureSiteStates = _.filter(
+	_.values(worldSitesTokens),
+	createTokenHierarchyCheckIterator(worldSitesTokens.CreatureSiteState)
+);
+const creatureTypeModifiers = _.filter(
+	_.values(worldSitesTokens),
+	createTokenHierarchyCheckIterator(worldSitesTokens.CreatureTypeModifier)
+);
 // debug('creatureTypeModifiers is %o', creatureTypeModifiers);
 
 export const modes = {
@@ -58,7 +74,8 @@ export const modes = {
 
 worldSitesTokens.WhiteSpace.GROUP = Lexer.SKIPPED;
 worldSitesTokens.WhiteSpaceNoNewLine.GROUP = Lexer.SKIPPED;
-worldSitesTokens.CivilizedWorldPopulationHeader.PUSH_MODE = modes.CIVILIZED_POPS;
+worldSitesTokens.CivilizedWorldPopulationHeader.PUSH_MODE =
+	modes.CIVILIZED_POPS;
 worldSitesTokens.TotalLabel.PUSH_MODE = modes.CIVILIZED_POPS_TOTAL;
 worldSitesTokens.TotalCivilizedPopulationNumber.POP_MODE = true;
 worldSitesTokens.SitesHeader.POP_MODE = true;
@@ -214,6 +231,9 @@ export default class RegionWorldSitesPopsLexer extends Lexer {
 		const def = createLexerDefinition();
 		super(def, {debug: true});
 
-		this.allTokens = _.chain(def.modes).flatMap().uniq().value();
+		this.allTokens = _.chain(def.modes)
+			.flatMap()
+			.uniq()
+			.value();
 	}
 }

@@ -1,4 +1,3 @@
-
 const privates = {
 	configurations: new WeakMap()
 };

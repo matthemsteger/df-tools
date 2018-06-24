@@ -1,6 +1,13 @@
 import {Parser} from 'chevrotain';
 import _debug from 'debug';
-import {Comment, TokenOpen, TokenArgSeperator, TokenArgument, TokenClose, TokenName} from './../tokens/languageTokens';
+import {
+	Comment,
+	TokenOpen,
+	TokenArgSeperator,
+	TokenArgument,
+	TokenClose,
+	TokenName
+} from './../tokens/languageTokens';
 
 const debug = _debug('df:dsl:parsers:genericLangParser');
 

@@ -1,4 +1,3 @@
-
 export const definitionProperties = [
 	['SYN_AFFECTED_CLASS', 1],
 	['SYN_AFFECTED_CREATURE', 2],

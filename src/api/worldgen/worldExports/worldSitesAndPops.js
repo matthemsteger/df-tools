@@ -10,20 +10,32 @@ const debug = _debug('df:api:worldgen:worldExports:worldSitesAndPops');
 
 export default function parseWorldSitesAndPops({filePath, creatures}) {
 	return R.compose(
-		R.chain(R.compose(
-			R.ifElse(
-				R.complement(R.prop('status')),
-				R.compose(
-					() => rejectedFutureOf(new Error(`Error while parsing ${filePath}.`)),
-					R.tap(({index, expected}) => debug('parse errors: %o', {index, expected}))
+		R.chain(
+			R.compose(
+				R.ifElse(
+					R.complement(R.prop('status')),
+					R.compose(
+						() =>
+							rejectedFutureOf(
+								new Error(`Error while parsing ${filePath}.`)
+							),
+						R.tap(({index, expected}) =>
+							debug('parse errors: %o', {index, expected})
+						)
+					),
+					R.compose(
+						futureOf,
+						R.prop('value')
+					)
 				),
-				R.compose(futureOf, R.prop('value'))
-			),
-			(contents) => createRegionWorldSitesPopsParser(creatures).file.parse(contents),
-			(fileBuffer) => iconv.decode(fileBuffer, 'cp437')
-		)),
+				(contents) =>
+					createRegionWorldSitesPopsParser(creatures).file.parse(
+						contents
+					),
+				(fileBuffer) => iconv.decode(fileBuffer, 'cp437')
+			)
+		),
 		(resolvedPath) => fs.readFileFuture(resolvedPath, null),
 		path.resolve
 	)(filePath);
 }
-

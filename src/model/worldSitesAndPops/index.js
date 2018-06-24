@@ -1,4 +1,6 @@
-import createCivilizedWorldPopulation, {civilizedPopulation} from './civilizedWorldPopulation';
+import createCivilizedWorldPopulation, {
+	civilizedPopulation
+} from './civilizedWorldPopulation';
 import site from './site';
 
 export default function worldSitesAndPops({
@@ -8,13 +10,18 @@ export default function worldSitesAndPops({
 	undergroundAnimalPopulations
 } = {}) {
 	return {
-		civilizedWorldPopulation: createCivilizedWorldPopulation(civilizedWorldPopulation),
+		civilizedWorldPopulation: createCivilizedWorldPopulation(
+			civilizedWorldPopulation
+		),
 		sites,
 		outdoorAnimalPopulations,
 		undergroundAnimalPopulations
 	};
 }
 
-export {createCivilizedWorldPopulation as civilizedWorldPopulation, civilizedPopulation};
+export {
+	createCivilizedWorldPopulation as civilizedWorldPopulation,
+	civilizedPopulation
+};
 export {site};
 export {default as civRuler} from './civRuler';

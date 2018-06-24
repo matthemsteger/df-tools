@@ -12,17 +12,39 @@ export const makePropertyName = _.camelCase;
  * @param {function} valueTransform a transform for the value
  * @param {string} tokenName the token name
  */
-export const makeTransducer = R.curry((propertyTransform, valueTransform, tokenName) =>
-	R.map(R.when(
-		R.propEq('name', tokenName),
-		R.compose(R.objOf(propertyTransform(tokenName)), valueTransform, R.prop('value'))
-	))
+export const makeTransducer = R.curry(
+	(propertyTransform, valueTransform, tokenName) =>
+		R.map(
+			R.when(
+				R.propEq('name', tokenName),
+				R.compose(
+					R.objOf(propertyTransform(tokenName)),
+					valueTransform,
+					R.prop('value')
+				)
+			)
+		)
 );
 
 export const makeCamelCaseTransducer = makeTransducer(makePropertyName);
 
-export const makeStringValueTransducer = makeTransducer(makePropertyName, R.head);
+export const makeStringValueTransducer = makeTransducer(
+	makePropertyName,
+	R.head
+);
 
-export const makeIntegerValueTransducer = makeTransducer(makePropertyName, R.compose(parseBase10Int, R.head));
+export const makeIntegerValueTransducer = makeTransducer(
+	makePropertyName,
+	R.compose(
+		parseBase10Int,
+		R.head
+	)
+);
 
-export const makeBooleanValueTransducer = makeTransducer(makePropertyName, R.compose(R.equals('1'), R.head));
+export const makeBooleanValueTransducer = makeTransducer(
+	makePropertyName,
+	R.compose(
+		R.equals('1'),
+		R.head
+	)
+);

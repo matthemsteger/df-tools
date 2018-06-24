@@ -30,7 +30,7 @@ const directoryIncludesFile = R.curry((fileName, dirPath) =>
 /**
  * discover the install meta data from the file system at the given path
  * @param {string} installPath - the install path
- * @returns {Future<InstallMeta>} 
+ * @returns {Future<InstallMeta>}
  */
 export function discoverInstallMeta(installPath) {
 	const metadata = {installPath};
@@ -41,11 +41,14 @@ export function discoverInstallMeta(installPath) {
 		R.chain((foundReleaseNotes) => {
 			if (!foundReleaseNotes) return futureOf(metadata);
 
-			const releaseNotesPath = path.resolve(installPath, releaseNotesFileName);
+			const releaseNotesPath = path.resolve(
+				installPath,
+				releaseNotesFileName
+			);
 			return R.map((releaseNotes) => {
 				const matches = releaseNotes.match(releaseVersionRegex);
 				if (matches && matches.length >= 1) {
-					metadata.version = matches[1];
+					metadata.version = matches[1]; // eslint-disable-line prefer-destructuring
 				}
 
 				return metadata;
@@ -58,8 +61,8 @@ export function discoverInstallMeta(installPath) {
 export default function discoverInstall({dfRootPath} = {}) {
 	const osType = os.type();
 	return R.map(
-		({version}) => createDwarfFortressInstall({path: dfRootPath, osType, version}),
+		({version}) =>
+			createDwarfFortressInstall({path: dfRootPath, osType, version}),
 		discoverInstallMeta(dfRootPath)
 	);
 }
-

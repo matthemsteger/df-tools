@@ -20,15 +20,23 @@ import {
 } from './../../../model/settings/worldGen/transforms';
 import {parseBase10Int} from './../../../utility/numbers';
 
-const makeRequiredStringDefinition = makeRequiredDefinition(makeStringValueTransducer);
-const makeRequiredIntegerDefinition = makeRequiredDefinition(makeIntegerValueTransducer);
-const makeRequiredBooleanDefinition = makeRequiredDefinition(makeBooleanValueTransducer);
+const makeRequiredStringDefinition = makeRequiredDefinition(
+	makeStringValueTransducer
+);
+const makeRequiredIntegerDefinition = makeRequiredDefinition(
+	makeIntegerValueTransducer
+);
+const makeRequiredBooleanDefinition = makeRequiredDefinition(
+	makeBooleanValueTransducer
+);
 const makeMinMaxVarianceDefinition = makeRequiredDefinition(
-	makeCamelCaseTransducer(R.compose(
-		minMaxVariance,
-		R.zipObj(['min', 'max', 'varianceX', 'varianceY']),
-		R.map(parseBase10Int)
-	)),
+	makeCamelCaseTransducer(
+		R.compose(
+			minMaxVariance,
+			R.zipObj(['min', 'max', 'varianceX', 'varianceY']),
+			R.map(parseBase10Int)
+		)
+	),
 	4
 );
 
@@ -40,7 +48,11 @@ export const definition = {
 		makeRequiredDefinition(dimTransducer, 2, 'DIM'),
 		makeRequiredDefinition(beastEndYearTransducer, 2, 'BEAST_END_YEAR'),
 		makeRequiredStringDefinition(1, 'POLE'),
-		makeRequiredDefinition(titanAttackTriggerTransducer, 3, 'TITAN_ATTACK_TRIGGER'),
+		makeRequiredDefinition(
+			titanAttackTriggerTransducer,
+			3,
+			'TITAN_ATTACK_TRIGGER'
+		),
 		makeRequiredDefinition(regionCountsTransducer, 4, 'REGION_COUNTS'), // there are a bunch of these
 		makeRequiredDefinition(riverMinsTransducer, 2, 'RIVER_MINS'),
 		...R.map(makeRequiredIntegerDefinition(1), [
@@ -131,4 +143,3 @@ export const definition = {
 };
 
 export default createSettingsParser(definition);
-
