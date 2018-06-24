@@ -18,10 +18,13 @@ export default async function render() {
 			End map indented 1
 
 			^That was an extra line break
-			${ifRender(true, pretty(-3)`
+			${ifRender(
+				true,
+				pretty(-3)`
 			if: This should be indented 1
 				if: This is indented 2
-			if: This should be indented 1`).render()}
+			if: This should be indented 1`
+			).render()}
 			after if: This should be indented 1
 		Flush end
 	`;

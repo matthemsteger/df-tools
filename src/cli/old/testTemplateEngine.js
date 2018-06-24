@@ -12,7 +12,10 @@ export function builder(yargs) {
 	return yargs
 		.option('template', {
 			alias: 't',
-			default: path.resolve(__dirname, '../../templates/templateEngineTest.js')
+			default: path.resolve(
+				__dirname,
+				'../../templates/templateEngineTest.js'
+			)
 		})
 		.option('filename', {
 			alias: 'f',

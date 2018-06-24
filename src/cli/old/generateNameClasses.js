@@ -22,7 +22,10 @@ export function builder(yargs) {
 		})
 		.option('template', {
 			alias: 't',
-			default: path.resolve(__dirname, '../../templates/classNames.js.dust')
+			default: path.resolve(
+				__dirname,
+				'../../templates/classNames.js.dust'
+			)
 		})
 		.option('filename', {
 			alias: 'f',
@@ -33,7 +36,9 @@ export function builder(yargs) {
 export async function handler(argv) {
 	try {
 		const {raws, template, filename} = argv;
-		const rawFileNames = await Promise.fromCallback((callback) => glob(raws, {nodir: true}, callback));
+		const rawFileNames = await Promise.fromCallback((callback) =>
+			glob(raws, {nodir: true}, callback)
+		);
 		const templateContents = await fs.readFileAsync(template, 'utf8');
 		const compiled = dust.compile(templateContents, 'nameClassesBlock');
 		dust.loadSource(compiled);
@@ -41,13 +46,15 @@ export async function handler(argv) {
 		const lexer = new BaseLexer();
 
 		const tokenNames = await Promise.map(rawFileNames, (filePath) =>
-			fs.readFileAsync(filePath, {encoding: 'utf8'}).then((fileContents) => {
-				const tokens = lexer.tokenize(fileContents);
-				return _.chain(tokens.tokens)
-					.filter((token) => tokenMatcher(token, TokenName))
-					.map((token) => token.image)
-					.value();
-			})
+			fs
+				.readFileAsync(filePath, {encoding: 'utf8'})
+				.then((fileContents) => {
+					const tokens = lexer.tokenize(fileContents);
+					return _.chain(tokens.tokens)
+						.filter((token) => tokenMatcher(token, TokenName))
+						.map((token) => token.image)
+						.value();
+				})
 		);
 
 		const uniqueTokenNames = _.chain(tokenNames)
@@ -56,12 +63,20 @@ export async function handler(argv) {
 			.sortBy()
 			.value();
 
-		const fileContents = await Promise.reduce(uniqueTokenNames, (contents, tokenName) => {
-			const classname = _.upperFirst(_.camelCase(tokenName));
-			return Promise.fromCallback((callback) =>
-				dust.render('nameClassesBlock', {classname, tokenName, tab: '\t'}, callback)
-			).then((renderedBlock) => contents + renderedBlock);
-		}, '');
+		const fileContents = await Promise.reduce(
+			uniqueTokenNames,
+			(contents, tokenName) => {
+				const classname = _.upperFirst(_.camelCase(tokenName));
+				return Promise.fromCallback((callback) =>
+					dust.render(
+						'nameClassesBlock',
+						{classname, tokenName, tab: '\t'},
+						callback
+					)
+				).then((renderedBlock) => contents + renderedBlock);
+			},
+			''
+		);
 
 		await fs.writeFileAsync(filename, fileContents);
 		process.exit(0);

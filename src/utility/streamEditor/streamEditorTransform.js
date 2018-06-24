@@ -18,8 +18,11 @@ export default class StreamEditor extends Transform {
 	// }
 
 	replacementsForChunk(startOffset, endOffset) {
-		return _.reject(this.replacements, (replacement) =>
-			replacement.endOffset < startOffset || replacement.startOffset > endOffset
+		return _.reject(
+			this.replacements,
+			(replacement) =>
+				replacement.endOffset < startOffset ||
+				replacement.startOffset > endOffset
 		);
 	}
 }

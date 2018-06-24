@@ -21,23 +21,27 @@ const castDefinition = [
 	['AQUATIC'],
 	['ARENA_RESTRICTED'],
 	['AT_PEACE_WITH_WILDLIFE'],
-	['ATTACK', Number.NaN, [
-		['ATTACK_SKILL', 1],
-		['ATTACK_VERB', 2],
-		['ATTACK_CONTACT_PERC', 1],
-		['ATTACK_PENETRATION_PERC', 1],
-		['ATTACK_PRIORITY', 1],
-		['ATTACK_VELOCITY_MODIFIER', 1],
-		['ATTACK_FLAG_CANLATCH'],
-		['ATTACK_FLAG_WITH'],
-		['ATTACK_FLAG_EDGE'],
-		['ATTACK_PREPARE_AND_RECOVER', 2],
-		['ATTACK_FLAG_BAD_MULTIATTACK'],
-		['ATTACK_FLAG_INDEPENDENT_MULTIATTACK'],
-		['SPECIALATTACK_INJECT_EXTRACT', 5],
-		['SPECIALATTACK_INTERATION', 1],
-		['SPECIALATTACK_SUCK_BLOOD', 2]
-	]],
+	[
+		'ATTACK',
+		Number.NaN,
+		[
+			['ATTACK_SKILL', 1],
+			['ATTACK_VERB', 2],
+			['ATTACK_CONTACT_PERC', 1],
+			['ATTACK_PENETRATION_PERC', 1],
+			['ATTACK_PRIORITY', 1],
+			['ATTACK_VELOCITY_MODIFIER', 1],
+			['ATTACK_FLAG_CANLATCH'],
+			['ATTACK_FLAG_WITH'],
+			['ATTACK_FLAG_EDGE'],
+			['ATTACK_PREPARE_AND_RECOVER', 2],
+			['ATTACK_FLAG_BAD_MULTIATTACK'],
+			['ATTACK_FLAG_INDEPENDENT_MULTIATTACK'],
+			['SPECIALATTACK_INJECT_EXTRACT', 5],
+			['SPECIALATTACK_INTERATION', 1],
+			['SPECIALATTACK_SUCK_BLOOD', 2]
+		]
+	],
 	['ATTACK_TRIGGER', 3],
 	['BABY', 1],
 	['BABYNAME', 2],
@@ -47,20 +51,22 @@ const castDefinition = [
 	['BLOODSUCKER'],
 	['BODY', Number.NaN],
 	['BODY_APPEARANCE_MODIFIER', 8],
-	['BODY_DETAIL_PLAN', Number.NaN, [
-		['USE_TISSUE_TEMPLATE', 2],
-		['REMOVE_MATERIAL', 1],
-		['REMOVE_TISSUE', 1],
-		['SELECT_TISSUE', 1],
-		...tissueTemplateDefinition
-	]],
+	[
+		'BODY_DETAIL_PLAN',
+		Number.NaN,
+		[
+			['USE_TISSUE_TEMPLATE', 2],
+			['REMOVE_MATERIAL', 1],
+			['REMOVE_TISSUE', 1],
+			['SELECT_TISSUE', 1],
+			...tissueTemplateDefinition
+		]
+	],
 	['BODY_SIZE', 3],
 	['BODYGLOSS', Number.NaN],
 	['BONECARN'],
 	['BUILDINGDESTROYER', 1],
-	['CAN_DO_INTERACTION', 1, [
-		['CDI', Number.NaN]
-	]],
+	['CAN_DO_INTERACTION', 1, [['CDI', Number.NaN]]],
 	['CAN_LEARN'],
 	['CAN_SPEAK'],
 	['CANNOT_CLIMB'],
@@ -100,10 +106,7 @@ const castDefinition = [
 	['DIURNAL'],
 	['DIVE_HUNTS_VERMIN'],
 	['EQUIPS'],
-	['EXTRA_BUTCHER_OBJECT', 2, [
-		['EBO_ITEM', 3],
-		['EBO_SHAPE', 1]
-	]],
+	['EXTRA_BUTCHER_OBJECT', 2, [['EBO_ITEM', 3], ['EBO_SHAPE', 1]]],
 	['EXTRACT', 2],
 	['EXTRAVISION'],
 	['FEATURE_ATTACK_GROUP'],
@@ -145,11 +148,11 @@ const castDefinition = [
 	['LAIR_HUNTER'],
 	['LAIR_HUNTER_SPEECH', 1],
 	['LARGE_PREDATOR'],
-	['LAYS_EGGS', 0, [
-		['EGG_MATERIAL', 3],
-		['EGG_SIZE', 1],
-		['CLUTCH_SIZE', 2]
-	]],
+	[
+		'LAYS_EGGS',
+		0,
+		[['EGG_MATERIAL', 3], ['EGG_SIZE', 1], ['CLUTCH_SIZE', 2]]
+	],
 	['LAYS_UNUSUAL_EGGS', 2],
 	['LIGAMENTS', 3],
 	['LIGHT_GEN'],
@@ -269,45 +272,59 @@ const castDefinition = [
 	['RETURNS_VERMIN_KILLS_TO_OWNER'],
 	['ROOT_AROUND', 4],
 	['SECRETION', Number.NaN],
-	['SELECT_TISSUE_LAYER', Number.NaN, [
-		['TL_RELATIVE_THICKNESS', 1],
-		['TL_MAJOR_ARTERIES'], // TODO: refactor duplicate
-		['TL_HEALING_RATE', 1],
-		['PLUS_TISSUE_LAYER', 3, [
-			['SET_LAYER_TISSUE', 1],
-			['TL_CONNECTS'],
-			['TL_HEALING_RATE'],
-			['TL_MAJOR_ARTERIES'],
-			['TL_PAIN_RECEPTORS'],
-			['TL_RELATIVE_THICKNESS'],
-			['TL_VASCULAR']
-		]]
-	]],
+	[
+		'SELECT_TISSUE_LAYER',
+		Number.NaN,
+		[
+			['TL_RELATIVE_THICKNESS', 1],
+			['TL_MAJOR_ARTERIES'], // TODO: refactor duplicate
+			['TL_HEALING_RATE', 1],
+			[
+				'PLUS_TISSUE_LAYER',
+				3,
+				[
+					['SET_LAYER_TISSUE', 1],
+					['TL_CONNECTS'],
+					['TL_HEALING_RATE'],
+					['TL_MAJOR_ARTERIES'],
+					['TL_PAIN_RECEPTORS'],
+					['TL_RELATIVE_THICKNESS'],
+					['TL_VASCULAR']
+				]
+			]
+		]
+	],
 	['SEMIMEGABEAST'],
 	['SENSE_CREATURE_CLASS', 3],
-	['SET_BP_GROUP', 2, [
-		['BP_ADD_TYPE', 1],
-		['BP_APPEARANCE_MODIFIER', 8, [
-			...appearanceModifiers
-		]],
-		['PLUS_BP_GROUP', 2]
-	]],
-	['SET_TL_GROUP', 3, [
-		['SHEARABLE_TISSUE_LAYER', 2],
-		['TL_COLOR_MODIFIER', Number.NaN, [
-			['TLCM_GENETIC_MODEL'],
-			['TLCM_IMPORTANCE', 1],
-			['TLCM_NOUN', 2],
-			['TLCM_TIMING', 5]
-		]],
-		['TISSUE_STYLE_UNIT', 2, [
-			['TSU_NOUN', 2]
-		]],
-		['PLUS_TL_GROUP', 3],
-		['TISSUE_LAYER_APPEARANCE_MODIFIER', 8, [
-			...appearanceModifiers
-		]]
-	]],
+	[
+		'SET_BP_GROUP',
+		2,
+		[
+			['BP_ADD_TYPE', 1],
+			['BP_APPEARANCE_MODIFIER', 8, [...appearanceModifiers]],
+			['PLUS_BP_GROUP', 2]
+		]
+	],
+	[
+		'SET_TL_GROUP',
+		3,
+		[
+			['SHEARABLE_TISSUE_LAYER', 2],
+			[
+				'TL_COLOR_MODIFIER',
+				Number.NaN,
+				[
+					['TLCM_GENETIC_MODEL'],
+					['TLCM_IMPORTANCE', 1],
+					['TLCM_NOUN', 2],
+					['TLCM_TIMING', 5]
+				]
+			],
+			['TISSUE_STYLE_UNIT', 2, [['TSU_NOUN', 2]]],
+			['PLUS_TL_GROUP', 3],
+			['TISSUE_LAYER_APPEARANCE_MODIFIER', 8, [...appearanceModifiers]]
+		]
+	],
 	['SKILL_LEARN_RATE', 2],
 	['SKILL_LEARN_RATES', 1],
 	['SKILL_RATE', 5],
@@ -329,9 +346,13 @@ const castDefinition = [
 	['SYNDROME_DILUTION_FACTOR', 2],
 	['TENDONS', 3],
 	['THICKWEB'],
-	['TISSUE_LAYER', Number.NaN, [
-		['TL_RELATIVE_THICKNESS', 1] // TODO: refactor duplicate
-	]],
+	[
+		'TISSUE_LAYER',
+		Number.NaN,
+		[
+			['TL_RELATIVE_THICKNESS', 1] // TODO: refactor duplicate
+		]
+	],
 	['TISSUE_LAYER_UNDER', 3],
 	['TISSUE_LAYER_OVER', 4],
 	['TITAN'],
@@ -401,22 +422,19 @@ export default createRawFileParser({
 		['PREFSTRING', 1],
 		['PROFESSION_NAME', 3],
 		['SAVAGE'],
-		['SELECT_CASTE', 1, [
-			['SELECT_ADDITIONAL_CASTE', 1]
-		]],
-		['SELECT_MATERIAL', 1, [
-			['PLUS_MATERIAL', 1],
-			...materialTemplateDefinition
-		]],
+		['SELECT_CASTE', 1, [['SELECT_ADDITIONAL_CASTE', 1]]],
+		[
+			'SELECT_MATERIAL',
+			1,
+			[['PLUS_MATERIAL', 1], ...materialTemplateDefinition]
+		],
 		['SMELL_TRIGGER', 1],
 		['SOLDIER_ALTTILE', 1],
 		['SPEECH', 1],
 		['SPEECH_FEMALE', 1],
 		['SPEECH_MALE', 1],
 		['SPHERE', 1],
-		['TISSUE', 1, [
-			...tissueTemplateDefinition
-		]],
+		['TISSUE', 1, [...tissueTemplateDefinition]],
 		['TRIGGERABLE_GROUP', 2],
 		['UBIQUITOUS'],
 		['UNDERGROUND_DEPTH', Number.NaN],
@@ -424,9 +442,7 @@ export default createRawFileParser({
 		['USE_MATERIAL', 2],
 		['USE_MATERIAL_TEMPLATE', 2, materialTemplateDefinition],
 		['USE_TISSUE', 2],
-		['USE_TISSUE_TEMPLATE', 2, [
-			...tissueTemplateDefinition
-		]],
+		['USE_TISSUE_TEMPLATE', 2, [...tissueTemplateDefinition]],
 		['VERMIN_EATER'],
 		['VERMIN_FISH'],
 		['VERMIN_GROUNDER'],

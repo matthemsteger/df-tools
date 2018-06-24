@@ -2,3 +2,6 @@ dist
 local
 coverage
 src/cli/old
+src/templates
+src/dsl/parsers/worldGenParser.js
+src/dsl/tokens

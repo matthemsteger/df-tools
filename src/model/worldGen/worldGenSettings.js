@@ -22,8 +22,10 @@ export const meshValues = {
 };
 
 export function meshFrequency({mesh, weights} = {}) {
-	if (!_.isArray(weights)) throw new Error('weights must be an array of weights');
-	if (weights.length !== 5) throw new Error('weights must be an array of length 5');
+	if (!_.isArray(weights))
+		throw new Error('weights must be an array of weights');
+	if (weights.length !== 5)
+		throw new Error('weights must be an array of length 5');
 
 	return {
 		mesh,
@@ -40,7 +42,11 @@ export const poles = {
 	NORTH_AND_SOUTH: 'NORTH_AND_SOUTH'
 };
 
-export function titanAttackTrigger({population, exportedWealth, createdWealth} = {}) {
+export function titanAttackTrigger({
+	population,
+	exportedWealth,
+	createdWealth
+} = {}) {
 	return {population, exportedWealth, createdWealth};
 }
 

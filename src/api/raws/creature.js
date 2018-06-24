@@ -3,6 +3,8 @@ import {parallel} from 'fluture';
 import {fs} from './../../utility/fs';
 import rawCreaturesParser from './../../dsl/parsers/raws/creatures/rawCreaturesParser';
 import rawFiles from './rawFiles';
+import types from './types';
+import {modelCreatureRawFile} from './../../model/raws/creature';
 
 /**
  * Parse creature raw text
@@ -26,6 +28,18 @@ export const parseCreatureRawFile = R.compose(
  * @param {string} dfRootPath
  */
 export const parseCreatureRaws = R.compose(
-	R.chain(R.compose(parallel(Number.POSITIVE_INFINITY), R.map(parseCreatureRawFile))),
-	rawFiles.creature
+	R.chain(
+		R.compose(
+			parallel(Number.POSITIVE_INFINITY),
+			R.map(
+				R.compose(
+					parseCreatureRawFile,
+					R.prop('filePath')
+				)
+			)
+		)
+	),
+	rawFiles[types.CREATURE]
 );
+
+export const modelParsedCreatureRaw = modelCreatureRawFile;

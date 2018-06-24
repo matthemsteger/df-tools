@@ -11,7 +11,9 @@ export const setupModuleDependency = R.curry((sandbox, fnNames) => {
 });
 
 export function ensureFunctionExport(fn, fnName) {
-	it(`should export a function ${fnName === 'default' ? 'as default' : fnName}`, function () {
+	it(`should export a function ${
+		fnName === 'default' ? 'as default' : fnName
+	}`, function() {
 		expect(fn).to.be.a('function');
 	});
 }
@@ -29,4 +31,3 @@ export function setupFakeFsModule(sandbox) {
 	fsModule.fs = fakeFuturifiedFs(sandbox);
 	return fsModule;
 }
-

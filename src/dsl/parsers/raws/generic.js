@@ -7,7 +7,9 @@ export const isLanguageToken = R.flip(R.contains)(['[', ']', ':']);
 
 // export const comment = P.regexp(/[^\]\s]+(?![^[]*])/); orig
 // export const comment = P.regexp(/[^\][\r\n]+(?!.*])/); better
-export const comment = P.regexp(/(?:[^\][\r\n]+(?!.*(?:]|\[))|[^\]\s]+(?![^[]*]))/);
+export const comment = P.regexp(
+	/(?:[^\][\r\n]+(?!.*(?:]|\[))|[^\]\s]+(?![^[]*]))/
+);
 
 // export const commentOrWhitespace = P.regexp(/[^\]]*(?![^[]*])/);
 export const commentOrWhitespace = comment.trim(P.optWhitespace).many();
@@ -25,9 +27,7 @@ export const rbracket = P.string(']');
 export const colon = P.string(':');
 
 export function spaced(parser) {
-	return P.optWhitespace
-		.then(parser)
-		.skip(P.optWhitespace);
+	return P.optWhitespace.then(parser).skip(P.optWhitespace);
 }
 
 export function spaceAll(parsers) {
@@ -36,9 +36,7 @@ export function spaceAll(parsers) {
 
 function spacedWithComments(parser) {
 	// this should be a many since any amount of crap should be skipped
-	return commentOrWhitespace
-		.then(parser)
-		.skip(commentOrWhitespace);
+	return commentOrWhitespace.then(parser).skip(commentOrWhitespace);
 }
 
 function spaceAllWithComments(parsers) {
@@ -107,10 +105,16 @@ function convertDefinition(definition) {
 	// [3] - (boolean) - required (when children)
 	// tokens are assumed optional
 	const defTokenParser = createTokenParser(definition[0], definition[1]);
-	if (definition.length < 3 || R.is(Boolean, definition[2])) return defTokenParser;
+	if (definition.length < 3 || R.is(Boolean, definition[2]))
+		return defTokenParser;
 
-	const numRequired = R.filter(R.any(R.both(R.is(Boolean), R.equals(true))), definition[2]).length;
-	const childTokenParsers = spaceAllWithComments(definition[2].map(convertDefinition));
+	const numRequired = R.filter(
+		R.any(R.both(R.is(Boolean), R.equals(true))),
+		definition[2]
+	).length;
+	const childTokenParsers = spaceAllWithComments(
+		definition[2].map(convertDefinition)
+	);
 	return P.seqMap(
 		defTokenParser,
 		P.alt(...childTokenParsers).atLeast(numRequired),
@@ -119,7 +123,10 @@ function convertDefinition(definition) {
 }
 
 export function createRawFileParser(rawDefinition) {
-	const {rawObject: rawObjectTagName, children: childrenDefinitions} = rawDefinition;
+	const {
+		rawObject: rawObjectTagName,
+		children: childrenDefinitions
+	} = rawDefinition;
 	return P.createLanguage({
 		file(lang) {
 			return P.seqMap(
@@ -139,8 +146,13 @@ export function createRawFileParser(rawDefinition) {
 		objectType: () => createTokenParser('OBJECT', 1),
 		objects: (lang) => lang.rawObject.many(),
 		rawObject: () => {
-			const numRequired = R.filter(R.any(R.both(R.is(Boolean), R.equals(true))), childrenDefinitions).length;
-			const childTokenParsers = spaceAllWithComments(childrenDefinitions.map(convertDefinition));
+			const numRequired = R.filter(
+				R.any(R.both(R.is(Boolean), R.equals(true))),
+				childrenDefinitions
+			).length;
+			const childTokenParsers = spaceAllWithComments(
+				childrenDefinitions.map(convertDefinition)
+			);
 			return P.seqMap(
 				spacedWithComments(createTokenParser(rawObjectTagName, 1)),
 				P.alt(...childTokenParsers).atLeast(numRequired),

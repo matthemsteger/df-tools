@@ -2,12 +2,22 @@ import P from 'parsimmon';
 import R from 'ramda';
 import _ from 'lodash';
 import _debug from 'debug';
-import worldSitesAndPops, {civRuler, site, civilizedPopulation, civilizedWorldPopulation as createCivilizedWorldPopulation} from './../../../model/worldSitesAndPops';
+import worldSitesAndPops, {
+	civRuler,
+	site,
+	civilizedPopulation,
+	civilizedWorldPopulation as createCivilizedWorldPopulation
+} from './../../../model/worldSitesAndPops';
 
-const debug = _debug('df:dsl:parsers:regionWorldSitesPops:regionWorldSitesPopsParser');
+const debug = _debug(
+	'df:dsl:parsers:regionWorldSitesPops:regionWorldSitesPopsParser'
+);
 
 const findById = R.curry((id, list) => R.find(R.propEq('id', id), list));
-const makeRegexOr = R.compose(R.join('|'), R.sort(R.descend));
+const makeRegexOr = R.compose(
+	R.join('|'),
+	R.sort(R.descend)
+);
 
 // ideally these are not hardcoded and come out of the raws
 const civilizedCreatures = ['DWARF', 'HUMAN', 'ELF', 'GOBLIN', 'KOBOLD'];
@@ -27,12 +37,21 @@ const demonModifiers = [
 	'specter',
 	'wraith'
 ];
-const demonModifiersRegexOr = makeRegexOr(demonModifiers.map((modifier) => `${modifier}s?`));
+const demonModifiersRegexOr = makeRegexOr(
+	demonModifiers.map((modifier) => `${modifier}s?`)
+);
 
-const forgottenBeastCreature = {id: 'GENERATED_FORGOTTEN_BEAST', singularName: 'forgotten beast', isGenerated: true};
+const forgottenBeastCreature = {
+	id: 'GENERATED_FORGOTTEN_BEAST',
+	singularName: 'forgotten beast',
+	isGenerated: true
+};
 const makeOtherWorldlyCreature = (generatedName) => ({
 	creature: {
-		id: `GENERATED_${R.compose(R.toUpper, _.snakeCase)(generatedName)}`,
+		id: `GENERATED_${R.compose(
+			R.toUpper,
+			_.snakeCase
+		)(generatedName)}`,
 		isGenerated: true,
 		generatedName
 	}
@@ -63,7 +82,7 @@ function makeLineRegexParser(str, captureGroup = 1) {
 // all creatures, even generated ones, can be sitestate
 // makeParseableCreature -> adds parsing info
 // array of parsers, {parseString, parser} sorted by order, largest strings first
-// 
+//
 // probably want to go in order of probability
 // -> regular animals
 // -> outcasts
@@ -78,7 +97,9 @@ function makeCreaturePopulationParser(creature) {
 
 	const result = {creature};
 
-	const normalParser = makeLineRegexParser(singularOrPlural).map(R.always(result));
+	const normalParser = makeLineRegexParser(singularOrPlural).map(
+		R.always(result)
+	);
 	exactMatches.set(singularName, result);
 	exactMatches.set(pluralName, result);
 
@@ -86,13 +107,24 @@ function makeCreaturePopulationParser(creature) {
 		const stateResult = {...result, siteStateModifier: state};
 		exactMatches.set(`${singularName} ${state}`, stateResult);
 		exactMatches.set(`${singularName} ${state}s`, stateResult);
-		return makeLineRegexParser(`${singularName} ${state}s?`)
-			.map(R.always(stateResult));
+		return makeLineRegexParser(`${singularName} ${state}s?`).map(
+			R.always(stateResult)
+		);
 	});
 
 	const demonParsers = [
-		P.regexp(new RegExp(`(${demonModifiersRegexOr}) (${singularOrPlural})(?:\\r\\n?|\\n)`), 1).map((demonModifier) => ({...result, demonModifier})),
-		P.regexp(new RegExp(`${adjectiveName} (${demonModifiersRegexOr})(?:\\r\\n?|\\n)`), 1).map((demonModifier) => ({...result, demonModifier}))
+		P.regexp(
+			new RegExp(
+				`(${demonModifiersRegexOr}) (${singularOrPlural})(?:\\r\\n?|\\n)`
+			),
+			1
+		).map((demonModifier) => ({...result, demonModifier})),
+		P.regexp(
+			new RegExp(
+				`${adjectiveName} (${demonModifiersRegexOr})(?:\\r\\n?|\\n)`
+			),
+			1
+		).map((demonModifier) => ({...result, demonModifier}))
 	];
 
 	demonModifiers.forEach((demonModifier) => {
@@ -104,11 +136,20 @@ function makeCreaturePopulationParser(creature) {
 		});
 	});
 
-	return {creature, normalParser, siteStateParsers: stateParsers, demonParsers, exactMatches};
+	return {
+		creature,
+		normalParser,
+		siteStateParsers: stateParsers,
+		demonParsers,
+		exactMatches
+	};
 }
 
 export default function createRegionWorldSitesParser(creatures) {
-	debug('creating region world sites parser with %d creatures defined', creatures.length);
+	debug(
+		'creating region world sites parser with %d creatures defined',
+		creatures.length
+	);
 	// civilized creatures have CAN_LEARN(?) and/or INTELLIGENT (CAN_SPEAK and CAN_LEARN)
 	// for now just hard code
 	const creatureParsers = R.map(makeCreaturePopulationParser, creatures);
@@ -132,7 +173,10 @@ export default function createRegionWorldSitesParser(creatures) {
 				const creatureMatch = R.toLower(match[1]);
 				const creatureHashMatch = creatureMap.get(creatureMatch);
 				if (creatureHashMatch) {
-					return P.makeSuccess(i + match[0].length, creatureHashMatch);
+					return P.makeSuccess(
+						i + match[0].length,
+						creatureHashMatch
+					);
 				}
 			}
 
@@ -147,35 +191,50 @@ export default function createRegionWorldSitesParser(creatures) {
 				lang.sites,
 				lang.outdoorAnimalPopulations,
 				lang.undergroundAnimalPopulations,
-				(civilizedWorldPopulation, sites, outdoorAnimalPopulations, undergroundAnimalPopulations) => worldSitesAndPops({
+				(
 					civilizedWorldPopulation,
 					sites,
 					outdoorAnimalPopulations,
 					undergroundAnimalPopulations
-				})
+				) =>
+					worldSitesAndPops({
+						civilizedWorldPopulation,
+						sites,
+						outdoorAnimalPopulations,
+						undergroundAnimalPopulations
+					})
 			);
 		},
 		civilizedWorldPopulation(lang) {
 			return P.seqMap(
 				P.regexp(/Civilized World Population(?:\r\n?|\n)+/)
-					.then(lang.creaturePopulation.many()).trim(P.optWhitespace),
+					.then(lang.creaturePopulation.many())
+					.trim(P.optWhitespace),
 				P.string('Total:').then(P.digits.trim(P.optWhitespace)),
 				(populations, total) => {
-					const civilizedPopulations = populations.map(({creature, population}) => civilizedPopulation({race: creature, population}));
-					return createCivilizedWorldPopulation({civilizedPopulations, total});
+					const civilizedPopulations = populations.map(
+						({creature, population}) =>
+							civilizedPopulation({race: creature, population})
+					);
+					return createCivilizedWorldPopulation({
+						civilizedPopulations,
+						total
+					});
 				}
 			);
 		},
 		civilizationPopulation() {
 			const civNameParsers = R.compose(
-				R.map((creature) => P.string(_.upperFirst(creature.pluralName))),
+				R.map((creature) =>
+					P.string(_.upperFirst(creature.pluralName))
+				),
 				R.map(R.flip(findById)(creatures))
 			)(civilizedCreatures);
-			const civsParsers = civNameParsers.map(makeCivilizationPopulationParser);
-
-			return P.alt(
-				...civsParsers
+			const civsParsers = civNameParsers.map(
+				makeCivilizationPopulationParser
 			);
+
+			return P.alt(...civsParsers);
 		},
 		sites(lang) {
 			return P.string('Sites')
@@ -189,18 +248,31 @@ export default function createRegionWorldSitesParser(creatures) {
 				lang.siteParentCiv.many(),
 				lang.siteRuler.many(),
 				lang.creaturePopulation.many(),
-				({siteNumber, name, friendlyName, siteType}, siteOwners, siteParentCivs, siteRulers, populations) => site({
-					siteNumber,
-					name,
-					friendlyName,
-					siteType,
-					ownerName: R.path(['0', 'ownerName'], siteOwners),
-					ownerRace: R.path(['0', 'ownerRace'], siteOwners),
-					parentCivName: R.path(['0', 'parentCivName'], siteParentCivs),
-					parentCivRace: R.path(['0', 'parentCivRace'], siteParentCivs),
+				(
+					{siteNumber, name, friendlyName, siteType},
+					siteOwners,
+					siteParentCivs,
 					siteRulers,
 					populations
-				})
+				) =>
+					site({
+						siteNumber,
+						name,
+						friendlyName,
+						siteType,
+						ownerName: R.path(['0', 'ownerName'], siteOwners),
+						ownerRace: R.path(['0', 'ownerRace'], siteOwners),
+						parentCivName: R.path(
+							['0', 'parentCivName'],
+							siteParentCivs
+						),
+						parentCivRace: R.path(
+							['0', 'parentCivRace'],
+							siteParentCivs
+						),
+						siteRulers,
+						populations
+					})
 			);
 		},
 		siteInfo() {
@@ -249,7 +321,9 @@ export default function createRegionWorldSitesParser(creatures) {
 			// lady, lord, administrator
 			return P.seqMap(
 				P.alt(
-					...rulerLabels.map((label) => P.regexp(new RegExp(`\\t(${label}): `), 1))
+					...rulerLabels.map((label) =>
+						P.regexp(new RegExp(`\\t(${label}): `), 1)
+					)
 				),
 				P.regexp(/(.+?),/, 1),
 				P.alt(
@@ -257,23 +331,34 @@ export default function createRegionWorldSitesParser(creatures) {
 					P.regexp(/ (?:\r\n?|\n)/).map(R.always(undefined))
 				),
 				// P.regexp(/[ ]*(.+)(?:\r\n?|\n)/, 1),
-				(title, name, race) => civRuler({
-					title,
-					name,
-					race
-				})
+				(title, name, race) =>
+					civRuler({
+						title,
+						name,
+						race
+					})
 			);
 		},
 		creaturePopulation() {
 			return P.seqMap(
-				P.regexp(/\t(\d+|Unnumbered) /, 1)
-					.map((popNumber) => (popNumber === 'Unnumbered' ? Number.NaN : Number.parseInt(popNumber, 10))),
+				P.regexp(/\t(\d+|Unnumbered) /, 1).map(
+					(popNumber) =>
+						popNumber === 'Unnumbered'
+							? Number.NaN
+							: Number.parseInt(popNumber, 10)
+				),
 				P.alt(
 					exactCreature(),
-					P.regexp(/(forgotten beasts?)(?:\r\n?|\n)/i).map(R.always(makeCreature({
-						creature: forgottenBeastCreature
-					}))),
-					P.regexp(/(.+)(?:\r\n?|\n)/, 1).map(makeOtherWorldlyCreature)
+					P.regexp(/(forgotten beasts?)(?:\r\n?|\n)/i).map(
+						R.always(
+							makeCreature({
+								creature: forgottenBeastCreature
+							})
+						)
+					),
+					P.regexp(/(.+)(?:\r\n?|\n)/, 1).map(
+						makeOtherWorldlyCreature
+					)
 				),
 				(population, creature) => ({
 					population,
@@ -282,12 +367,18 @@ export default function createRegionWorldSitesParser(creatures) {
 			);
 		},
 		outdoorAnimalPopulations(lang) {
-			return P.regexp(/Outdoor Animal Populations \(Including Undead\)(?:\r\n?|\n)/)
-				.then(lang.creaturePopulation.many()).trim(P.optWhitespace);
+			return P.regexp(
+				/Outdoor Animal Populations \(Including Undead\)(?:\r\n?|\n)/
+			)
+				.then(lang.creaturePopulation.many())
+				.trim(P.optWhitespace);
 		},
 		undergroundAnimalPopulations(lang) {
-			return P.regexp(/Underground Animal Populations \(Including Undead\)(?:\r\n?|\n)/)
-				.then(lang.creaturePopulation.many()).trim(P.optWhitespace);
+			return P.regexp(
+				/Underground Animal Populations \(Including Undead\)(?:\r\n?|\n)/
+			)
+				.then(lang.creaturePopulation.many())
+				.trim(P.optWhitespace);
 		}
 	});
 }

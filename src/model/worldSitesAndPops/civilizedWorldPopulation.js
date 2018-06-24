@@ -1,4 +1,3 @@
-
 export function civilizedPopulation({race, population = 0}) {
 	return {
 		race,

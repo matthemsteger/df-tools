@@ -1,4 +1,3 @@
-
 const privates = {
 	install: new WeakMap(),
 	rawCollection: new WeakMap()

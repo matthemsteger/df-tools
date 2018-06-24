@@ -1,4 +1,3 @@
-
 export default function site({
 	siteNumber,
 	name,
