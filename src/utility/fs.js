@@ -47,3 +47,8 @@ export function fileMeta(filePath) {
 		md5File
 	)(filePath);
 }
+
+export const readUtf8File = R.converge(fs.readFileFuture, [
+	R.identity,
+	R.always('utf8')
+]);
