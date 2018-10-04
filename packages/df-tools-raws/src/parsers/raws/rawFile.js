@@ -1,13 +1,11 @@
 import P from 'parsimmon';
 import {always, prop} from 'ramda';
-import {commentOrWhitespace, comment} from '../utilities';
+import {noise} from '../utilities';
 import objectTypeParser from './objectType';
 import createObjectParser from './objects';
 
 const fileLabel = always(P.regexp(/[a-z_]*/));
 const fileObjectType = always(objectTypeParser);
-const untilLeftBracket = P.takeWhile((c) => c !== '[');
-const noise = P.alt(untilLeftBracket, P.optWhitespace);
 
 /**
  * @typedef {object} Position

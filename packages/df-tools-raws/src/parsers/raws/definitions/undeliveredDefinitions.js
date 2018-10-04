@@ -737,3 +737,326 @@ export const BP_LAYERS_UNDER = {
 	numArgs: Number.NaN,
 	...getMeta('BP_LAYERS_UNDER')
 };
+
+export const CONTAINS_LYE = {
+	name: 'CONTAINS_LYE',
+	numArgs: 0,
+	...getMeta('CONTAINS_LYE')
+};
+
+export const POTASHABLE = {
+	name: 'POTASHABLE',
+	numArgs: 0,
+	...getMeta('POTASHABLE')
+};
+
+export const WEB_ONLY = {
+	name: 'WEB_ONLY',
+	numArgs: 0,
+	...getMeta('WEB_ONLY')
+};
+
+export const NOT_CONTAIN_BARREL_ITEM = {
+	name: 'NOT_CONTAIN_BARREL_ITEM',
+	numArgs: 0,
+	...getMeta('NOT_CONTAIN_BARREL_ITEM')
+};
+
+export const GLASS_MATERIAL = {
+	name: 'GLASS_MATERIAL',
+	numArgs: 0,
+	...getMeta('GLASS_MATERIAL')
+};
+
+export const FIRE_BUILD_SAFE = {
+	name: 'FIRE_BUILD_SAFE',
+	numArgs: 0,
+	...getMeta('FIRE_BUILD_SAFE')
+};
+
+export const MAGMA_BUILD_SAFE = {
+	name: 'MAGMA_BUILD_SAFE',
+	numArgs: 0,
+	...getMeta('MAGMA_BUILD_SAFE')
+};
+
+export const ANY_SILK_MATERIAL = {
+	name: 'ANY_SILK_MATERIAL',
+	numArgs: 0,
+	...getMeta('ANY_SILK_MATERIAL')
+};
+
+export const ANY_YARN_MATERIAL = {
+	name: 'ANY_YARN_MATERIAL',
+	numArgs: 0,
+	...getMeta('ANY_YARN_MATERIAL')
+};
+
+export const ANY_SOAP_MATERIAL = {
+	name: 'ANY_SOAP_MATERIAL',
+	numArgs: 0,
+	...getMeta('ANY_SOAP_MATERIAL')
+};
+
+export const ANY_LEATHER_MATERIAL = {
+	name: 'ANY_LEATHER_MATERIAL',
+	numArgs: 0,
+	...getMeta('ANY_LEATHER_MATERIAL')
+};
+
+export const ANY_STRAND_MATERIAL = {
+	name: 'ANY_STRAND_MATERIAL',
+	numArgs: 0,
+	...getMeta('ANY_STRAND_MATERIAL')
+};
+
+export const ANY_SHELL_MATERIAL = {
+	name: 'ANY_SHELL_MATERIAL',
+	numArgs: 0,
+	...getMeta('ANY_SHELL_MATERIAL')
+};
+
+export const ANY_TOOTH_MATERIAL = {
+	name: 'ANY_TOOTH_MATERIAL',
+	numArgs: 0,
+	...getMeta('ANY_TOOTH_MATERIAL')
+};
+
+export const ANY_HORN_MATERIAL = {
+	name: 'ANY_HORN_MATERIAL',
+	numArgs: 0,
+	...getMeta('ANY_HORN_MATERIAL')
+};
+
+export const ANY_PEARL_MATERIAL = {
+	name: 'ANY_PEARL_MATERIAL',
+	numArgs: 0,
+	...getMeta('ANY_PEARL_MATERIAL')
+};
+
+export const NOT_ENGRAVED = {
+	name: 'NOT_ENGRAVED',
+	numArgs: 0,
+	...getMeta('NOT_ENGRAVED')
+};
+
+export const MIN_DIMENSION = {
+	name: 'MIN_DIMENSION',
+	numArgs: Number.NaN,
+	...getMeta('MIN_DIMENSION')
+};
+
+export const IS_SAND_MATERIAL = {
+	name: 'IS_SAND_MATERIAL',
+	numArgs: 0,
+	...getMeta('IS_SAND_MATERIAL')
+};
+
+export const HARD_ITEM_MATERIAL = {
+	name: 'HARD_ITEM_MATERIAL',
+	numArgs: 0,
+	...getMeta('HARD_ITEM_MATERIAL')
+};
+
+export const METAL_ITEM_MATERIAL = {
+	name: 'METAL_ITEM_MATERIAL',
+	numArgs: 0,
+	...getMeta('METAL_ITEM_MATERIAL')
+};
+
+export const BUILDING_FURNACE = {
+	name: 'BUILDING_FURNACE',
+	numArgs: 1,
+	...getMeta('BUILDING_FURNACE')
+};
+
+export const ALLOWED_CLASS = {
+	name: 'ALLOWED_CLASS',
+	numArgs: 1,
+	...getMeta('ALLOWED_CLASS')
+};
+
+export const ALLOWED_CREATURE = {
+	name: 'ALLOWED_CREATURE',
+	numArgs: 1,
+	...getMeta('ALLOWED_CREATURE')
+};
+
+export const REJECTED_CLASS = {
+	name: 'REJECTED_CLASS',
+	numArgs: 1,
+	...getMeta('REJECTED_CLASS')
+};
+
+export const REJECTED_CREATURE = {
+	name: 'REJECTED_CREATURE',
+	numArgs: 1,
+	...getMeta('REJECTED_CREATURE')
+};
+
+export const INDOOR_ORCHARDS = {
+	name: 'INDOOR_ORCHARDS',
+	numArgs: 0,
+	...getMeta('INDOOR_ORCHARDS')
+};
+export const IS_HIST_STRING_1 = {
+	name: 'IS_HIST_STRING_1',
+	numArgs: 1,
+	...getMeta('IS_HIST_STRING_1')
+};
+
+export const IS_HIST_STRING_2 = {
+	name: 'IS_HIST_STRING_2',
+	numArgs: 1,
+	...getMeta('IS_HIST_STRING_2')
+};
+
+export const IS_FREQUENCY = {
+	name: 'IS_FREQUENCY',
+	numArgs: 1,
+	...getMeta('IS_FREQUENCY')
+};
+
+export const IS_NAME = {
+	name: 'IS_NAME',
+	numArgs: 1,
+	...getMeta('IS_NAME')
+};
+
+export const IS_REGION = {
+	name: 'IS_REGION',
+	numArgs: 1,
+	...getMeta('IS_REGION')
+};
+
+export const IS_SPHERE = {
+	name: 'IS_SPHERE',
+	numArgs: 1,
+	...getMeta('IS_SPHERE')
+};
+
+export const IS_SECRET_GOAL = {
+	name: 'IS_SECRET_GOAL',
+	numArgs: 1,
+	...getMeta('IS_SECRET_GOAL')
+};
+
+export const IS_SECRET = {
+	name: 'IS_SECRET',
+	numArgs: 1,
+	...getMeta('IS_SECRET')
+};
+
+export const IS_USAGE_HINT = {
+	name: 'IS_USAGE_HINT',
+	numArgs: 1,
+	...getMeta('IS_USAGE_HINT')
+};
+
+export const IT_AFFECTED_CREATURE = {
+	name: 'IT_AFFECTED_CREATURE',
+	numArgs: 1,
+	...getMeta('IT_AFFECTED_CREATURE')
+};
+
+export const IT_AFFECTED_CLASS = {
+	name: 'IT_AFFECTED_CLASS',
+	numArgs: 1,
+	...getMeta('IT_AFFECTED_CLASS')
+};
+
+export const IT_IMMUNE_CREATURE = {
+	name: 'IT_IMMUNE_CREATURE',
+	numArgs: 1,
+	...getMeta('IT_IMMUNE_CREATURE')
+};
+
+export const IT_IMMUNE_CLASS = {
+	name: 'IT_IMMUNE_CLASS',
+	numArgs: 1,
+	...getMeta('IT_IMMUNE_CLASS')
+};
+
+export const IT_REQUIRES = {
+	name: 'IT_REQUIRES',
+	numArgs: 1,
+	...getMeta('IT_REQUIRES')
+};
+
+export const IT_FORBIDDEN = {
+	name: 'IT_FORBIDDEN',
+	numArgs: 1,
+	...getMeta('IT_FORBIDDEN')
+};
+
+export const IT_CANNOT_TARGET_IF_ALREADY_AFFECTED = {
+	name: 'IT_CANNOT_TARGET_IF_ALREADY_AFFECTED',
+	numArgs: 1,
+	...getMeta('IT_CANNOT_TARGET_IF_ALREADY_AFFECTED')
+};
+
+export const IT_CANNOT_HAVE_SYNDROME_CLASS = {
+	name: 'IT_CANNOT_HAVE_SYNDROME_CLASS',
+	numArgs: 1,
+	...getMeta('IT_CANNOT_HAVE_SYNDROME_CLASS')
+};
+
+export const IE_INTERMITTENT = {
+	name: 'IE_INTERMITTENT',
+	numArgs: 1,
+	...getMeta('IE_INTERMITTENT')
+};
+
+export const IE_ARENA_NAME = {
+	name: 'IE_ARENA_NAME',
+	numArgs: 1,
+	...getMeta('IE_ARENA_NAME')
+};
+
+export const BONE_MAT = {
+	name: 'BONE_MAT',
+	numArgs: 0,
+	...getMeta('BONE_MAT')
+};
+
+export const CERAMIC_MAT = {
+	name: 'CERAMIC_MAT',
+	numArgs: 0,
+	...getMeta('CERAMIC_MAT')
+};
+
+export const DESCRIPTION = {
+	name: 'DESCRIPTION',
+	numArgs: 1,
+	...getMeta('DESCRIPTION')
+};
+
+export const GLASS_MAT = {
+	name: 'GLASS_MAT',
+	numArgs: 0,
+	...getMeta('GLASS_MAT')
+};
+
+export const LEATHER_MAT = {
+	name: 'LEATHER_MAT',
+	numArgs: 0,
+	...getMeta('LEATHER_MAT')
+};
+
+export const SHELL_MAT = {
+	name: 'SHELL_MAT',
+	numArgs: 0,
+	...getMeta('SHELL_MAT')
+};
+
+export const SILK_MAT = {
+	name: 'SILK_MAT',
+	numArgs: 0,
+	...getMeta('SILK_MAT')
+};
+
+export const THREAD_PLANT_MAT = {
+	name: 'THREAD_PLANT_MAT',
+	numArgs: 0,
+	...getMeta('THREAD_PLANT_MAT')
+};
