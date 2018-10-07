@@ -4,8 +4,12 @@ import fs from 'fs';
 import path from 'path';
 import util from 'util';
 import {path as atPath} from 'ramda';
+import {glob} from '@matthemsteger/utils-fn-fs';
+import {performance} from 'perf_hooks';
+import {parallel, encaseP} from 'fluture';
 import createRawFileParser from '../../../src/parsers/raws/rawFile';
 
+const mapSeries = parallel(1);
 const readFileAsync = util.promisify(fs.readFile);
 
 describe('(integration) src/parsers/raws/rawFile', () => {
@@ -66,5 +70,32 @@ describe('(integration) src/parsers/raws/rawFile', () => {
 				line: 415,
 				column: 3
 			});
+	});
+
+	it('**temp debug** should parse entire clean raws', async function() {
+		this.timeout(0);
+		const parser = createRawFileParser();
+		const rawFiles = await glob('C:\\df\\df-clean\\raw\\objects\\*.txt', {
+			nodir: true,
+			absolute: true
+		}).promise();
+
+		const results = await mapSeries(
+			rawFiles.map(
+				encaseP(async (file) => {
+					const rawText = await readFileAsync(file, 'utf8');
+					console.log(`start parse ${file}`);
+					const startParse = performance.now();
+					const result = parser.file.tryParse(rawText);
+					const endParse = performance.now();
+					console.log(
+						`finished parsing ${file} in ${(endParse - startParse) /
+							1000}s`
+					);
+					return result;
+				})
+			)
+		).promise();
+		return results;
 	});
 });

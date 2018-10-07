@@ -11,7 +11,7 @@ export const untilLeftBracket = P.takeWhile((c) => c !== '[');
 export const noise = P.alt(untilLeftBracket, P.optWhitespace);
 
 export const comment = P.regexp(
-	/(?:[^\][\r\n]+(?!.*(?:]|\[))|[^\]\s]+(?![^[]*]))/
+	/(?:[^\][\r\n]+(?!.*(?:]|\[))|[^\]\s]+(?![^[]*])|\s)/
 );
 
 export const commentOrWhitespace = comment.many().trim(P.optWhitespace);

@@ -12,6 +12,7 @@ import itemSiegeAmmo from '../definitions/itemSiegeAmmo';
 import itemTool from '../definitions/itemTool';
 import itemToy from '../definitions/itemToy';
 import itemTrapComp from '../definitions/itemTrapComp';
+import itemWeapon from '../definitions/itemWeapon';
 
 export default P.alt(
 	createParserFromDefinition(itemAmmo),
@@ -25,5 +26,6 @@ export default P.alt(
 	createParserFromDefinition(itemSiegeAmmo),
 	createParserFromDefinition(itemTool),
 	createParserFromDefinition(itemToy),
-	createParserFromDefinition(itemTrapComp)
+	createParserFromDefinition(itemTrapComp),
+	createParserFromDefinition(itemWeapon)
 );

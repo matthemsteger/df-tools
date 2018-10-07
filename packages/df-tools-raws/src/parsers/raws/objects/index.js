@@ -11,6 +11,11 @@ import entityParser from '../objects/entity';
 import inorganicParser from '../objects/inorganic';
 import interactionParser from '../objects/interaction';
 import itemParser from '../objects/item';
+import languageParser from '../objects/language';
+import materialTemplateParser from '../objects/materialTemplate';
+import plantParser from '../objects/plant';
+import reactionParser from '../objects/reaction';
+import tissueTemplateParser from '../objects/tissueTemplate';
 
 /**
  * Create an object parser based on the type
@@ -42,6 +47,16 @@ export default function createObjectParser(objectType) {
 			return interactionParser;
 		case 'ITEM':
 			return itemParser;
+		case 'LANGUAGE':
+			return languageParser;
+		case 'MATERIAL_TEMPLATE':
+			return materialTemplateParser;
+		case 'PLANT':
+			return plantParser;
+		case 'REACTION':
+			return reactionParser;
+		case 'TISSUE_TEMPLATE':
+			return tissueTemplateParser;
 		default:
 			return P.fail(`Unknown objectType ${objectType}`);
 	}

@@ -528,54 +528,6 @@ export const STOCKPILE_GLOB_SOLID = {
 	...getMeta('STOCKPILE_GLOB_SOLID')
 };
 
-export const BLOOD_MAP_DISCRIPTOR = {
-	name: 'BLOOD_MAP_DISCRIPTOR',
-	numArgs: 0,
-	...getMeta('BLOOD_MAP_DISCRIPTOR')
-};
-
-export const ICHOR_MAP_DISCRIPTOR = {
-	name: 'ICHOR_MAP_DISCRIPTOR',
-	numArgs: 0,
-	...getMeta('ICHOR_MAP_DISCRIPTOR')
-};
-
-export const GOO_MAP_DISCRIPTOR = {
-	name: 'GOO_MAP_DISCRIPTOR',
-	numArgs: 0,
-	...getMeta('GOO_MAP_DISCRIPTOR')
-};
-
-export const SLIME_MAP_DISCRIPTOR = {
-	name: 'SLIME_MAP_DISCRIPTOR',
-	numArgs: 0,
-	...getMeta('SLIME_MAP_DISCRIPTOR')
-};
-
-export const PUS_MAP_DISCRIPTOR = {
-	name: 'PUS_MAP_DISCRIPTOR',
-	numArgs: 0,
-	...getMeta('PUS_MAP_DISCRIPTOR')
-};
-
-export const SWEAT_MAP_DISCRIPTOR = {
-	name: 'SWEAT_MAP_DISCRIPTOR',
-	numArgs: 0,
-	...getMeta('SWEAT_MAP_DISCRIPTOR')
-};
-
-export const TEARS_MAP_DISCRIPTOR = {
-	name: 'TEARS_MAP_DISCRIPTOR',
-	numArgs: 0,
-	...getMeta('TEARS_MAP_DISCRIPTOR')
-};
-
-export const SPIT_MAP_DISCRIPTOR = {
-	name: 'SPIT_MAP_DISCRIPTOR',
-	numArgs: 0,
-	...getMeta('SPIT_MAP_DISCRIPTOR')
-};
-
 export const SYN_IMMUNE_CLASS = {
 	name: 'SYN_IMMUNE_CLASS',
 	numArgs: 1,
@@ -1059,4 +1011,88 @@ export const THREAD_PLANT_MAT = {
 	name: 'THREAD_PLANT_MAT',
 	numArgs: 0,
 	...getMeta('THREAD_PLANT_MAT')
+};
+
+export const TRUNK_NAME = {
+	name: 'TRUNK_NAME',
+	numArgs: 1,
+	...getMeta('TRUNK_NAME')
+};
+
+export const LIGHT_BRANCHES_NAME = {
+	name: 'LIGHT_BRANCHES_NAME',
+	numArgs: 1,
+	...getMeta('LIGHT_BRANCHES_NAME')
+};
+
+export const HEAVY_BRANCHES_NAME = {
+	name: 'HEAVY_BRANCHES_NAME',
+	numArgs: 1,
+	...getMeta('HEAVY_BRANCHES_NAME')
+};
+
+export const ROOT_NAME = {
+	name: 'ROOT_NAME',
+	numArgs: 1,
+	...getMeta('ROOT_NAME')
+};
+
+export const TWIGS_NAME = {
+	name: 'TWIGS_NAME',
+	numArgs: 1,
+	...getMeta('TWIGS_NAME')
+};
+
+export const CAP_NAME = {
+	name: 'CAP_NAME',
+	numArgs: 1,
+	...getMeta('CAP_NAME')
+};
+
+export const SAPLING_TILE = {
+	name: 'SAPLING_TILE',
+	numArgs: 1,
+	...getMeta('SAPLING_TILE')
+};
+
+export const DEAD_SAPLING_TILE = {
+	name: 'DEAD_SAPLING_TILE',
+	numArgs: 1,
+	...getMeta('DEAD_SAPLING_TILE')
+};
+
+export const SAPLING_DROWN_LEVEL = {
+	name: 'SAPLING_DROWN_LEVEL',
+	numArgs: 1,
+	...getMeta('SAPLING_DROWN_LEVEL')
+};
+
+export const TREE_DROWN_LEVEL = {
+	name: 'TREE_DROWN_LEVEL',
+	numArgs: 1,
+	...getMeta('TREE_DROWN_LEVEL')
+};
+
+export const DEAD_PICKED_COLOR = {
+	name: 'DEAD_PICKED_COLOR',
+	numArgs: 1,
+	...getMeta('DEAD_PICKED_COLOR')
+};
+
+export const SHRUB_DROWN_LEVEL = {
+	name: 'SHRUB_DROWN_LEVEL',
+	numArgs: 1,
+	...getMeta('SHRUB_DROWN_LEVEL')
+};
+
+export const CATEGORY_PARENT = {
+	name: 'CATEGORY_PARENT',
+	numArgs: 1,
+	...getMeta('CATEGORY_PARENT')
+};
+
+export const CATEGORY_KEY = {
+	name: 'CATEGORY_KEY',
+	numArgs: 1,
+	...getMeta('CATEGORY_KEY')
 };
