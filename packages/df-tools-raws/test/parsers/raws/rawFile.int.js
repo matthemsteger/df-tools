@@ -75,10 +75,13 @@ describe('(integration) src/parsers/raws/rawFile', () => {
 	it('**temp debug** should parse entire clean raws', async function() {
 		this.timeout(0);
 		const parser = createRawFileParser();
-		const rawFiles = await glob('C:\\df\\df-clean\\raw\\objects\\*.txt', {
-			nodir: true,
-			absolute: true
-		}).promise();
+		const rawFiles = await glob(
+			'C:\\df\\df-clean\\raw\\objects\\creature_standard.txt',
+			{
+				nodir: true,
+				absolute: true
+			}
+		).promise();
 
 		const results = await mapSeries(
 			rawFiles.map(
@@ -91,6 +94,11 @@ describe('(integration) src/parsers/raws/rawFile', () => {
 					console.log(
 						`finished parsing ${file} in ${(endParse - startParse) /
 							1000}s`
+					);
+					fs.writeFileSync(
+						'test.json',
+						JSON.stringify(result),
+						'utf8'
 					);
 					return result;
 				})

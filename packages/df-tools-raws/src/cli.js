@@ -2,10 +2,15 @@
 
 import yargs from 'yargs';
 import process from 'process';
+import {promisify} from 'util';
+import {readFile} from 'fs';
 import {
 	outputDefinitions,
 	outputTokenNames
 } from './parsers/raws/definitionsGenerator';
+import createRawFileParser from './parsers/raws/rawFile';
+
+const readFileAsync = promisify(readFile);
 
 function generateDefinitions({glob}) {
 	outputDefinitions({
@@ -29,6 +34,19 @@ function generateTokenNames({glob}) {
 			process.exit(0);
 		}
 	);
+}
+
+async function outputRawFileParse({file}) {
+	try {
+		const parser = createRawFileParser();
+		const rawText = await readFileAsync(file, 'utf8');
+		const result = parser.file.tryParse(rawText);
+		process.stdout.write(JSON.stringify(result));
+		process.exit(0);
+	} catch (err) {
+		process.stderr.write(err.message);
+		process.exit(1);
+	}
 }
 
 // eslint-disable-next-line no-unused-expressions
@@ -57,5 +75,16 @@ yargs
 			});
 		},
 		generateTokenNames
+	)
+	.command(
+		'parse-raw-file <file>',
+		'Parse a raw file and output the result of the parse in JSON',
+		(y) => {
+			y.positional('file', {
+				type: 'string',
+				describe: 'the path to a file'
+			});
+		},
+		outputRawFileParse
 	)
 	.help().argv;

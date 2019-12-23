@@ -29,29 +29,17 @@
 	},
 	"homepage": "https://github.com/matthemsteger/df-tools#readme",
 	"engines": {
-		"node": ">= 8.9"
+		"node": ">= 12.4.0"
 	},
 	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-plugin-transform-class-properties": "^6.24.1",
-		"babel-plugin-transform-object-rest-spread": "^6.26.0",
-		"babel-preset-env": "^1.7.0",
-		"babel-register": "^6.26.0",
-		"chai": "^4.1.2",
-		"chai-interface": "^2.0.3",
-		"mocha": "^5.2.0",
-		"nyc": "^12.0.2",
-		"proxyquire": "^2.0.1",
-		"sinon": "^6.0.0",
-		"sinon-chai": "^3.2.0",
-		"yargs": "^12.0.2"
+		"yargs": "^14.0.0"
 	},
 	"dependencies": {
 		"@matthemsteger/utils-fn-fs": "^1.0.2",
 		"@matthemsteger/utils-fn-futures": "^1.0.2",
-		"fluture": "^10.1.0",
-		"folktale": "^2.3.0",
-		"parsimmon": "^1.12.0",
-		"ramda": "^0.25.0"
+		"fluture": "^11.0.3",
+		"folktale": "^2.3.2",
+		"parsimmon": "^1.13.0",
+		"ramda": "^0.26.1"
 	}
 }

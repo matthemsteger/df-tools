@@ -9,7 +9,7 @@
 		"mocha": "mocha --recursive -r babel-register \"test/**/*.spec.js\"",
 		"mocha:watch": "mocha --recursive --reporter min -r babel-register --watch \"test/**/*.spec.js\"",
 		"lint": "eslint \"**/*.js\" && echo Lint passed.",
-		"build": "babel src -d dist",
+		"build": "babel --root-mode upward src -d dist",
 		"dev": "babel src --watch -d dist",
 		"prepublishOnly": "npm run build"
 	},
@@ -27,14 +27,9 @@
 	},
 	"homepage": "https://github.com/matthemsteger/df-tools#readme",
 	"engines": {
-		"node": ">= 8.9"
+		"node": ">= 12.4.0"
 	},
 	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-plugin-transform-class-properties": "^6.24.1",
-		"babel-plugin-transform-object-rest-spread": "^6.26.0",
-		"babel-preset-env": "^1.7.0",
-		"babel-register": "^6.26.0",
 		"chai": "^4.1.2",
 		"chai-interface": "^2.0.3",
 		"mocha": "^5.2.0",
