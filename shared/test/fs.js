@@ -12,3 +12,15 @@ export function createFsStubModule(sandbox) {
 		Stream: stream
 	};
 }
+
+export function createFnFsStubModule(sandbox) {
+	const maybeDirHasFile = sandbox.stub();
+	const fs = {
+		readFileFuture: sandbox.stub()
+	};
+
+	return {
+		fs,
+		maybeDirHasFile
+	};
+}

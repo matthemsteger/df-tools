@@ -37,10 +37,9 @@ describe('src/index', () => {
 			collectStub.callsArgWith(0, null, fakeResult);
 
 			readGameLogFromPosition(gamelogPath, start).fork(done, (result) => {
-				expect(createReadStreamStub).to.have.been.calledWithMatch(
-					gamelogPath,
-					{start}
-				);
+				expect(
+					createReadStreamStub
+				).to.have.been.calledWithMatch(gamelogPath, {start});
 				expect(decodeStreamStub).to.have.been.calledWithExactly(
 					'cp437'
 				);
@@ -55,10 +54,9 @@ describe('src/index', () => {
 			collectStub.callsArgWith(0, error, null);
 
 			readGameLogFromPosition(gamelogPath, start).fork((err) => {
-				expect(createReadStreamStub).to.have.been.calledWithMatch(
-					gamelogPath,
-					{start}
-				);
+				expect(
+					createReadStreamStub
+				).to.have.been.calledWithMatch(gamelogPath, {start});
 				expect(decodeStreamStub).to.have.been.calledWithExactly(
 					'cp437'
 				);

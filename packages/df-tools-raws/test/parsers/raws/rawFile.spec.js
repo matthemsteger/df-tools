@@ -5,13 +5,10 @@ import proxyquire from 'proxyquire';
 
 const sandbox = sinon.createSandbox();
 const noop = () => undefined;
-const parsimmonModule = {createLanguage: noop, seqMap: noop};
-const {createLanguage: createLanguageStub, seqMap: seqMapStub} = sandbox.stub(
-	parsimmonModule
-);
+const parsimmonModule = sandbox.stub({createLanguage: noop, seqMap: noop});
 
 const rawFileModule = proxyquire('../../../src/parsers/raws/rawFile', {
-	P: parsimmonModule
+	parsimmon: parsimmonModule
 });
 
 const {default: createRawFileParser} = rawFileModule;
@@ -25,7 +22,7 @@ describe('src/parsers/raws/rawFile', () => {
 
 	describe('createRawFileParser', () => {
 		beforeEach(() => {
-			createLanguageStub.returnsArg(0);
+			parsimmonModule.createLanguage.returnsArg(0);
 		});
 
 		afterEach(() => {
@@ -43,7 +40,7 @@ describe('src/parsers/raws/rawFile', () => {
 
 		it('should have a language file', () => {
 			const fakeResult = {};
-			seqMapStub.returns(fakeResult);
+			parsimmonModule.seqMap.returns(fakeResult);
 
 			const language = createRawFileParser();
 			const fileObjectType = {

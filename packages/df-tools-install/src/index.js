@@ -72,13 +72,15 @@ export function discoverInstallMeta(installPath) {
 		RELEASE_NOTES_FILENAME
 	);
 
-	return chain(
-		compose(
-			maybeGetOrElse(futureOf({installPath})),
-			discoverInstallVersion(installPath)
+	return compose(
+		chain(
+			compose(
+				maybeGetOrElse(futureOf({installPath})),
+				map(discoverInstallVersion(installPath))
+			)
 		),
 		maybeReleaseNotesFileNameFuture
-	);
+	)(installPath);
 }
 
 /**

@@ -6,8 +6,8 @@
 	"scripts": {
 		"test": "npm run mocha",
 		"test:coverage": "nyc --cache npm run mocha && nyc report --reporter=lcov",
-		"mocha": "mocha --recursive -r babel-register \"test/**/*.spec.js\"",
-		"mocha:watch": "mocha --recursive --reporter min -r babel-register --watch \"test/**/*.spec.js\"",
+		"mocha": "mocha --recursive -r ../../babel.register.js \"test/**/*.spec.js\"",
+		"mocha:watch": "mocha --recursive --reporter min -r babel.register.js --watch \"test/**/*.spec.js\"",
 		"lint": "eslint \"**/*.js\" && echo Lint passed.",
 		"build": "babel --root-mode upward src -d dist",
 		"dev": "babel src --watch -d dist",
