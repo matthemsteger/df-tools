@@ -30,10 +30,7 @@ const findFiles = (pattern) => glob(pattern, {absolute: true, nodir: true});
  * @param {string[]} fileNames
  * @returns {Future<string[]>} array of file contents
  */
-const readFiles = compose(
-	unlimitedParallel,
-	map(readUtf8File)
-);
+const readFiles = compose(unlimitedParallel, map(readUtf8File));
 
 /**
  * Given two num args, figure out whether variable
@@ -98,8 +95,6 @@ export function outputDefinitions({fileGlob}) {
 
 export function outputTokenNames({fileGlob}) {
 	return generateDefinitions(fileGlob).map((definitionsHash) =>
-		keys(definitionsHash)
-			.sort()
-			.join(', ')
+		keys(definitionsHash).sort().join(', ')
 	);
 }

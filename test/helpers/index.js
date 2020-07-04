@@ -13,7 +13,7 @@ export const setupModuleDependency = R.curry((sandbox, fnNames) => {
 export function ensureFunctionExport(fn, fnName) {
 	it(`should export a function ${
 		fnName === 'default' ? 'as default' : fnName
-	}`, function() {
+	}`, function () {
 		expect(fn).to.be.a('function');
 	});
 }

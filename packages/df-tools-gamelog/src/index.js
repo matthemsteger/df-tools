@@ -1,6 +1,7 @@
 import Future from 'fluture';
 import fs from 'fs';
 import iconv from 'iconv-lite';
+import {resolve as resolvePath} from 'path';
 
 export default function readGameLogFromPosition(gamelogPath, start) {
 	return Future((reject, resolve) => {
@@ -13,5 +14,11 @@ export default function readGameLogFromPosition(gamelogPath, start) {
 
 				resolve(logText);
 			});
+
+		return () => undefined;
 	});
+}
+
+export function getGamelogPath(dfRootPath) {
+	return resolvePath(dfRootPath, 'gamelog.txt');
 }

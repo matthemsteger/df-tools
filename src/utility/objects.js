@@ -13,8 +13,5 @@ export const renameKeys = R.curry((keysMap, obj) =>
 );
 
 export const deriveObjFromPaths = R.curry((paths, props) =>
-	R.compose(
-		R.zipObj(props),
-		propsPath(paths)
-	)
+	R.compose(R.zipObj(props), propsPath(paths))
 );

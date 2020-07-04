@@ -5,9 +5,6 @@ import _debug from 'debug';
 
 const debug = _debug('df:cli:commands:index');
 
-const {argv} = yargs
-	.commandDir('commands')
-	.demandCommand()
-	.help().argv;
+const {argv} = yargs.commandDir('commands').demandCommand().help().argv;
 
 debug('argv is %o', argv);

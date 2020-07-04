@@ -40,11 +40,11 @@ const discoverInstallModule = proxyquire(
 
 const {discoverInstall, discoverInstallMeta} = discoverInstallModule;
 
-describe('api/install/discoverInstall', function() {
+describe('api/install/discoverInstall', function () {
 	const version = '0.44.02';
 	const releaseNotes = `Release notes for ${version}`;
 
-	afterEach(function() {
+	afterEach(function () {
 		sandbox.reset();
 	});
 
@@ -52,10 +52,10 @@ describe('api/install/discoverInstall', function() {
 	ensureFuncExport('discoverInstall');
 	ensureFuncExport('discoverInstallMeta');
 
-	describe('discoverInstallMeta', function() {
+	describe('discoverInstallMeta', function () {
 		const installPath = 'c:/df';
 
-		it('should get the meta of a df notes file', function(done) {
+		it('should get the meta of a df notes file', function (done) {
 			maybeDirHasFileStub.returns(
 				R.always(futureOf(Maybe.of('release notes.txt')))
 			);
@@ -69,7 +69,7 @@ describe('api/install/discoverInstall', function() {
 			});
 		});
 
-		it('should get only the install path if no release notes', function(done) {
+		it('should get only the install path if no release notes', function (done) {
 			maybeDirHasFileStub.returns(R.always(futureOf(Maybe.empty())));
 			discoverInstallMeta(installPath).fork(done, (meta) => {
 				expect(meta).to.deep.equal({installPath});
@@ -78,7 +78,7 @@ describe('api/install/discoverInstall', function() {
 			});
 		});
 
-		it('should set the version to undefined if not found', function(done) {
+		it('should set the version to undefined if not found', function (done) {
 			maybeDirHasFileStub.returns(
 				R.always(futureOf(Maybe.of('release notes.txt')))
 			);
@@ -90,22 +90,22 @@ describe('api/install/discoverInstall', function() {
 		});
 	});
 
-	describe('discoverInstall', function() {
+	describe('discoverInstall', function () {
 		let discoverInstallMetaStub;
 		const dfRootPath = 'c:/df';
 
-		beforeEach(function() {
+		beforeEach(function () {
 			discoverInstallMetaStub = sandbox.stub(
 				discoverInstallModule,
 				'discoverInstallMeta'
 			);
 		});
 
-		afterEach(function() {
+		afterEach(function () {
 			discoverInstallMetaStub.restore();
 		});
 
-		it('should return a dwarf fortress install from a dfRootPath', function(done) {
+		it('should return a dwarf fortress install from a dfRootPath', function (done) {
 			maybeDirHasFileStub.returns(
 				R.always(futureOf(Maybe.of('release notes.txt')))
 			);

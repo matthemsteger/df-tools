@@ -23,9 +23,7 @@ describe('(integration) src/parsers/raws/rawFile', () => {
 		const result = parser.file.parse(rawText);
 		expect(result).to.be.an('object');
 		expect(result).to.have.property('status', true);
-		expect(result)
-			.to.have.property('value')
-			.that.is.an('object');
+		expect(result).to.have.property('value').that.is.an('object');
 		const {value} = result;
 		expect(value).to.have.property('label', 'creature_fanciful');
 		expect(value)
@@ -48,9 +46,7 @@ describe('(integration) src/parsers/raws/rawFile', () => {
 		const result = parser.file.parse(rawText);
 		expect(result).to.be.an('object');
 		expect(result).to.have.property('status', true);
-		expect(result)
-			.to.have.property('value')
-			.that.is.an('object');
+		expect(result).to.have.property('value').that.is.an('object');
 		const {value} = result;
 		expect(value).to.have.property('label', 'creature_standard');
 		expect(value)
@@ -63,16 +59,14 @@ describe('(integration) src/parsers/raws/rawFile', () => {
 			.with.lengthOf(1);
 		const buggedEntry = atPath(['objects', 0, 'children', 155], value);
 		expect(buggedEntry).to.have.property('name', 'SET_TL_GROUP');
-		expect(buggedEntry)
-			.to.have.property('start')
-			.that.is.deep.equal({
-				offset: 17638,
-				line: 415,
-				column: 3
-			});
+		expect(buggedEntry).to.have.property('start').that.is.deep.equal({
+			offset: 17638,
+			line: 415,
+			column: 3
+		});
 	});
 
-	it('**temp debug** should parse entire clean raws', async function() {
+	it('**temp debug** should parse entire clean raws', async function () {
 		this.timeout(0);
 		const parser = createRawFileParser();
 		const rawFiles = await glob(
@@ -92,8 +86,9 @@ describe('(integration) src/parsers/raws/rawFile', () => {
 					const result = parser.file.tryParse(rawText);
 					const endParse = performance.now();
 					console.log(
-						`finished parsing ${file} in ${(endParse - startParse) /
-							1000}s`
+						`finished parsing ${file} in ${
+							(endParse - startParse) / 1000
+						}s`
 					);
 					fs.writeFileSync(
 						'test.json',

@@ -16,7 +16,8 @@ export function createFsStubModule(sandbox) {
 export function createFnFsStubModule(sandbox) {
 	const maybeDirHasFile = sandbox.stub();
 	const fs = {
-		readFileFuture: sandbox.stub()
+		readFileFuture: sandbox.stub(),
+		readdirFuture: sandbox.stub()
 	};
 
 	return {

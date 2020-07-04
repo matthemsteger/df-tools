@@ -29,18 +29,11 @@
 	"engines": {
 		"node": ">= 12.4.0"
 	},
-	"devDependencies": {
-		"chai": "^4.1.2",
-		"chai-interface": "^2.0.3",
-		"mocha": "^5.2.0",
-		"nyc": "^12.0.2",
-		"proxyquire": "^2.0.1",
-		"sinon": "^6.0.0",
-		"sinon-chai": "^3.2.0"
-	},
+	"devDependencies": {},
 	"dependencies": {
-		"@matthemsteger/utils-fn-fs": "^1.0.2",
-		"fluture": "^10.1.0",
+		"@matthemsteger/utils-fn-fs": "^2.0.0",
+		"@matthemsteger/utils-fn-numbers": "^2.0.0",
+		"fluture": "^12.3.1",
 		"folktale": "^2.3.0",
 		"ramda": "^0.27.0"
 	}

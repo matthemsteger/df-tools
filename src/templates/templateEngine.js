@@ -119,10 +119,7 @@ export function indentedBlock(block = '', baseIndentation = 0) {
 }
 
 export function map(collection, iteratee) {
-	return _.chain(collection)
-		.map(iteratee)
-		.join('')
-		.value();
+	return _.chain(collection).map(iteratee).join('').value();
 }
 
 export function pretty(strings, ...values) {

@@ -35,16 +35,10 @@ export const makeStringValueTransducer = makeTransducer(
 
 export const makeIntegerValueTransducer = makeTransducer(
 	makePropertyName,
-	R.compose(
-		parseBase10Int,
-		R.head
-	)
+	R.compose(parseBase10Int, R.head)
 );
 
 export const makeBooleanValueTransducer = makeTransducer(
 	makePropertyName,
-	R.compose(
-		R.equals('1'),
-		R.head
-	)
+	R.compose(R.equals('1'), R.head)
 );

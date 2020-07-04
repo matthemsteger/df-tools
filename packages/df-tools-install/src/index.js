@@ -1,8 +1,21 @@
 import os from 'os';
 import path from 'path';
-import {of as futureOf} from 'fluture';
+import {resolve as futureOf} from 'fluture';
 import {fs, maybeDirHasFile} from '@matthemsteger/utils-fn-fs';
-import {compose, chain, invoker, curry, map, nth, match} from 'ramda';
+import {parseBase10Int} from '@matthemsteger/utils-fn-numbers';
+import {
+	compose,
+	chain,
+	invoker,
+	curry,
+	map,
+	nth,
+	match,
+	filter,
+	startsWith,
+	sort,
+	subtract
+} from 'ramda';
 import createDwarfFortressInstall from './createDwarfFortressInstall';
 
 const RELEASE_NOTES_FILENAME = 'release notes.txt';
@@ -100,4 +113,39 @@ export function discoverInstall({dfRootPath}) {
 			}),
 		installMetaFuture
 	);
+}
+
+/**
+ * Parse a region dir name and return the number
+ * @param {string} regionDir
+ * @returns {number}
+ */
+function parseRegionDirName(regionDir) {
+	return compose(parseBase10Int, nth(1), match(/^region(\d+)$/))(regionDir);
+}
+
+/**
+ * Parse region dir names for nums
+ * @param {string[]} dirNames
+ * @returns {number[]}
+ */
+function parseRegionDirsForNums(dirNames) {
+	return compose(
+		sort(subtract),
+		map(parseRegionDirName),
+		filter(startsWith('region'))
+	)(dirNames);
+}
+
+/**
+ * Get all the region numbers for all saves in an install
+ * @param {object} options
+ * @param {string} options.dfRootPath
+ * @returns {Future<number[]>}
+ */
+export function getAllSaveRegionNums({dfRootPath}) {
+	const saveDir = path.resolve(dfRootPath, 'data/save');
+	const saveDirFilesFuture = fs.readdirFuture(saveDir);
+
+	return map(parseRegionDirsForNums, saveDirFilesFuture);
 }

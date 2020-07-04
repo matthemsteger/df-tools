@@ -31,12 +31,7 @@ export const parseCreatureRaws = R.compose(
 	R.chain(
 		R.compose(
 			parallel(Number.POSITIVE_INFINITY),
-			R.map(
-				R.compose(
-					parseCreatureRawFile,
-					R.prop('filePath')
-				)
-			)
+			R.map(R.compose(parseCreatureRawFile, R.prop('filePath')))
 		)
 	),
 	rawFiles[types.CREATURE]

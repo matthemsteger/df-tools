@@ -15,10 +15,7 @@ const fs = futurifyAll(_fs);
  * @returns {Future<boolean>}
  */
 const directoryIncludesFile = R.curry((fileName, dirPath) =>
-	R.compose(
-		R.map(R.contains(fileName)),
-		fs.readdirFuture
-	)(dirPath)
+	R.compose(R.map(R.contains(fileName)), fs.readdirFuture)(dirPath)
 );
 
 /**

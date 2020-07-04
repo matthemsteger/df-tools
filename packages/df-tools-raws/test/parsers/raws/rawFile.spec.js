@@ -1,4 +1,3 @@
-import {describe, it, beforeEach, afterEach} from 'mocha';
 import {expect} from 'chai';
 import sinon from 'sinon';
 import proxyquire from 'proxyquire';
@@ -15,9 +14,7 @@ const {default: createRawFileParser} = rawFileModule;
 
 describe('src/parsers/raws/rawFile', () => {
 	it('should export a function as default', () => {
-		expect(createRawFileParser)
-			.to.be.a('function')
-			.with.lengthOf(0);
+		expect(createRawFileParser).to.be.a('function').with.lengthOf(0);
 	});
 
 	describe('createRawFileParser', () => {

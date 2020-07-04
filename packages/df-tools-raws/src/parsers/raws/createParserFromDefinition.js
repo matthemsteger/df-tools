@@ -29,10 +29,7 @@ function makeOriginalToken(token) {
  * @param {RawParserDefinition[]} definitions
  * @returns {number}
  */
-const countRequiredChildren = compose(
-	length,
-	filter(propEq('required', true))
-);
+const countRequiredChildren = compose(length, filter(propEq('required', true)));
 
 /**
  * Create a parser from a definition

@@ -68,13 +68,7 @@ export function createTokenParser(name, numArgs = 0) {
 
 	return P.seq(...seq)
 		.trim(P.optWhitespace)
-		.map(
-			R.compose(
-				R.tail,
-				R.reject(isLanguageToken),
-				R.flatten
-			)
-		)
+		.map(R.compose(R.tail, R.reject(isLanguageToken), R.flatten))
 		.node(name);
 }
 

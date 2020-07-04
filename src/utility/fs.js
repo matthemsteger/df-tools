@@ -15,12 +15,7 @@ export {glob};
 
 export const maybeDirHasFile = R.curry((fileName, directoryPath) =>
 	R.compose(
-		R.map(
-			R.compose(
-				Maybe.fromNullable,
-				R.find(R.equals(fileName))
-			)
-		),
+		R.map(R.compose(Maybe.fromNullable, R.find(R.equals(fileName)))),
 		fs.readdirFuture
 	)(directoryPath)
 );
@@ -38,12 +33,7 @@ export const maybeDirHasFile = R.curry((fileName, directoryPath) =>
  */
 export function fileMeta(filePath) {
 	return R.compose(
-		R.map(
-			R.compose(
-				R.assoc('filePath', filePath),
-				R.objOf('hash')
-			)
-		),
+		R.map(R.compose(R.assoc('filePath', filePath), R.objOf('hash'))),
 		md5File
 	)(filePath);
 }

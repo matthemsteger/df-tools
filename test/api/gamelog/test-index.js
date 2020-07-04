@@ -24,23 +24,23 @@ const gamelogModule = proxyquire('./../../../src/api/gamelog', {
 
 const {default: readGameLogFromPosition} = gamelogModule;
 
-describe('api/gamelog/index', function() {
-	beforeEach(function() {
+describe('api/gamelog/index', function () {
+	beforeEach(function () {
 		pipeStub.returnsThis();
 		collectStub.returnsThis();
 	});
 
-	afterEach(function() {
+	afterEach(function () {
 		sandbox.reset();
 	});
 
 	ensureModuleFunctionExport(gamelogModule, 'default');
 
-	describe('readGameLogFromPosition', function() {
+	describe('readGameLogFromPosition', function () {
 		const gamelogPath = 'c:/df/gamelog.txt';
 		const start = 42;
 
-		it('should read the game log from a start position', function(done) {
+		it('should read the game log from a start position', function (done) {
 			const fakeLogText = 'blah blah';
 			createReadStreamStub.returns(streamStub);
 			collectStub.yields(null, fakeLogText);
@@ -51,7 +51,7 @@ describe('api/gamelog/index', function() {
 			});
 		});
 
-		it('should pass a rejected future if the read errors', function(done) {
+		it('should pass a rejected future if the read errors', function (done) {
 			const error = new Error('no');
 			createReadStreamStub.returns(streamStub);
 			collectStub.yields(error);

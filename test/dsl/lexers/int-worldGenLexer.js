@@ -8,8 +8,8 @@ import WorldGenLexer from './../../../src/dsl/lexers/worldGenLexer';
 Promise.promisifyAll(fs);
 // const debug = _debug('df:test:dsl:int-worldGenLexer');
 
-describe.skip('WorldGenLexer integration tests', function() {
-	it('should lex properly a world gen file', async function() {
+describe.skip('WorldGenLexer integration tests', function () {
+	it('should lex properly a world gen file', async function () {
 		const fakeWorldGen = await fs.readFileAsync(
 			path.resolve(__dirname, './../data/world_gen.txt'),
 			'utf8'

@@ -10,9 +10,8 @@ import {fromParser} from './../../model/settings/worldGen';
  * @returns {Future<FileMeta>}
  */
 export function getWorldGenSettingsFile(installPath) {
-	return R.compose(
-		fileMeta,
-		(p) => path.resolve(p, 'data/init/world_gen.txt')
+	return R.compose(fileMeta, (p) =>
+		path.resolve(p, 'data/init/world_gen.txt')
 	)(installPath);
 }
 
@@ -35,12 +34,7 @@ export const parseWorldGenSettings = R.compose(
 export function getWorldGenSettings(installPath) {
 	return R.compose(
 		R.map(parseWorldGenSettings),
-		R.chain(
-			R.compose(
-				readUtf8File,
-				R.prop('filePath')
-			)
-		),
+		R.chain(R.compose(readUtf8File, R.prop('filePath'))),
 		getWorldGenSettingsFile
 	)(installPath);
 }

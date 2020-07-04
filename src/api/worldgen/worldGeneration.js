@@ -112,25 +112,15 @@ function initialInformationWithContext(zipIntoContext, creatures) {
 			discoverInstall,
 			getWorldGenSettings,
 			getAllSaveRegions,
-			R.compose(
-				parseCreaturesIfNeeded(creatures),
-				R.prop('dfRootPath')
-			)
+			R.compose(parseCreaturesIfNeeded(creatures), R.prop('dfRootPath'))
 		]),
 		R.pick(['dfRootPath'])
 	);
 }
 
 const worldGenIdFromContext = R.when(
-	R.compose(
-		R.not,
-		R.prop('id')
-	),
-	R.compose(
-		R.inc,
-		R.last,
-		R.prop('usedIds')
-	)
+	R.compose(R.not, R.prop('id')),
+	R.compose(R.inc, R.last, R.prop('usedIds'))
 );
 
 const finalExecutablePathFromContext = R.compose(
@@ -146,33 +136,21 @@ const gamelogPathFromContext = R.compose(
 function gameLogSizeWithContext(valueIntoContext, tapFilteredContext) {
 	return R.compose(
 		R.map(
-			R.compose(
-				valueIntoContext('initialGamelogSize'),
-				R.prop('size')
-			)
+			R.compose(valueIntoContext('initialGamelogSize'), R.prop('size'))
 		),
-		R.compose(
-			fs.statFuture,
-			R.prop('gamelogPath')
-		),
+		R.compose(fs.statFuture, R.prop('gamelogPath')),
 		tapFilteredContext([
 			'gamelogPath',
 			'finalExecutablePath',
 			'worldGenId'
 		]),
-		R.compose(
-			valueIntoContext('gamelogPath'),
-			gamelogPathFromContext
-		),
+		R.compose(valueIntoContext('gamelogPath'), gamelogPathFromContext),
 		R.compose(
 			valueIntoContext('finalExecutablePath'),
 			finalExecutablePathFromContext
 		),
 		tapFilteredContext(['worldGenId']),
-		R.compose(
-			valueIntoContext('worldGenId'),
-			worldGenIdFromContext
-		),
+		R.compose(valueIntoContext('worldGenId'), worldGenIdFromContext),
 		tapFilteredContext(['id', 'usedIds', 'install', 'dfRootPath'])
 	);
 }
@@ -239,10 +217,7 @@ function parseResultsWithContext(zipIntoContext) {
 				parseWorldSitesAndPops,
 				parseWorldSitesAndPopsArgsFromContext
 			),
-			R.compose(
-				parseWorldHistory,
-				parseWorldHistoryArgsFromContext
-			)
+			R.compose(parseWorldHistory, parseWorldHistoryArgsFromContext)
 		])
 	);
 }

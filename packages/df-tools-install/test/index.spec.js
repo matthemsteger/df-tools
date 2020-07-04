@@ -3,7 +3,7 @@ import {expect, use} from 'chai';
 import sinonChai from 'sinon-chai';
 import sinon from 'sinon';
 import proxyquire from 'proxyquire';
-import {resolve} from 'fluture';
+import {resolve, promise} from 'fluture';
 import Maybe from 'folktale/maybe';
 import {curryN} from 'ramda';
 import {createFnFsStubModule} from '../../../shared/test/fs';
@@ -23,19 +23,23 @@ const installModule = proxyquire('./../src', {
 	'./createDwarfFortressInstall': createInstallModule
 });
 
-const {discoverInstallMeta, discoverInstall} = installModule;
+const {
+	discoverInstallMeta,
+	discoverInstall,
+	getAllSaveRegionNums
+} = installModule;
 
 describe('src/index', () => {
 	it('should export a discoverInstallMeta function', () => {
-		expect(discoverInstallMeta)
-			.to.be.a('function')
-			.with.lengthOf(1);
+		expect(discoverInstallMeta).to.be.a('function').with.lengthOf(1);
 	});
 
 	it('should export a discoverInstall function', () => {
-		expect(discoverInstall)
-			.to.be.a('function')
-			.with.lengthOf(1);
+		expect(discoverInstall).to.be.a('function').with.lengthOf(1);
+	});
+
+	it('should export a getAllSaveRegionNums function', () => {
+		expect(getAllSaveRegionNums).to.be.a('function').with.lengthOf(1);
 	});
 
 	describe('discoverInstallMeta', () => {
@@ -45,7 +49,7 @@ describe('src/index', () => {
 			sandbox.reset();
 		});
 
-		it('should give the meta', (done) => {
+		it('should give the meta', async () => {
 			const version = '0.99.03';
 			fsModule.maybeDirHasFile.callsFake(
 				curryN(2, () => resolve(Maybe.of('release notes.txt')))
@@ -55,27 +59,21 @@ describe('src/index', () => {
 				resolve(`Release notes for ${version}`)
 			);
 
-			discoverInstallMeta(fakePath).fork(done, (result) => {
-				expect(result).to.deep.equal({
-					installPath: fakePath,
-					version
-				});
-
-				done();
+			const result = await promise(discoverInstallMeta(fakePath));
+			expect(result).to.deep.equal({
+				installPath: fakePath,
+				version
 			});
 		});
 
-		it('should give the meta without version if release notes not found', (done) => {
+		it('should give the meta without version if release notes not found', async () => {
 			fsModule.maybeDirHasFile.callsFake(
 				curryN(2, () => resolve(Maybe.empty()))
 			);
 
-			discoverInstallMeta(fakePath).fork(done, (result) => {
-				expect(result).to.deep.equal({
-					installPath: fakePath
-				});
-
-				done();
+			const result = await promise(discoverInstallMeta(fakePath));
+			expect(result).to.deep.equal({
+				installPath: fakePath
 			});
 		});
 	});
@@ -83,7 +81,7 @@ describe('src/index', () => {
 	describe('discoverInstall', () => {
 		const fakePath = '~/df';
 
-		it('should should get install information', (done) => {
+		it('should should get install information', async () => {
 			const version = '0.99.04';
 			const osType = 'Linux';
 			const fakeResult = {path: fakePath};
@@ -97,19 +95,38 @@ describe('src/index', () => {
 			osModule.type.returns(osType);
 			createInstallModule.default.returns(fakeResult);
 
-			discoverInstall({dfRootPath: fakePath}).fork(done, (result) => {
-				expect(
-					createInstallModule.default
-				).to.have.been.calledWithExactly({
-					path: fakePath,
-					version,
-					osType
-				});
-
-				expect(result).to.equal(fakeResult);
-
-				done();
+			const result = await promise(
+				discoverInstall({dfRootPath: fakePath})
+			);
+			expect(createInstallModule.default).to.have.been.calledWithExactly({
+				path: fakePath,
+				version,
+				osType
 			});
+
+			expect(result).to.equal(fakeResult);
+		});
+	});
+
+	describe('getAllSaveRegionNums', () => {
+		const fakePath = '~/df';
+
+		it('should return only the proper save region directory numbers', async () => {
+			pathModule.resolve.returns(`${fakePath}/data/save`);
+			fsModule.fs.readdirFuture.returns(
+				resolve([
+					'region1',
+					'region4',
+					'region2',
+					'region99',
+					'another'
+				])
+			);
+
+			const result = await promise(
+				getAllSaveRegionNums({dfRootPath: fakePath})
+			);
+			expect(result).to.have.ordered.members([1, 2, 4, 99]);
 		});
 	});
 });

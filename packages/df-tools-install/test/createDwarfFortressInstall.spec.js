@@ -1,4 +1,3 @@
-import {describe, it} from 'mocha';
 import {expect} from 'chai';
 import sinon from 'sinon';
 import proxyquire from 'proxyquire';
@@ -15,9 +14,7 @@ const {default: createDwarfFortressInstall} = createInstallModule;
 
 describe('src/createDwarfFortressInstall', () => {
 	it('should export a function as default', () => {
-		expect(createDwarfFortressInstall)
-			.to.be.a('function')
-			.with.lengthOf(1);
+		expect(createDwarfFortressInstall).to.be.a('function').with.lengthOf(1);
 	});
 
 	describe('createDwarfFortressInstall', () => {

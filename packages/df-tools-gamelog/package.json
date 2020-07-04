@@ -29,17 +29,9 @@
 	"engines": {
 		"node": ">= 12.4.0"
 	},
-	"devDependencies": {
-		"chai": "^4.1.2",
-		"chai-interface": "^2.0.3",
-		"mocha": "^5.2.0",
-		"nyc": "^12.0.2",
-		"proxyquire": "^2.0.1",
-		"sinon": "^6.0.0",
-		"sinon-chai": "^3.2.0"
-	},
+	"devDependencies": {},
 	"dependencies": {
-		"fluture": "^8.0.2",
-		"iconv-lite": "^0.4.23"
+		"fluture": "^12.3.1",
+		"iconv-lite": "^0.6.1"
 	}
 }

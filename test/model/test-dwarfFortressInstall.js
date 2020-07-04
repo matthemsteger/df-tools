@@ -18,13 +18,13 @@ const dwarfFortressInstallModule = proxyquire(
 
 const {default: createDwarfFortressInstall} = dwarfFortressInstallModule;
 
-describe('model/install/dwarfFortressInstall', function() {
-	it('should export a constructor by default', function() {
+describe('model/install/dwarfFortressInstall', function () {
+	it('should export a constructor by default', function () {
 		expect(createDwarfFortressInstall).to.be.a('function');
 	});
 
-	describe('DwarfFortressInstall', function() {
-		it('should allow no input and initialize empty', function() {
+	describe('DwarfFortressInstall', function () {
+		it('should allow no input and initialize empty', function () {
 			const install = createDwarfFortressInstall();
 			['path', 'version'].forEach((prop) => {
 				expect(install).to.have.property(prop, undefined);
@@ -32,7 +32,7 @@ describe('model/install/dwarfFortressInstall', function() {
 		});
 
 		['path', 'version'].forEach((prop) => {
-			it(`should have a property ${prop} assigned based on input object`, function() {
+			it(`should have a property ${prop} assigned based on input object`, function () {
 				const install = createDwarfFortressInstall(validInput);
 				expect(install).to.have.property(
 					prop,

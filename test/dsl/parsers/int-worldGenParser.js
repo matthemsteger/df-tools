@@ -11,8 +11,8 @@ import {WorldGenConfiguration} from './../../../src/model/worldGen';
 Promise.promisifyAll(fs);
 const debug = _debug('df:test:dsl:int-worldGenParser');
 
-describe.skip('RegionWorldSitesPopsParser integration tests', function() {
-	it('should parse properly a world sites file', async function() {
+describe.skip('RegionWorldSitesPopsParser integration tests', function () {
+	it('should parse properly a world sites file', async function () {
 		const worldGenText = await fs.readFileAsync(
 			path.resolve(__dirname, './../data/world_gen.txt'),
 			'utf8'

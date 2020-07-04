@@ -69,11 +69,7 @@ export function minimumLowMedHighSquares({low, medium, high} = {}) {
 }
 
 export const dimTransducer = makeCamelCaseTransducer(
-	R.compose(
-		dim,
-		R.zipObj(['x', 'y']),
-		R.map(parseBase10Int)
-	)
+	R.compose(dim, R.zipObj(['x', 'y']), R.map(parseBase10Int))
 );
 
 export const beastEndYearTransducer = makeCamelCaseTransducer(
