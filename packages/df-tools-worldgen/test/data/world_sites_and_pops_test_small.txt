@@ -1,0 +1,174 @@
+Civilized World Population
+
+	38102 Dwarves
+	151357 Humans
+	37888 Elves
+	230340 Goblins
+	2306 Kobolds
+
+	Total: 459993
+
+Sites
+
+1: Ozran„b, "Shadyshafts", cave
+	1 dragon
+2: Enoznuglush K…snun—r, "Blanchedgutters the Quiet Crevice", cave
+	Owner: Strumbus, kobolds
+	Parent Civ: Lagabablaber, kobolds
+	267 kobolds
+3: N‹rlogem, "Landspainted", fortress
+	29 elves
+	1 peregrine falcon man
+	22 dwarves
+	1 forgotten beast
+4: Gitelapip, "Riderdimpled", hamlet
+	Owner: The Ivory Councils, humans
+	Parent Civ: The Influential Empires, humans
+	lady: Kisnast Worldbridged, human
+	95 humans
+	23 dogs
+	10 turkeys
+	50 rabbits
+5: Mimaleemino, "Rivermuted", forest retreat
+	Owner: The Amusing Rains, elves
+	Parent Civ: The Routed Intricacy, elves
+	6 goblins
+	1 human
+	3487 elves
+	154 ravens
+	418 kea
+	278 great horned owls
+	170 slugs
+	2 mules
+	8 water buffalos
+	170 hamsters
+	26 elf visitors
+	1 goblin visitor
+	1 human visitor
+	14 goblin outcasts
+	2 dwarf outcasts
+	16 elf outcasts
+6: Al†thcud‹st, "Boltedscald", fortress
+	Owner: The Murky Crypt, dwarves
+	Parent Civ: The Ring of Kin, dwarves
+	56 dwarves
+	8 humans
+	49 cats
+	25 horses
+	13 ducks
+	13 blue peafowls
+	31 dwarf visitors
+	25 human visitors
+	8 goblin outcasts
+	1 human outcast
+	4 dwarf outcasts
+7: Smoburar, "Conjuredmalign", dark fortress
+	Owner: The Circular Torments, goblins
+	Parent Civ: The Wretched Cruelties, goblins
+	lady: Ngerxung Hatedfactions the Contingent Fang, goblin
+	3 dwarves
+	12 humans
+	1 elf
+	1 warthog fiend
+	11134 goblins
+	2526 trolls
+	2526 blizzard men
+	2526 beak dogs
+	1 goblin visitor
+	3 human prisoners
+	2 dwarf prisoners
+8: Uddathad, "Brunchages", town
+	Owner: The League of Vaulting, humans
+	Parent Civ: The Nation of Strays, humans
+	lord: Elku Dustcolor, human
+	39 humans
+	1057 dogs
+	50 horses
+	245 pigs
+	15 human visitors
+	5 dwarf visitors
+	1 alligator outcast
+	1 dusk creature outcast
+	1 troll outcast
+	1797 human outcasts
+	31 goblin outcasts
+	1 saltwater crocodile outcast
+	6 kobold outcasts
+	7 human prisoners
+9: Sp”stromugub, "Towerburned", vault
+	Owner: The Whirling Frame, 
+	25 Blight Soldiers
+	50 War Beings
+	1 Dead Behemoth
+10: Tongmulgened, "Veileddepths", lair
+11: Morsodel, "Templeshield", fortress
+	Owner: The Rare Fortification, dwarves
+	Parent Civ: The Book of Judges, dwarves
+
+Outdoor Animal Populations (Including Undead)
+	33933 sea serpents
+	712572 gigantic squids
+	271456 squid men
+	283822 sea otters
+	407184 giant nautiluses
+	203592 nautilus men
+	60135 giant harp seals
+	36081 harp seal men
+	92207 harp seals
+	80180 giant elephant seals
+	28063 elephant seal men
+	92207 elephant seals
+	712572 giant sperm whales
+	203592 sperm whale men
+	678640 sperm whales
+	10000000 giant horseshoe crabs
+	237524 horseshoe crab men
+	10000341 horseshoe crabs
+	9134254 giant sponges
+	305408 sponge men
+	108 gila monster men
+	84472 dingo men
+	1711 leopard men
+	5 sloth bear men
+	2069 gila monsters
+	Unnumbered oysters
+	Unnumbered mussels
+	Unnumbered moon snails
+	Unnumbered slugs
+	Unnumbered snails
+	Unnumbered worms
+	Unnumbered beetles
+	Unnumbered thrips
+	Unnumbered lice
+	Unnumbered ticks
+	Unnumbered leeches
+	Unnumbered honey bees
+	Unnumbered bumblebees
+	Unnumbered ants
+	Unnumbered termites
+
+Underground Animal Populations (Including Undead)
+	2977087 gorlaks
+	1489460 trolls
+	462349 giant cave spiders
+	1344053 giant rats
+	1007661 giant bats
+	1280592 giant cave swallows
+	1087531 naked mole dogs
+	791930 large rats
+	2048490 giant moles
+	1815922 troglodytes
+	Unnumbered lizard devils
+	Unnumbered winged brutes
+	Unnumbered cockatoo demons
+	Unnumbered stegosaurid devils
+	Unnumbered vomit fiends
+	Unnumbered water brutes
+	Unnumbered shadow fiends
+	Unnumbered lizard demons
+	Unnumbered snow brutes
+	Unnumbered winged brutes
+	Unnumbered wolf demons
+	Unnumbered brutes of steam
+	Unnumbered marmot fiends
+	24660110 fire snakes

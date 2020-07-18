@@ -1,0 +1,132 @@
+import {describe, it, afterEach} from 'mocha';
+import {expect, use} from 'chai';
+import sinonChai from 'sinon-chai';
+import sinon from 'sinon';
+import proxyquire from 'proxyquire';
+import {resolve, promise} from 'fluture';
+import Maybe from 'folktale/maybe';
+import {curryN} from 'ramda';
+import {createFnFsStubModule} from '../../../shared/test/fs';
+
+use(sinonChai);
+const noop = () => undefined;
+const sandbox = sinon.createSandbox();
+const osModule = sandbox.stub({type: noop});
+const pathModule = sandbox.stub({resolve: noop});
+const fsModule = createFnFsStubModule(sandbox);
+const createInstallModule = sandbox.stub({default: noop});
+
+const installModule = proxyquire('./../src', {
+	os: osModule,
+	path: pathModule,
+	'@matthemsteger/utils-fn-fs': fsModule,
+	'./createDwarfFortressInstall': createInstallModule
+});
+
+const {
+	discoverInstallMeta,
+	discoverInstall,
+	getAllSaveRegionNums
+} = installModule;
+
+describe('src/index', () => {
+	it('should export a discoverInstallMeta function', () => {
+		expect(discoverInstallMeta).to.be.a('function').with.lengthOf(1);
+	});
+
+	it('should export a discoverInstall function', () => {
+		expect(discoverInstall).to.be.a('function').with.lengthOf(1);
+	});
+
+	it('should export a getAllSaveRegionNums function', () => {
+		expect(getAllSaveRegionNums).to.be.a('function').with.lengthOf(1);
+	});
+
+	describe('discoverInstallMeta', () => {
+		const fakePath = '~/df';
+
+		afterEach(() => {
+			sandbox.reset();
+		});
+
+		it('should give the meta', async () => {
+			const version = '0.99.03';
+			fsModule.maybeDirHasFile.callsFake(
+				curryN(2, () => resolve(Maybe.of('release notes.txt')))
+			);
+			pathModule.resolve.returns(`${fakePath}/release notes.txt`);
+			fsModule.fs.readFileFuture.returns(
+				resolve(`Release notes for ${version}`)
+			);
+
+			const result = await promise(discoverInstallMeta(fakePath));
+			expect(result).to.deep.equal({
+				installPath: fakePath,
+				version
+			});
+		});
+
+		it('should give the meta without version if release notes not found', async () => {
+			fsModule.maybeDirHasFile.callsFake(
+				curryN(2, () => resolve(Maybe.empty()))
+			);
+
+			const result = await promise(discoverInstallMeta(fakePath));
+			expect(result).to.deep.equal({
+				installPath: fakePath
+			});
+		});
+	});
+
+	describe('discoverInstall', () => {
+		const fakePath = '~/df';
+
+		it('should should get install information', async () => {
+			const version = '0.99.04';
+			const osType = 'Linux';
+			const fakeResult = {path: fakePath};
+			fsModule.maybeDirHasFile.callsFake(
+				curryN(2, () => resolve(Maybe.of('release notes.txt')))
+			);
+			pathModule.resolve.returns(`${fakePath}/release notes.txt`);
+			fsModule.fs.readFileFuture.returns(
+				resolve(`Release notes for ${version}`)
+			);
+			osModule.type.returns(osType);
+			createInstallModule.default.returns(fakeResult);
+
+			const result = await promise(
+				discoverInstall({dfRootPath: fakePath})
+			);
+			expect(createInstallModule.default).to.have.been.calledWithExactly({
+				path: fakePath,
+				version,
+				osType
+			});
+
+			expect(result).to.equal(fakeResult);
+		});
+	});
+
+	describe('getAllSaveRegionNums', () => {
+		const fakePath = '~/df';
+
+		it('should return only the proper save region directory numbers', async () => {
+			pathModule.resolve.returns(`${fakePath}/data/save`);
+			fsModule.fs.readdirFuture.returns(
+				resolve([
+					'region1',
+					'region4',
+					'region2',
+					'region99',
+					'another'
+				])
+			);
+
+			const result = await promise(
+				getAllSaveRegionNums({dfRootPath: fakePath})
+			);
+			expect(result).to.have.ordered.members([1, 2, 4, 99]);
+		});
+	});
+});

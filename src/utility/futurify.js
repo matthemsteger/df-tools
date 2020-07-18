@@ -14,11 +14,7 @@ export const futurifyAll = R.compose(
 	R.chain(
 		R.compose(
 			R.when(
-				R.compose(
-					R.is(Function),
-					R.last,
-					R.head
-				),
+				R.compose(R.is(Function), R.last, R.head),
 				R.compose(
 					([key, value]) => [
 						[key, value],

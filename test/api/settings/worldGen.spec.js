@@ -36,14 +36,14 @@ const worldGenSettingsModule = proxyquire(
 
 const {default: getWorldGenSettings} = worldGenSettingsModule;
 
-describe('api/settings/worldGen', function() {
+describe('api/settings/worldGen', function () {
 	ensureModuleFunctionExport(worldGenSettingsModule, 'default');
 
-	afterEach(function() {
+	afterEach(function () {
 		sandbox.reset();
 	});
 
-	it('should parse and return the world gen settings', function(done) {
+	it('should parse and return the world gen settings', function (done) {
 		const dfRootPath = 'c:/df';
 		const fileContents = '[YES:NO]';
 		const parseResult = {value: {yes: false}};

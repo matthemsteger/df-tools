@@ -23,10 +23,7 @@ export default function parseWorldSitesAndPops({filePath, creatures}) {
 							debug('parse errors: %o', {index, expected})
 						)
 					),
-					R.compose(
-						futureOf,
-						R.prop('value')
-					)
+					R.compose(futureOf, R.prop('value'))
 				),
 				(contents) =>
 					createRegionWorldSitesPopsParser(creatures).file.parse(

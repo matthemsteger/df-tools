@@ -1,0 +1,4604 @@
+[
+	{
+		"id": "TOAD",
+		"singularName": "toad",
+		"pluralName": "toads",
+		"adjectiveName": "toad"
+	},
+	{
+		"id": "TOAD_MAN",
+		"singularName": "toad man",
+		"pluralName": "toad men",
+		"adjectiveName": "toad man"
+	},
+	{
+		"id": "GIANT_TOAD",
+		"singularName": "giant toad",
+		"pluralName": "giant toads",
+		"adjectiveName": "giant toad"
+	},
+	{
+		"id": "WORM",
+		"singularName": "worm",
+		"pluralName": "worms",
+		"adjectiveName": "worm"
+	},
+	{
+		"id": "WORM_MAN",
+		"singularName": "worm man",
+		"pluralName": "worm men",
+		"adjectiveName": "worm man"
+	},
+	{
+		"id": "BIRD_CROW",
+		"singularName": "crow",
+		"pluralName": "crows",
+		"adjectiveName": "crow"
+	},
+	{
+		"id": "CROW_MAN",
+		"singularName": "crow man",
+		"pluralName": "crow men",
+		"adjectiveName": "crow man"
+	},
+	{
+		"id": "GIANT_CROW",
+		"singularName": "giant crow",
+		"pluralName": "giant crows",
+		"adjectiveName": "giant crow"
+	},
+	{
+		"id": "BIRD_RAVEN",
+		"singularName": "raven",
+		"pluralName": "ravens",
+		"adjectiveName": "raven"
+	},
+	{
+		"id": "RAVEN_MAN",
+		"singularName": "raven man",
+		"pluralName": "raven men",
+		"adjectiveName": "raven man"
+	},
+	{
+		"id": "GIANT_RAVEN",
+		"singularName": "giant raven",
+		"pluralName": "giant ravens",
+		"adjectiveName": "giant raven"
+	},
+	{
+		"id": "BIRD_CASSOWARY",
+		"singularName": "cassowary",
+		"pluralName": "cassowaries",
+		"adjectiveName": "cassowary"
+	},
+	{
+		"id": "CASSOWARY_MAN",
+		"singularName": "cassowary man",
+		"pluralName": "cassowary men",
+		"adjectiveName": "cassowary man"
+	},
+	{
+		"id": "GIANT_CASSOWARY",
+		"singularName": "giant cassowary",
+		"pluralName": "giant cassowaries",
+		"adjectiveName": "giant cassowary"
+	},
+	{
+		"id": "BIRD_KEA",
+		"singularName": "kea",
+		"pluralName": "kea",
+		"adjectiveName": "kea"
+	},
+	{
+		"id": "KEA_MAN",
+		"singularName": "kea man",
+		"pluralName": "kea men",
+		"adjectiveName": "kea man"
+	},
+	{
+		"id": "GIANT_KEA",
+		"singularName": "giant kea",
+		"pluralName": "giant kea",
+		"adjectiveName": "giant kea"
+	},
+	{
+		"id": "BIRD_OWL_SNOWY",
+		"singularName": "snowy owl",
+		"pluralName": "snowy owls",
+		"adjectiveName": "snowy owl"
+	},
+	{
+		"id": "SNOWY_OWL_MAN",
+		"singularName": "snowy owl man",
+		"pluralName": "snowy owl men",
+		"adjectiveName": "snowy owl man"
+	},
+	{
+		"id": "GIANT_SNOWY_OWL",
+		"singularName": "giant snowy owl",
+		"pluralName": "giant snowy owls",
+		"adjectiveName": "giant snowy owl"
+	},
+	{
+		"id": "SPARROW",
+		"singularName": "sparrow",
+		"pluralName": "sparrows",
+		"adjectiveName": "sparrow"
+	},
+	{
+		"id": "SPARROW_MAN",
+		"singularName": "sparrow man",
+		"pluralName": "sparrow men",
+		"adjectiveName": "sparrow man"
+	},
+	{
+		"id": "GIANT_SPARROW",
+		"singularName": "giant sparrow",
+		"pluralName": "giant sparrows",
+		"adjectiveName": "giant sparrow"
+	},
+	{
+		"id": "BIRD_STORK_WHITE",
+		"singularName": "white stork",
+		"pluralName": "white storks",
+		"adjectiveName": "white stork"
+	},
+	{
+		"id": "WHITE_STORK_MAN",
+		"singularName": "white stork man",
+		"pluralName": "white stork men",
+		"adjectiveName": "white stork man"
+	},
+	{
+		"id": "GIANT_WHITE_STORK",
+		"singularName": "giant white stork",
+		"pluralName": "giant white storks",
+		"adjectiveName": "giant white stork"
+	},
+	{
+		"id": "BIRD_LOON",
+		"singularName": "loon",
+		"pluralName": "loons",
+		"adjectiveName": "loon"
+	},
+	{
+		"id": "LOON_MAN",
+		"singularName": "loon man",
+		"pluralName": "loon men",
+		"adjectiveName": "loon man"
+	},
+	{
+		"id": "GIANT_LOON",
+		"singularName": "giant loon",
+		"pluralName": "giant loons",
+		"adjectiveName": "giant loon"
+	},
+	{
+		"id": "BIRD_OWL_BARN",
+		"singularName": "barn owl",
+		"pluralName": "barn owls",
+		"adjectiveName": "barn owl"
+	},
+	{
+		"id": "BARN_OWL_MAN",
+		"singularName": "barn owl man",
+		"pluralName": "barn owl men",
+		"adjectiveName": "barn owl man"
+	},
+	{
+		"id": "GIANT_BARN_OWL",
+		"singularName": "giant barn owl",
+		"pluralName": "giant barn owls",
+		"adjectiveName": "giant barn owl"
+	},
+	{
+		"id": "BIRD_PARAKEET",
+		"singularName": "parakeet",
+		"pluralName": "parakeets",
+		"adjectiveName": "parakeet"
+	},
+	{
+		"id": "PARAKEET_MAN",
+		"singularName": "parakeet man",
+		"pluralName": "parakeet men",
+		"adjectiveName": "parakeet man"
+	},
+	{
+		"id": "GIANT_PARAKEET",
+		"singularName": "giant parakeet",
+		"pluralName": "giant parakeets",
+		"adjectiveName": "giant parakeet"
+	},
+	{
+		"id": "BIRD_KAKAPO",
+		"singularName": "kakapo",
+		"pluralName": "kakapo",
+		"adjectiveName": "kakapo"
+	},
+	{
+		"id": "KAKAPO_MAN",
+		"singularName": "kakapo man",
+		"pluralName": "kakapo men",
+		"adjectiveName": "kakapo man"
+	},
+	{
+		"id": "GIANT_KAKAPO",
+		"singularName": "giant kakapo",
+		"pluralName": "giant kakapo",
+		"adjectiveName": "giant kakapo"
+	},
+	{
+		"id": "BIRD_PARROT_GREY",
+		"singularName": "grey parrot",
+		"pluralName": "grey parrots",
+		"adjectiveName": "grey parrot"
+	},
+	{
+		"id": "GREY_PARROT_MAN",
+		"singularName": "grey parrot man",
+		"pluralName": "grey parrot men",
+		"adjectiveName": "grey parrot man"
+	},
+	{
+		"id": "GIANT_GREY_PARROT",
+		"singularName": "giant grey parrot",
+		"pluralName": "giant grey parrots",
+		"adjectiveName": "giant grey parrot"
+	},
+	{
+		"id": "BIRD_PUFFIN",
+		"singularName": "puffin",
+		"pluralName": "puffins",
+		"adjectiveName": "puffin"
+	},
+	{
+		"id": "PUFFIN_MAN",
+		"singularName": "puffin man",
+		"pluralName": "puffin men",
+		"adjectiveName": "puffin man"
+	},
+	{
+		"id": "GIANT_PUFFIN",
+		"singularName": "giant puffin",
+		"pluralName": "giant puffins",
+		"adjectiveName": "giant puffin"
+	},
+	{
+		"id": "BIRD_SWAN",
+		"singularName": "swan",
+		"pluralName": "swans",
+		"adjectiveName": "swan"
+	},
+	{
+		"id": "SWAN_MAN",
+		"singularName": "swan man",
+		"pluralName": "swan men",
+		"adjectiveName": "swan man"
+	},
+	{
+		"id": "GIANT_SWAN",
+		"singularName": "giant swan",
+		"pluralName": "giant swans",
+		"adjectiveName": "giant swan"
+	},
+	{
+		"id": "BIRD_LORIKEET",
+		"singularName": "lorikeet",
+		"pluralName": "lorikeets",
+		"adjectiveName": "lorikeet"
+	},
+	{
+		"id": "LORIKEET_MAN",
+		"singularName": "lorikeet man",
+		"pluralName": "lorikeet men",
+		"adjectiveName": "lorikeet man"
+	},
+	{
+		"id": "GIANT_LORIKEET",
+		"singularName": "giant lorikeet",
+		"pluralName": "giant lorikeets",
+		"adjectiveName": "giant lorikeet"
+	},
+	{
+		"id": "BIRD_WREN",
+		"singularName": "wren",
+		"pluralName": "wrens",
+		"adjectiveName": "wren"
+	},
+	{
+		"id": "WREN_MAN",
+		"singularName": "wren man",
+		"pluralName": "wren men",
+		"adjectiveName": "wren man"
+	},
+	{
+		"id": "GIANT_WREN",
+		"singularName": "giant wren",
+		"pluralName": "giant wrens",
+		"adjectiveName": "giant wren"
+	},
+	{
+		"id": "BIRD_OSPREY",
+		"singularName": "osprey",
+		"pluralName": "ospreys",
+		"adjectiveName": "osprey"
+	},
+	{
+		"id": "OSPREY_MAN",
+		"singularName": "osprey man",
+		"pluralName": "osprey men",
+		"adjectiveName": "osprey man"
+	},
+	{
+		"id": "GIANT_OSPREY",
+		"singularName": "giant osprey",
+		"pluralName": "giant ospreys",
+		"adjectiveName": "giant osprey"
+	},
+	{
+		"id": "BIRD_EMU",
+		"singularName": "emu",
+		"pluralName": "emus",
+		"adjectiveName": "emu"
+	},
+	{
+		"id": "EMU_MAN",
+		"singularName": "emu man",
+		"pluralName": "emu men",
+		"adjectiveName": "emu man"
+	},
+	{
+		"id": "GIANT_EMU",
+		"singularName": "giant emu",
+		"pluralName": "giant emus",
+		"adjectiveName": "giant emu"
+	},
+	{
+		"id": "BIRD_COCKATIEL",
+		"singularName": "cockatiel",
+		"pluralName": "cockatiels",
+		"adjectiveName": "cockatiel"
+	},
+	{
+		"id": "COCKATIEL_MAN",
+		"singularName": "cockatiel man",
+		"pluralName": "cockatiel men",
+		"adjectiveName": "cockatiel man"
+	},
+	{
+		"id": "GIANT_COCKATIEL",
+		"singularName": "giant cockatiel",
+		"pluralName": "giant cockatiels",
+		"adjectiveName": "giant cockatiel"
+	},
+	{
+		"id": "BIRD_LOVEBIRD_PEACH-FACED",
+		"singularName": "peach-faced lovebird",
+		"pluralName": "peach-faced lovebirds",
+		"adjectiveName": "peach-faced lovebird"
+	},
+	{
+		"id": "PEACH-FACED_LOVEBIRD_MAN",
+		"singularName": "peach-faced lovebird man",
+		"pluralName": "peach-faced lovebird men",
+		"adjectiveName": "peach-faced lovebird man"
+	},
+	{
+		"id": "GIANT_PEACH-FACED_LOVEBIRD",
+		"singularName": "giant peach-faced lovebird",
+		"pluralName": "giant peach-faced lovebirds",
+		"adjectiveName": "giant peach-faced lovebird"
+	},
+	{
+		"id": "BIRD_MAGPIE",
+		"singularName": "magpie",
+		"pluralName": "magpies",
+		"adjectiveName": "magpie"
+	},
+	{
+		"id": "MAGPIE_MAN",
+		"singularName": "magpie man",
+		"pluralName": "magpie men",
+		"adjectiveName": "magpie man"
+	},
+	{
+		"id": "GIANT_MAGPIE",
+		"singularName": "giant magpie",
+		"pluralName": "giant magpies",
+		"adjectiveName": "giant magpie"
+	},
+	{
+		"id": "BIRD_KESTREL",
+		"singularName": "kestrel",
+		"pluralName": "kestrels",
+		"adjectiveName": "kestrel"
+	},
+	{
+		"id": "KESTREL_MAN",
+		"singularName": "kestrel man",
+		"pluralName": "kestrel men",
+		"adjectiveName": "kestrel man"
+	},
+	{
+		"id": "GIANT_KESTREL",
+		"singularName": "giant kestrel",
+		"pluralName": "giant kestrels",
+		"adjectiveName": "giant kestrel"
+	},
+	{
+		"id": "BIRD_ALBATROSS",
+		"singularName": "albatross",
+		"pluralName": "albatrosses",
+		"adjectiveName": "albatross"
+	},
+	{
+		"id": "ALBATROSS_MAN",
+		"singularName": "albatross man",
+		"pluralName": "albatross men",
+		"adjectiveName": "albatross man"
+	},
+	{
+		"id": "GIANT_ALBATROSS",
+		"singularName": "giant albatross",
+		"pluralName": "giant albatrosses",
+		"adjectiveName": "giant albatross"
+	},
+	{
+		"id": "BIRD_OWL_GREAT_HORNED",
+		"singularName": "great horned owl",
+		"pluralName": "great horned owls",
+		"adjectiveName": "great horned owl"
+	},
+	{
+		"id": "GREAT_HORNED_OWL_MAN",
+		"singularName": "great horned owl man",
+		"pluralName": "great horned owl men",
+		"adjectiveName": "great horned owl man"
+	},
+	{
+		"id": "GIANT_GREAT_HORNED_OWL",
+		"singularName": "giant great horned owl",
+		"pluralName": "giant great horned owls",
+		"adjectiveName": "giant great horned owl"
+	},
+	{
+		"id": "BIRD_EAGLE",
+		"singularName": "eagle",
+		"pluralName": "eagles",
+		"adjectiveName": "eagle"
+	},
+	{
+		"id": "EAGLE_MAN",
+		"singularName": "eagle man",
+		"pluralName": "eagle men",
+		"adjectiveName": "eagle man"
+	},
+	{
+		"id": "GIANT_EAGLE",
+		"singularName": "giant eagle",
+		"pluralName": "giant eagles",
+		"adjectiveName": "giant eagle"
+	},
+	{
+		"id": "BIRD_HORNBILL",
+		"singularName": "hornbill",
+		"pluralName": "hornbills",
+		"adjectiveName": "hornbill"
+	},
+	{
+		"id": "HORNBILL_MAN",
+		"singularName": "hornbill man",
+		"pluralName": "hornbill men",
+		"adjectiveName": "hornbill man"
+	},
+	{
+		"id": "GIANT_HORNBILL",
+		"singularName": "giant hornbill",
+		"pluralName": "giant hornbills",
+		"adjectiveName": "giant hornbill"
+	},
+	{
+		"id": "BIRD_LOVEBIRD_MASKED",
+		"singularName": "masked lovebird",
+		"pluralName": "masked lovebirds",
+		"adjectiveName": "masked lovebird"
+	},
+	{
+		"id": "MASKED_LOVEBIRD_MAN",
+		"singularName": "masked lovebird man",
+		"pluralName": "masked lovebird men",
+		"adjectiveName": "masked lovebird man"
+	},
+	{
+		"id": "GIANT_MASKED_LOVEBIRD",
+		"singularName": "giant masked lovebird",
+		"pluralName": "giant masked lovebirds",
+		"adjectiveName": "giant masked lovebird"
+	},
+	{
+		"id": "BIRD_BUSHTIT",
+		"singularName": "bushtit",
+		"pluralName": "bushtits",
+		"adjectiveName": "bushtit"
+	},
+	{
+		"id": "BUSHTIT_MAN",
+		"singularName": "bushtit man",
+		"pluralName": "bushtit men",
+		"adjectiveName": "bushtit man"
+	},
+	{
+		"id": "GIANT_BUSHTIT",
+		"singularName": "giant bushtit",
+		"pluralName": "giant bushtits",
+		"adjectiveName": "giant bushtit"
+	},
+	{
+		"id": "BIRD_BLUEJAY",
+		"singularName": "blue jay",
+		"pluralName": "blue jays",
+		"adjectiveName": "blue jay"
+	},
+	{
+		"id": "BLUEJAY_MAN",
+		"singularName": "bluejay man",
+		"pluralName": "bluejay men",
+		"adjectiveName": "bluejay man"
+	},
+	{
+		"id": "GIANT_BLUEJAY",
+		"singularName": "giant bluejay",
+		"pluralName": "giant bluejays",
+		"adjectiveName": "giant bluejay"
+	},
+	{
+		"id": "BIRD_CARDINAL",
+		"singularName": "cardinal",
+		"pluralName": "cardinals",
+		"adjectiveName": "cardinal"
+	},
+	{
+		"id": "CARDINAL_MAN",
+		"singularName": "cardinal man",
+		"pluralName": "cardinal men",
+		"adjectiveName": "cardinal man"
+	},
+	{
+		"id": "GIANT_CARDINAL",
+		"singularName": "giant cardinal",
+		"pluralName": "giant cardinals",
+		"adjectiveName": "giant cardinal"
+	},
+	{
+		"id": "BIRD_GRACKLE",
+		"singularName": "grackle",
+		"pluralName": "grackles",
+		"adjectiveName": "grackle"
+	},
+	{
+		"id": "GRACKLE_MAN",
+		"singularName": "grackle man",
+		"pluralName": "grackle men",
+		"adjectiveName": "grackle man"
+	},
+	{
+		"id": "GIANT_GRACKLE",
+		"singularName": "giant grackle",
+		"pluralName": "giant grackles",
+		"adjectiveName": "giant grackle"
+	},
+	{
+		"id": "BIRD_ORIOLE",
+		"singularName": "oriole",
+		"pluralName": "orioles",
+		"adjectiveName": "oriole"
+	},
+	{
+		"id": "ORIOLE_MAN",
+		"singularName": "oriole man",
+		"pluralName": "oriole men",
+		"adjectiveName": "oriole man"
+	},
+	{
+		"id": "GIANT_ORIOLE",
+		"singularName": "giant oriole",
+		"pluralName": "giant orioles",
+		"adjectiveName": "giant oriole"
+	},
+	{
+		"id": "BIRD_RW_BLACKBIRD",
+		"singularName": "red-winged blackbird",
+		"pluralName": "red-winged blackbirds",
+		"adjectiveName": "red-winged blackbird"
+	},
+	{
+		"id": "RW_BLACKBIRD_MAN",
+		"singularName": "red-winged blackbird man",
+		"pluralName": "red-winged blackbird men",
+		"adjectiveName": "red-winged blackbird man"
+	},
+	{
+		"id": "GIANT_RW_BLACKBIRD",
+		"singularName": "giant red-winged blackbird",
+		"pluralName": "giant red-winged blackbirds",
+		"adjectiveName": "giant red-winged blackbird"
+	},
+	{
+		"id": "BIRD_PENGUIN",
+		"singularName": "penguin",
+		"pluralName": "penguins",
+		"adjectiveName": "penguin"
+	},
+	{
+		"id": "BIRD_PENGUIN_LITTLE",
+		"singularName": "little penguin",
+		"pluralName": "little penguins",
+		"adjectiveName": "little penguin"
+	},
+	{
+		"id": "BIRD_PENGUIN_EMPEROR",
+		"singularName": "emperor penguin",
+		"pluralName": "emperor penguins",
+		"adjectiveName": "emperor penguin"
+	},
+	{
+		"id": "PENGUIN MAN",
+		"singularName": "penguin man",
+		"pluralName": "penguin men",
+		"adjectiveName": "penguin man"
+	},
+	{
+		"id": "BIRD_PENGUIN_GIANT",
+		"singularName": "giant penguin",
+		"pluralName": "giant penguins",
+		"adjectiveName": "giant penguin"
+	},
+	{
+		"id": "BIRD_FALCON_PEREGRINE",
+		"singularName": "peregrine falcon",
+		"pluralName": "peregrine falcons",
+		"adjectiveName": "peregrine falcon"
+	},
+	{
+		"id": "PEREGRINE FALCON MAN",
+		"singularName": "peregrine falcon man",
+		"pluralName": "peregrine falcon men",
+		"adjectiveName": "peregrine falcon man"
+	},
+	{
+		"id": "GIANT PEREGRINE FALCON",
+		"singularName": "giant peregrine falcon",
+		"pluralName": "giant peregrine falcons",
+		"adjectiveName": "giant peregrine falcon"
+	},
+	{
+		"id": "BIRD_KIWI",
+		"singularName": "kiwi",
+		"pluralName": "kiwis",
+		"adjectiveName": "kiwi"
+	},
+	{
+		"id": "KIWI MAN",
+		"singularName": "kiwi man",
+		"pluralName": "kiwi men",
+		"adjectiveName": "kiwi man"
+	},
+	{
+		"id": "BIRD_KIWI_GIANT",
+		"singularName": "giant kiwi",
+		"pluralName": "giant kiwis",
+		"adjectiveName": "giant kiwi"
+	},
+	{
+		"id": "BIRD_OSTRICH",
+		"singularName": "ostrich",
+		"pluralName": "ostriches",
+		"adjectiveName": "ostrich"
+	},
+	{
+		"id": "OSTRICH MAN",
+		"singularName": "ostrich man",
+		"pluralName": "ostrich men",
+		"adjectiveName": "ostrich man"
+	},
+	{
+		"id": "BIRD_OSTRICH_GIANT",
+		"singularName": "giant ostrich",
+		"pluralName": "giant ostriches",
+		"adjectiveName": "giant ostrich"
+	},
+	{
+		"id": "DAMSELFLY",
+		"singularName": "damselfly",
+		"pluralName": "damselflies",
+		"adjectiveName": "damselfly"
+	},
+	{
+		"id": "DAMSELFLY_MAN",
+		"singularName": "damselfly man",
+		"pluralName": "damselfly men",
+		"adjectiveName": "damselfly man"
+	},
+	{
+		"id": "GIANT_DAMSELFLY",
+		"singularName": "giant damselfly",
+		"pluralName": "giant damselflies",
+		"adjectiveName": "giant damselfly"
+	},
+	{
+		"id": "MOTH",
+		"singularName": "moth",
+		"pluralName": "moths",
+		"adjectiveName": "moth"
+	},
+	{
+		"id": "MOTH_MAN",
+		"singularName": "moth man",
+		"pluralName": "moth men",
+		"adjectiveName": "moth man"
+	},
+	{
+		"id": "GIANT_MOTH",
+		"singularName": "giant moth",
+		"pluralName": "giant moths",
+		"adjectiveName": "giant moth"
+	},
+	{
+		"id": "GRASSHOPPER",
+		"singularName": "grasshopper",
+		"pluralName": "grasshoppers",
+		"adjectiveName": "grasshopper"
+	},
+	{
+		"id": "GRASSHOPPER_MAN",
+		"singularName": "grasshopper man",
+		"pluralName": "grasshopper men",
+		"adjectiveName": "grasshopper man"
+	},
+	{
+		"id": "GIANT_GRASSHOPPER",
+		"singularName": "giant grasshopper",
+		"pluralName": "giant grasshoppers",
+		"adjectiveName": "giant grasshopper"
+	},
+	{
+		"id": "BARK_SCORPION",
+		"singularName": "bark scorpion",
+		"pluralName": "bark scorpions",
+		"adjectiveName": "bark scorpion"
+	},
+	{
+		"id": "BARK_SCORPION_MAN",
+		"singularName": "bark scorpion man",
+		"pluralName": "bark scorpion men",
+		"adjectiveName": "bark scorpion man"
+	},
+	{
+		"id": "GIANT_BARK_SCORPION",
+		"singularName": "giant bark scorpion",
+		"pluralName": "giant bark scorpions",
+		"adjectiveName": "giant bark scorpion"
+	},
+	{
+		"id": "MANTIS",
+		"singularName": "mantis",
+		"pluralName": "mantises",
+		"adjectiveName": "mantis"
+	},
+	{
+		"id": "MANTIS_MAN",
+		"singularName": "mantis man",
+		"pluralName": "mantis men",
+		"adjectiveName": "mantis man"
+	},
+	{
+		"id": "GIANT_MANTIS",
+		"singularName": "giant mantis",
+		"pluralName": "giant mantises",
+		"adjectiveName": "giant mantis"
+	},
+	{
+		"id": "TICK",
+		"singularName": "tick",
+		"pluralName": "ticks",
+		"adjectiveName": "tick"
+	},
+	{
+		"id": "TICK_MAN",
+		"singularName": "tick man",
+		"pluralName": "tick men",
+		"adjectiveName": "tick man"
+	},
+	{
+		"id": "GIANT_TICK",
+		"singularName": "giant tick",
+		"pluralName": "giant ticks",
+		"adjectiveName": "giant tick"
+	},
+	{
+		"id": "LOUSE",
+		"singularName": "louse",
+		"pluralName": "lice",
+		"adjectiveName": "louse"
+	},
+	{
+		"id": "LOUSE_MAN",
+		"singularName": "louse man",
+		"pluralName": "louse men",
+		"adjectiveName": "louse man"
+	},
+	{
+		"id": "GIANT_LOUSE",
+		"singularName": "giant louse",
+		"pluralName": "giant lice",
+		"adjectiveName": "giant louse"
+	},
+	{
+		"id": "THRIPS",
+		"singularName": "thrips",
+		"pluralName": "thrips",
+		"adjectiveName": "thrips"
+	},
+	{
+		"id": "THRIPS_MAN",
+		"singularName": "thrips man",
+		"pluralName": "thrips men",
+		"adjectiveName": "thrips man"
+	},
+	{
+		"id": "GIANT_THRIPS",
+		"singularName": "giant thrips",
+		"pluralName": "giant thrips",
+		"adjectiveName": "giant thrips"
+	},
+	{
+		"id": "SLUG",
+		"singularName": "slug",
+		"pluralName": "slugs",
+		"adjectiveName": "slug"
+	},
+	{
+		"id": "SLUG_MAN",
+		"singularName": "slug man",
+		"pluralName": "slug men",
+		"adjectiveName": "slug man"
+	},
+	{
+		"id": "GIANT_SLUG",
+		"singularName": "giant slug",
+		"pluralName": "giant slugs",
+		"adjectiveName": "giant slug"
+	},
+	{
+		"id": "MOSQUITO",
+		"singularName": "mosquito",
+		"pluralName": "mosquitos",
+		"adjectiveName": "mosquito"
+	},
+	{
+		"id": "MOSQUITO_MAN",
+		"singularName": "mosquito man",
+		"pluralName": "mosquito men",
+		"adjectiveName": "mosquito man"
+	},
+	{
+		"id": "GIANT_MOSQUITO",
+		"singularName": "giant mosquito",
+		"pluralName": "giant mosquitos",
+		"adjectiveName": "giant mosquito"
+	},
+	{
+		"id": "SPIDER_JUMPING",
+		"singularName": "jumping spider",
+		"pluralName": "jumping spiders",
+		"adjectiveName": "jumping spider"
+	},
+	{
+		"id": "JUMPING_SPIDER_MAN",
+		"singularName": "jumping spider man",
+		"pluralName": "jumping spider men",
+		"adjectiveName": "jumping spider man"
+	},
+	{
+		"id": "GIANT_JUMPING_SPIDER",
+		"singularName": "giant jumping spider",
+		"pluralName": "giant jumping spiders",
+		"adjectiveName": "giant jumping spider"
+	},
+	{
+		"id": "TERMITE",
+		"singularName": "termite",
+		"pluralName": "termites",
+		"adjectiveName": "termite"
+	},
+	{
+		"id": "MOON_SNAIL",
+		"singularName": "moon snail",
+		"pluralName": "moon snails",
+		"adjectiveName": "moon snail"
+	},
+	{
+		"id": "MOON_SNAIL_MAN",
+		"singularName": "moon snail man",
+		"pluralName": "moon snail men",
+		"adjectiveName": "moon snail man"
+	},
+	{
+		"id": "GIANT_MOON_SNAIL",
+		"singularName": "giant moon snail",
+		"pluralName": "giant moon snails",
+		"adjectiveName": "giant moon snail"
+	},
+	{
+		"id": "SPIDER_BROWN_RECLUSE",
+		"singularName": "brown recluse spider",
+		"pluralName": "brown recluse spiders",
+		"adjectiveName": "brown recluse spider"
+	},
+	{
+		"id": "BROWN_RECLUSE_SPIDER_MAN",
+		"singularName": "brown recluse spider man",
+		"pluralName": "brown recluse spider men",
+		"adjectiveName": "brown recluse spider man"
+	},
+	{
+		"id": "GIANT_BROWN_RECLUSE_SPIDER",
+		"singularName": "giant brown recluse spider",
+		"pluralName": "giant brown recluse spiders",
+		"adjectiveName": "giant brown recluse spider"
+	},
+	{
+		"id": "SNAIL",
+		"singularName": "snail",
+		"pluralName": "snails",
+		"adjectiveName": "snail"
+	},
+	{
+		"id": "SNAIL_MAN",
+		"singularName": "snail man",
+		"pluralName": "snail men",
+		"adjectiveName": "snail man"
+	},
+	{
+		"id": "GIANT_SNAIL",
+		"singularName": "giant snail",
+		"pluralName": "giant snails",
+		"adjectiveName": "giant snail"
+	},
+	{
+		"id": "GECKO_LEOPARD",
+		"singularName": "leopard gecko",
+		"pluralName": "leopard geckos",
+		"adjectiveName": "leopard gecko"
+	},
+	{
+		"id": "LEOPARD_GECKO_MAN",
+		"singularName": "leopard gecko man",
+		"pluralName": "leopard gecko men",
+		"adjectiveName": "leopard gecko man"
+	},
+	{
+		"id": "GIANT_LEOPARD_GECKO",
+		"singularName": "giant leopard gecko",
+		"pluralName": "giant leopard geckos",
+		"adjectiveName": "giant leopard gecko"
+	},
+	{
+		"id": "DESERT TORTOISE",
+		"singularName": "desert tortoise",
+		"pluralName": "desert tortoises",
+		"adjectiveName": "desert tortoise"
+	},
+	{
+		"id": "DESERT_TORTOISE_MAN",
+		"singularName": "desert tortoise man",
+		"pluralName": "desert tortoise men",
+		"adjectiveName": "desert tortoise man"
+	},
+	{
+		"id": "GIANT_DESERT_TORTOISE",
+		"singularName": "giant desert tortoise",
+		"pluralName": "giant desert tortoises",
+		"adjectiveName": "giant desert tortoise"
+	},
+	{
+		"id": "GILA_MONSTER",
+		"singularName": "gila monster",
+		"pluralName": "gila monsters",
+		"adjectiveName": "gila monster"
+	},
+	{
+		"id": "GILA_MONSTER_MAN",
+		"singularName": "gila monster man",
+		"pluralName": "gila monster men",
+		"adjectiveName": "gila monster man"
+	},
+	{
+		"id": "GIANT_GILA_MONSTER",
+		"singularName": "giant gila monster",
+		"pluralName": "giant gila monsters",
+		"adjectiveName": "giant gila monster"
+	},
+	{
+		"id": "DOG",
+		"singularName": "dog",
+		"pluralName": "dogs",
+		"adjectiveName": "canine"
+	},
+	{
+		"id": "CAT",
+		"singularName": "cat",
+		"pluralName": "cats",
+		"adjectiveName": "feline"
+	},
+	{
+		"id": "MULE",
+		"singularName": "mule",
+		"pluralName": "mules",
+		"adjectiveName": "mule"
+	},
+	{
+		"id": "DONKEY",
+		"singularName": "donkey",
+		"pluralName": "donkeys",
+		"adjectiveName": "asinine"
+	},
+	{
+		"id": "HORSE",
+		"singularName": "horse",
+		"pluralName": "horses",
+		"adjectiveName": "equine"
+	},
+	{
+		"id": "COW",
+		"singularName": "cow",
+		"pluralName": "cows",
+		"adjectiveName": "bovine"
+	},
+	{
+		"id": "SHEEP",
+		"singularName": "sheep",
+		"pluralName": "sheep",
+		"adjectiveName": "ovine"
+	},
+	{
+		"id": "PIG",
+		"singularName": "pig",
+		"pluralName": "pigs",
+		"adjectiveName": "porcine"
+	},
+	{
+		"id": "GOAT",
+		"singularName": "goat",
+		"pluralName": "goats",
+		"adjectiveName": "hircine"
+	},
+	{
+		"id": "BIRD_CHICKEN",
+		"singularName": "chicken",
+		"pluralName": "chickens",
+		"adjectiveName": "chicken"
+	},
+	{
+		"id": "CAVY",
+		"singularName": "cavy",
+		"pluralName": "cavies",
+		"adjectiveName": "cavy"
+	},
+	{
+		"id": "BIRD_DUCK",
+		"singularName": "duck",
+		"pluralName": "ducks",
+		"adjectiveName": "duck"
+	},
+	{
+		"id": "WATER_BUFFALO",
+		"singularName": "water buffalo",
+		"pluralName": "water buffalos",
+		"adjectiveName": "water buffalo"
+	},
+	{
+		"id": "REINDEER",
+		"singularName": "reindeer",
+		"pluralName": "reindeer",
+		"adjectiveName": "reindeer"
+	},
+	{
+		"id": "BIRD_GOOSE",
+		"singularName": "goose",
+		"pluralName": "geese",
+		"adjectiveName": "goose"
+	},
+	{
+		"id": "YAK",
+		"singularName": "yak",
+		"pluralName": "yaks",
+		"adjectiveName": "yak"
+	},
+	{
+		"id": "LLAMA",
+		"singularName": "llama",
+		"pluralName": "llamas",
+		"adjectiveName": "llama"
+	},
+	{
+		"id": "ALPACA",
+		"singularName": "alpaca",
+		"pluralName": "alpacas",
+		"adjectiveName": "alpaca"
+	},
+	{
+		"id": "BIRD_GUINEAFOWL",
+		"singularName": "guineafowl",
+		"pluralName": "guineafowls",
+		"adjectiveName": "guineafowl"
+	},
+	{
+		"id": "BIRD_PEAFOWL_BLUE",
+		"singularName": "blue peafowl",
+		"pluralName": "blue peafowls",
+		"adjectiveName": "blue peafowl"
+	},
+	{
+		"id": "BIRD_TURKEY",
+		"singularName": "turkey",
+		"pluralName": "turkeys",
+		"adjectiveName": "turkey"
+	},
+	{
+		"id": "RABBIT",
+		"singularName": "rabbit",
+		"pluralName": "rabbits",
+		"adjectiveName": "rabbit"
+	},
+	{
+		"id": "EQUIPMENT_WAGON",
+		"singularName": "wagon",
+		"pluralName": "wagons",
+		"adjectiveName": "wagon"
+	},
+	{
+		"id": "CHIMERA",
+		"singularName": "chimera",
+		"pluralName": "chimeras",
+		"adjectiveName": "chimeric"
+	},
+	{
+		"id": "CENTAUR",
+		"singularName": "centaur",
+		"pluralName": "centaurs",
+		"adjectiveName": "centaur"
+	},
+	{
+		"id": "GRIFFON",
+		"singularName": "griffon",
+		"pluralName": "griffons",
+		"adjectiveName": "griffon"
+	},
+	{
+		"id": "FLY",
+		"singularName": "fly",
+		"pluralName": "flies",
+		"adjectiveName": "fly"
+	},
+	{
+		"id": "FLY_MAN",
+		"singularName": "fly man",
+		"pluralName": "fly men",
+		"adjectiveName": "fly man"
+	},
+	{
+		"id": "GIANT_FLY",
+		"singularName": "giant fly",
+		"pluralName": "giant flies",
+		"adjectiveName": "giant fly"
+	},
+	{
+		"id": "ROACH_LARGE",
+		"singularName": "large roach",
+		"pluralName": "large roaches",
+		"adjectiveName": "large roach"
+	},
+	{
+		"id": "ROACH_MAN",
+		"singularName": "roach man",
+		"pluralName": "roach men",
+		"adjectiveName": "roach man"
+	},
+	{
+		"id": "GIANT_ROACH",
+		"singularName": "giant roach",
+		"pluralName": "giant roaches",
+		"adjectiveName": "giant roach"
+	},
+	{
+		"id": "BEETLE",
+		"singularName": "beetle",
+		"pluralName": "beetles",
+		"adjectiveName": "beetle"
+	},
+	{
+		"id": "BEETLE_MAN",
+		"singularName": "beetle man",
+		"pluralName": "beetle men",
+		"adjectiveName": "beetle man"
+	},
+	{
+		"id": "GIANT_BEETLE",
+		"singularName": "giant beetle",
+		"pluralName": "giant beetles",
+		"adjectiveName": "giant beetle"
+	},
+	{
+		"id": "ANT",
+		"singularName": "ant",
+		"pluralName": "ants",
+		"adjectiveName": "ant"
+	},
+	{
+		"id": "BUTTERFLY_MONARCH",
+		"singularName": "monarch butterfly",
+		"pluralName": "monarch butterflies",
+		"adjectiveName": "monarch butterfly"
+	},
+	{
+		"id": "BUTTERFLY_MONARCH_MAN",
+		"singularName": "monarch butterfly man",
+		"pluralName": "monarch butterfly men",
+		"adjectiveName": "monarch butterfly man"
+	},
+	{
+		"id": "GIANT_BUTTERFLY_MONARCH",
+		"singularName": "giant monarch butterfly",
+		"pluralName": "giant monarch butterflies",
+		"adjectiveName": "giant monarch butterfly"
+	},
+	{
+		"id": "FIREFLY",
+		"singularName": "firefly",
+		"pluralName": "fireflies",
+		"adjectiveName": "firefly"
+	},
+	{
+		"id": "FIREFLY_MAN",
+		"singularName": "firefly man",
+		"pluralName": "firefly men",
+		"adjectiveName": "firefly man"
+	},
+	{
+		"id": "GIANT_FIREFLY",
+		"singularName": "giant firefly",
+		"pluralName": "giant fireflies",
+		"adjectiveName": "giant firefly"
+	},
+	{
+		"id": "DRAGONFLY",
+		"singularName": "dragonfly",
+		"pluralName": "dragonflies",
+		"adjectiveName": "dragonfly"
+	},
+	{
+		"id": "DRAGONFLY_MAN",
+		"singularName": "dragonfly man",
+		"pluralName": "dragonfly men",
+		"adjectiveName": "dragonfly man"
+	},
+	{
+		"id": "GIANT_DRAGONFLY",
+		"singularName": "giant dragonfly",
+		"pluralName": "giant dragonflies",
+		"adjectiveName": "giant dragonfly"
+	},
+	{
+		"id": "HONEY_BEE",
+		"singularName": "honey bee",
+		"pluralName": "honey bees",
+		"adjectiveName": "honey bee"
+	},
+	{
+		"id": "BUMBLEBEE",
+		"singularName": "bumblebee",
+		"pluralName": "bumblebees",
+		"adjectiveName": "bumblebee"
+	},
+	{
+		"id": "GOAT_MOUNTAIN",
+		"singularName": "mountain goat",
+		"pluralName": "mountain goats",
+		"adjectiveName": "mountain goat"
+	},
+	{
+		"id": "GOAT_MOUNTAIN_MAN",
+		"singularName": "mountain goat man",
+		"pluralName": "mountain goat men",
+		"adjectiveName": "mountain goat man"
+	},
+	{
+		"id": "GIANT_GOAT_MOUNTAIN",
+		"singularName": "giant mountain goat",
+		"pluralName": "giant mountain goats",
+		"adjectiveName": "giant mountain goat"
+	},
+	{
+		"id": "MARMOT_HOARY",
+		"singularName": "hoary marmot",
+		"pluralName": "hoary marmots",
+		"adjectiveName": "hoary marmot"
+	},
+	{
+		"id": "MARMOT_HOARY_MAN",
+		"singularName": "hoary marmot man",
+		"pluralName": "hoary marmot men",
+		"adjectiveName": "hoary marmot man"
+	},
+	{
+		"id": "GIANT_MARMOT_HOARY",
+		"singularName": "giant hoary marmot",
+		"pluralName": "giant hoary marmots",
+		"adjectiveName": "giant hoary marmot"
+	},
+	{
+		"id": "GNOME_MOUNTAIN",
+		"singularName": "mountain gnome",
+		"pluralName": "mountain gnomes",
+		"adjectiveName": "mountain gnome"
+	},
+	{
+		"id": "GNOME_DARK",
+		"singularName": "dark gnome",
+		"pluralName": "dark gnomes",
+		"adjectiveName": "dark gnome"
+	},
+	{
+		"id": "WALRUS",
+		"singularName": "walrus",
+		"pluralName": "walruses",
+		"adjectiveName": "walrus"
+	},
+	{
+		"id": "WALRUS_MAN",
+		"singularName": "walrus man",
+		"pluralName": "walrus men",
+		"adjectiveName": "walrus man"
+	},
+	{
+		"id": "GIANT_WALRUS",
+		"singularName": "giant walrus",
+		"pluralName": "giant walruss",
+		"adjectiveName": "giant walrus"
+	},
+	{
+		"id": "FISH_LAMPREY_SEA",
+		"singularName": "sea lamprey",
+		"pluralName": "sea lampreys",
+		"adjectiveName": "sea lamprey"
+	},
+	{
+		"id": "SHARK_GREAT_WHITE",
+		"singularName": "great white shark",
+		"pluralName": "great white sharks",
+		"adjectiveName": "great white shark"
+	},
+	{
+		"id": "SHARK_FRILL",
+		"singularName": "frill shark",
+		"pluralName": "frill sharks",
+		"adjectiveName": "frill shark"
+	},
+	{
+		"id": "SHARK_SPINY_DOGFISH",
+		"singularName": "spiny dogfish",
+		"pluralName": "spiny dogfish",
+		"adjectiveName": "spiny dogfish"
+	},
+	{
+		"id": "SHARK_WOBBEGONG_SPOTTED",
+		"singularName": "spotted wobbegong",
+		"pluralName": "spotted wobbegongs",
+		"adjectiveName": "spotted wobbegong"
+	},
+	{
+		"id": "SHARK_WHALE",
+		"singularName": "whale shark",
+		"pluralName": "whale sharks",
+		"adjectiveName": "shale shark"
+	},
+	{
+		"id": "SHARK_BASKING",
+		"singularName": "basking shark",
+		"pluralName": "basking sharks",
+		"adjectiveName": "basking shark"
+	},
+	{
+		"id": "SHARK_NURSE",
+		"singularName": "nurse shark",
+		"pluralName": "nurse sharks",
+		"adjectiveName": "nurse shark"
+	},
+	{
+		"id": "SHARK_MAKO_SHORTFIN",
+		"singularName": "shortfin mako shark",
+		"pluralName": "shortfin mako sharks",
+		"adjectiveName": "shortfin mako shark"
+	},
+	{
+		"id": "SHARK_MAKO_LONGFIN",
+		"singularName": "longfin mako shark",
+		"pluralName": "longfin mako sharks",
+		"adjectiveName": "longfin mako shark"
+	},
+	{
+		"id": "SHARK_TIGER",
+		"singularName": "tiger shark",
+		"pluralName": "tiger sharks",
+		"adjectiveName": "tiger shark"
+	},
+	{
+		"id": "SHARK_BULL",
+		"singularName": "bull shark",
+		"pluralName": "bull sharks",
+		"adjectiveName": "bull shark"
+	},
+	{
+		"id": "SHARK_REEF_BLACKTIP",
+		"singularName": "blacktip reef shark",
+		"pluralName": "blacktip reef sharks",
+		"adjectiveName": "blacktip reef shark"
+	},
+	{
+		"id": "SHARK_REEF_WHITETIP",
+		"singularName": "whitetip reef shark",
+		"pluralName": "whitetip reef sharks",
+		"adjectiveName": "whitetip reef shark"
+	},
+	{
+		"id": "SHARK_BLUE",
+		"singularName": "blue shark",
+		"pluralName": "blue sharks",
+		"adjectiveName": "blue shark"
+	},
+	{
+		"id": "SHARK_HAMMERHEAD",
+		"singularName": "hammerhead shark",
+		"pluralName": "hammerhead sharks",
+		"adjectiveName": "hammerhead shark"
+	},
+	{
+		"id": "SHARK_ANGEL",
+		"singularName": "angelshark",
+		"pluralName": "angelsharks",
+		"adjectiveName": "angelshark"
+	},
+	{
+		"id": "FISH_SKATE_COMMON",
+		"singularName": "common skate",
+		"pluralName": "common skates",
+		"adjectiveName": "common skate"
+	},
+	{
+		"id": "FISH_RAY_MANTA",
+		"singularName": "manta ray",
+		"pluralName": "manta rays",
+		"adjectiveName": "manta ray"
+	},
+	{
+		"id": "FISH_STINGRAY",
+		"singularName": "stingray",
+		"pluralName": "stingrays",
+		"adjectiveName": "stingray"
+	},
+	{
+		"id": "FISH_COELACANTH",
+		"singularName": "coelacanth",
+		"pluralName": "coelacanths",
+		"adjectiveName": "coelacanth"
+	},
+	{
+		"id": "FISH_STURGEON",
+		"singularName": "sturgeon",
+		"pluralName": "sturgeons",
+		"adjectiveName": "sturgeon"
+	},
+	{
+		"id": "FISH_CONGER_EEL",
+		"singularName": "conger eel",
+		"pluralName": "conger eels",
+		"adjectiveName": "conger eel"
+	},
+	{
+		"id": "FISH_MILKFISH",
+		"singularName": "milkfish",
+		"pluralName": "milkfish",
+		"adjectiveName": "milkfish"
+	},
+	{
+		"id": "FISH_COD",
+		"singularName": "cod",
+		"pluralName": "cod",
+		"adjectiveName": "cod"
+	},
+	{
+		"id": "FISH_OPAH",
+		"singularName": "opah",
+		"pluralName": "opah",
+		"adjectiveName": "opah"
+	},
+	{
+		"id": "FISH_GROUPER_GIANT",
+		"singularName": "giant grouper",
+		"pluralName": "giant groupers",
+		"adjectiveName": "giant grouper"
+	},
+	{
+		"id": "FISH_BLUEFISH",
+		"singularName": "bluefish",
+		"pluralName": "bluefish",
+		"adjectiveName": "bluefish"
+	},
+	{
+		"id": "FISH_SUNFISH_OCEAN",
+		"singularName": "ocean sunfish",
+		"pluralName": "ocean sunfish",
+		"adjectiveName": "ocean sunfish"
+	},
+	{
+		"id": "FISH_SWORDFISH",
+		"singularName": "swordfish",
+		"pluralName": "swordfish",
+		"adjectiveName": "swordfish"
+	},
+	{
+		"id": "FISH_MARLIN",
+		"singularName": "marlin",
+		"pluralName": "marlins",
+		"adjectiveName": "marlin"
+	},
+	{
+		"id": "FISH_HALIBUT",
+		"singularName": "halibut",
+		"pluralName": "halibut",
+		"adjectiveName": "halibut"
+	},
+	{
+		"id": "FISH_BARRACUDA_GREAT",
+		"singularName": "great barracuda",
+		"pluralName": "great barracudas",
+		"adjectiveName": "great barracuda"
+	},
+	{
+		"id": "FISH_TUNA_BLUEFIN",
+		"singularName": "bluefin tuna",
+		"pluralName": "bluefin tuna",
+		"adjectiveName": "bluefin tuna"
+	},
+	{
+		"id": "NARWHAL",
+		"singularName": "narwhal",
+		"pluralName": "narwhals",
+		"adjectiveName": "narwhal"
+	},
+	{
+		"id": "NARWHAL MAN",
+		"singularName": "narwhal man",
+		"pluralName": "narwhal men",
+		"adjectiveName": "narwhal man"
+	},
+	{
+		"id": "NARWHAL, GIANT",
+		"singularName": "giant narwhal",
+		"pluralName": "giant narwhals",
+		"adjectiveName": "giant narwhal"
+	},
+	{
+		"id": "HIPPO",
+		"singularName": "hippo",
+		"pluralName": "hippos",
+		"adjectiveName": "hippo"
+	},
+	{
+		"id": "HIPPO_MAN",
+		"singularName": "hippo man",
+		"pluralName": "hippo men",
+		"adjectiveName": "hippo man"
+	},
+	{
+		"id": "GIANT_HIPPO",
+		"singularName": "giant hippo",
+		"pluralName": "giant hippos",
+		"adjectiveName": "giant hippo"
+	},
+	{
+		"id": "FISH_GAR_LONGNOSE",
+		"singularName": "longnose gar",
+		"pluralName": "longnose gars",
+		"adjectiveName": "longnose gar"
+	},
+	{
+		"id": "FISH_CARP",
+		"singularName": "carp",
+		"pluralName": "carp",
+		"adjectiveName": "carp"
+	},
+	{
+		"id": "FISH_TIGERFISH",
+		"singularName": "tigerfish",
+		"pluralName": "tigerfish",
+		"adjectiveName": "tigerfish"
+	},
+	{
+		"id": "FISH_PIKE",
+		"singularName": "pike",
+		"pluralName": "pike",
+		"adjectiveName": "pike"
+	},
+	{
+		"id": "PLATYPUS",
+		"singularName": "platypus",
+		"pluralName": "platypuses",
+		"adjectiveName": "platypus"
+	},
+	{
+		"id": "PLATYPUS MAN",
+		"singularName": "platypus man",
+		"pluralName": "platypus men",
+		"adjectiveName": "platypus man"
+	},
+	{
+		"id": "PLATYPUS, GIANT",
+		"singularName": "giant platypus",
+		"pluralName": "giant platypuses",
+		"adjectiveName": "giant platypus"
+	},
+	{
+		"id": "BEAR_GRIZZLY",
+		"singularName": "grizzly bear",
+		"pluralName": "grizzly bears",
+		"adjectiveName": "grizzly bear"
+	},
+	{
+		"id": "BEAR_GRIZZLY_MAN",
+		"singularName": "grizzly bear man",
+		"pluralName": "grizzly bear men",
+		"adjectiveName": "grizzly bear man"
+	},
+	{
+		"id": "GIANT_BEAR_GRIZZLY",
+		"singularName": "giant grizzly bear",
+		"pluralName": "giant grizzly bears",
+		"adjectiveName": "giant grizzly bear"
+	},
+	{
+		"id": "BEAR_BLACK",
+		"singularName": "black bear",
+		"pluralName": "black bears",
+		"adjectiveName": "black bear"
+	},
+	{
+		"id": "BEAR_BLACK_MAN",
+		"singularName": "black bear man",
+		"pluralName": "black bear men",
+		"adjectiveName": "black bear man"
+	},
+	{
+		"id": "GIANT_BEAR_BLACK",
+		"singularName": "giant black bear",
+		"pluralName": "giant black bears",
+		"adjectiveName": "giant black bear"
+	},
+	{
+		"id": "DEER",
+		"singularName": "deer",
+		"pluralName": "deer",
+		"adjectiveName": "deer"
+	},
+	{
+		"id": "DEER_MAN",
+		"singularName": "deer man",
+		"pluralName": "deer men",
+		"adjectiveName": "deer man"
+	},
+	{
+		"id": "GIANT_DEER",
+		"singularName": "giant deer",
+		"pluralName": "giant deer",
+		"adjectiveName": "giant deer"
+	},
+	{
+		"id": "FOX",
+		"singularName": "fox",
+		"pluralName": "foxes",
+		"adjectiveName": "fox"
+	},
+	{
+		"id": "FOX_MAN",
+		"singularName": "fox man",
+		"pluralName": "fox men",
+		"adjectiveName": "fox man"
+	},
+	{
+		"id": "GIANT_FOX",
+		"singularName": "giant fox",
+		"pluralName": "giant foxes",
+		"adjectiveName": "giant fox"
+	},
+	{
+		"id": "RACCOON",
+		"singularName": "raccoon",
+		"pluralName": "raccoons",
+		"adjectiveName": "raccoon"
+	},
+	{
+		"id": "RACCOON_MAN",
+		"singularName": "raccoon man",
+		"pluralName": "raccoon men",
+		"adjectiveName": "raccoon man"
+	},
+	{
+		"id": "GIANT_RACCOON",
+		"singularName": "giant raccoon",
+		"pluralName": "giant raccoons",
+		"adjectiveName": "giant raccoon"
+	},
+	{
+		"id": "MACAQUE_RHESUS",
+		"singularName": "rhesus macaque",
+		"pluralName": "rhesus macaques",
+		"adjectiveName": "rhesus macaque"
+	},
+	{
+		"id": "MACAQUE_RHESUS_MAN",
+		"singularName": "rhesus macaque man",
+		"pluralName": "rhesus macaque men",
+		"adjectiveName": "rhesus macaque man"
+	},
+	{
+		"id": "GIANT_MACAQUE_RHESUS",
+		"singularName": "giant rhesus macaque",
+		"pluralName": "giant rhesus macaques",
+		"adjectiveName": "giant rhesus macaque"
+	},
+	{
+		"id": "COUGAR",
+		"singularName": "cougar",
+		"pluralName": "cougars",
+		"adjectiveName": "cougar"
+	},
+	{
+		"id": "COUGAR_MAN",
+		"singularName": "cougar man",
+		"pluralName": "cougar men",
+		"adjectiveName": "cougar man"
+	},
+	{
+		"id": "GIANT_COUGAR",
+		"singularName": "giant cougar",
+		"pluralName": "giant cougars",
+		"adjectiveName": "giant cougar"
+	},
+	{
+		"id": "WOLF",
+		"singularName": "wolf",
+		"pluralName": "wolves",
+		"adjectiveName": "wolf"
+	},
+	{
+		"id": "WOLF_MAN",
+		"singularName": "wolf man",
+		"pluralName": "wolf men",
+		"adjectiveName": "wolf man"
+	},
+	{
+		"id": "GIANT_WOLF",
+		"singularName": "giant wolf",
+		"pluralName": "giant wolves",
+		"adjectiveName": "giant wolf"
+	},
+	{
+		"id": "GROUNDHOG",
+		"singularName": "groundhog",
+		"pluralName": "groundhogs",
+		"adjectiveName": "groundhog"
+	},
+	{
+		"id": "GROUNDHOG_MAN",
+		"singularName": "groundhog man",
+		"pluralName": "groundhog men",
+		"adjectiveName": "groundhog man"
+	},
+	{
+		"id": "GIANT_GROUNDHOG",
+		"singularName": "giant groundhog",
+		"pluralName": "giant groundhogs",
+		"adjectiveName": "giant groundhog"
+	},
+	{
+		"id": "ALLIGATOR",
+		"singularName": "alligator",
+		"pluralName": "alligators",
+		"adjectiveName": "alligator"
+	},
+	{
+		"id": "ALLIGATOR_MAN",
+		"singularName": "alligator man",
+		"pluralName": "alligator men",
+		"adjectiveName": "alligator man"
+	},
+	{
+		"id": "GIANT_ALLIGATOR",
+		"singularName": "giant alligator",
+		"pluralName": "giant alligators",
+		"adjectiveName": "giant alligator"
+	},
+	{
+		"id": "BIRD_BUZZARD",
+		"singularName": "buzzard",
+		"pluralName": "buzzards",
+		"adjectiveName": "buzzard"
+	},
+	{
+		"id": "BUZZARD_MAN",
+		"singularName": "buzzard man",
+		"pluralName": "buzzard men",
+		"adjectiveName": "buzzard man"
+	},
+	{
+		"id": "GIANT_BUZZARD",
+		"singularName": "giant buzzard",
+		"pluralName": "giant buzzards",
+		"adjectiveName": "giant buzzard"
+	},
+	{
+		"id": "PANDA",
+		"singularName": "panda",
+		"pluralName": "pandas",
+		"adjectiveName": "panda"
+	},
+	{
+		"id": "PANDA, GIGANTIC",
+		"singularName": "gigantic panda",
+		"pluralName": "gigantic pandas",
+		"adjectiveName": "gigantic panda"
+	},
+	{
+		"id": "PANDA MAN",
+		"singularName": "panda man",
+		"pluralName": "panda men",
+		"adjectiveName": "panda man"
+	},
+	{
+		"id": "CAPYBARA",
+		"singularName": "capybara",
+		"pluralName": "capybaras",
+		"adjectiveName": "capybara"
+	},
+	{
+		"id": "CAPYBARA, GIANT",
+		"singularName": "giant capybara",
+		"pluralName": "giant capybaras",
+		"adjectiveName": "giant capybara"
+	},
+	{
+		"id": "CAPYBARA MAN",
+		"singularName": "capybara man",
+		"pluralName": "capybara men",
+		"adjectiveName": "capybara man"
+	},
+	{
+		"id": "BADGER",
+		"singularName": "badger",
+		"pluralName": "badgers",
+		"adjectiveName": "badger"
+	},
+	{
+		"id": "BADGER MAN",
+		"singularName": "badger man",
+		"pluralName": "badger men",
+		"adjectiveName": "badger man"
+	},
+	{
+		"id": "BADGER, GIANT",
+		"singularName": "giant badger",
+		"pluralName": "giant badgers",
+		"adjectiveName": "giant badger"
+	},
+	{
+		"id": "MOOSE",
+		"singularName": "moose",
+		"pluralName": "moose",
+		"adjectiveName": "moose"
+	},
+	{
+		"id": "MOOSE MAN",
+		"singularName": "moose man",
+		"pluralName": "moose men",
+		"adjectiveName": "moose man"
+	},
+	{
+		"id": "MOOSE, GIANT",
+		"singularName": "giant moose",
+		"pluralName": "giant moose",
+		"adjectiveName": "giant moose"
+	},
+	{
+		"id": "RED PANDA",
+		"singularName": "red panda",
+		"pluralName": "red pandas",
+		"adjectiveName": "red panda"
+	},
+	{
+		"id": "RED PANDA MAN",
+		"singularName": "red panda man",
+		"pluralName": "red panda men",
+		"adjectiveName": "red panda man"
+	},
+	{
+		"id": "RED PANDA, GIANT",
+		"singularName": "giant red panda",
+		"pluralName": "giant red pandas",
+		"adjectiveName": "giant red panda"
+	},
+	{
+		"id": "ELEPHANT",
+		"singularName": "elephant",
+		"pluralName": "elephants",
+		"adjectiveName": "elephant"
+	},
+	{
+		"id": "ELEPHANT_MAN",
+		"singularName": "elephant man",
+		"pluralName": "elephant men",
+		"adjectiveName": "elephant man"
+	},
+	{
+		"id": "GIANT_ELEPHANT",
+		"singularName": "giant elephant",
+		"pluralName": "giant elephants",
+		"adjectiveName": "giant elephant"
+	},
+	{
+		"id": "WARTHOG",
+		"singularName": "warthog",
+		"pluralName": "warthogs",
+		"adjectiveName": "warthog"
+	},
+	{
+		"id": "WARTHOG_MAN",
+		"singularName": "warthog man",
+		"pluralName": "warthog men",
+		"adjectiveName": "warthog man"
+	},
+	{
+		"id": "GIANT_WARTHOG",
+		"singularName": "giant warthog",
+		"pluralName": "giant warthogs",
+		"adjectiveName": "giant warthog"
+	},
+	{
+		"id": "LION",
+		"singularName": "lion",
+		"pluralName": "lions",
+		"adjectiveName": "lion"
+	},
+	{
+		"id": "LION_MAN",
+		"singularName": "lion man",
+		"pluralName": "lion men",
+		"adjectiveName": "lion man"
+	},
+	{
+		"id": "GIANT_LION",
+		"singularName": "giant lion",
+		"pluralName": "giant lions",
+		"adjectiveName": "giant lion"
+	},
+	{
+		"id": "LEOPARD",
+		"singularName": "leopard",
+		"pluralName": "leopards",
+		"adjectiveName": "leopard"
+	},
+	{
+		"id": "LEOPARD_MAN",
+		"singularName": "leopard man",
+		"pluralName": "leopard men",
+		"adjectiveName": "leopard man"
+	},
+	{
+		"id": "GIANT_LEOPARD",
+		"singularName": "giant leopard",
+		"pluralName": "giant leopards",
+		"adjectiveName": "giant leopard"
+	},
+	{
+		"id": "JAGUAR",
+		"singularName": "jaguar",
+		"pluralName": "jaguars",
+		"adjectiveName": "jaguar"
+	},
+	{
+		"id": "JAGUAR_MAN",
+		"singularName": "jaguar man",
+		"pluralName": "jaguar men",
+		"adjectiveName": "jaguar man"
+	},
+	{
+		"id": "GIANT_JAGUAR",
+		"singularName": "giant jaguar",
+		"pluralName": "giant jaguars",
+		"adjectiveName": "giant jaguar"
+	},
+	{
+		"id": "TIGER",
+		"singularName": "tiger",
+		"pluralName": "tigers",
+		"adjectiveName": "tiger"
+	},
+	{
+		"id": "TIGER_MAN",
+		"singularName": "tiger man",
+		"pluralName": "tiger men",
+		"adjectiveName": "tiger man"
+	},
+	{
+		"id": "GIANT_TIGER",
+		"singularName": "giant tiger",
+		"pluralName": "giant tigers",
+		"adjectiveName": "giant tiger"
+	},
+	{
+		"id": "CHEETAH",
+		"singularName": "cheetah",
+		"pluralName": "cheetahs",
+		"adjectiveName": "cheetah"
+	},
+	{
+		"id": "CHEETAH_MAN",
+		"singularName": "cheetah man",
+		"pluralName": "cheetah men",
+		"adjectiveName": "cheetah man"
+	},
+	{
+		"id": "GIANT_CHEETAH",
+		"singularName": "giant cheetah",
+		"pluralName": "giant cheetahs",
+		"adjectiveName": "giant cheetah"
+	},
+	{
+		"id": "GAZELLE",
+		"singularName": "gazelle",
+		"pluralName": "gazelles",
+		"adjectiveName": "gazelle"
+	},
+	{
+		"id": "GAZELLE_MAN",
+		"singularName": "gazelle man",
+		"pluralName": "gazelle men",
+		"adjectiveName": "gazelle man"
+	},
+	{
+		"id": "GIANT_GAZELLE",
+		"singularName": "giant gazelle",
+		"pluralName": "giant gazelles",
+		"adjectiveName": "giant gazelle"
+	},
+	{
+		"id": "MANDRILL",
+		"singularName": "mandrill",
+		"pluralName": "mandrills",
+		"adjectiveName": "mandrill"
+	},
+	{
+		"id": "MANDRILL_MAN",
+		"singularName": "mandrill man",
+		"pluralName": "mandrill men",
+		"adjectiveName": "mandrill man"
+	},
+	{
+		"id": "GIANT_MANDRILL",
+		"singularName": "giant mandrill",
+		"pluralName": "giant mandrills",
+		"adjectiveName": "giant mandrill"
+	},
+	{
+		"id": "CHIMPANZEE",
+		"singularName": "chimpanzee",
+		"pluralName": "chimpanzees",
+		"adjectiveName": "chimpanzee"
+	},
+	{
+		"id": "BONOBO",
+		"singularName": "bonobo",
+		"pluralName": "bonobos",
+		"adjectiveName": "bonobo"
+	},
+	{
+		"id": "GORILLA",
+		"singularName": "gorilla",
+		"pluralName": "gorillas",
+		"adjectiveName": "gorilla"
+	},
+	{
+		"id": "ORANGUTAN",
+		"singularName": "orangutan",
+		"pluralName": "orangutans",
+		"adjectiveName": "orangutan"
+	},
+	{
+		"id": "GIBBON_SIAMANG",
+		"singularName": "siamang",
+		"pluralName": "siamangs",
+		"adjectiveName": "siamang"
+	},
+	{
+		"id": "GIBBON_WHITE_HANDED",
+		"singularName": "white-handed gibbon",
+		"pluralName": "white-handed gibbons",
+		"adjectiveName": "white-handed gibbon"
+	},
+	{
+		"id": "GIBBON_BLACK_HANDED",
+		"singularName": "black-handed gibbon",
+		"pluralName": "black-handed gibbons",
+		"adjectiveName": "black-handed gibbon"
+	},
+	{
+		"id": "GIBBON_GRAY",
+		"singularName": "gray gibbon",
+		"pluralName": "gray gibbons",
+		"adjectiveName": "gray gibbon"
+	},
+	{
+		"id": "GIBBON_SILVERY",
+		"singularName": "silvery gibbon",
+		"pluralName": "silvery gibbons",
+		"adjectiveName": "silvery gibbon"
+	},
+	{
+		"id": "GIBBON_PILEATED",
+		"singularName": "pileated gibbon",
+		"pluralName": "pileated gibbons",
+		"adjectiveName": "pileated gibbon"
+	},
+	{
+		"id": "GIBBON_BILOU",
+		"singularName": "bilou",
+		"pluralName": "bilous",
+		"adjectiveName": "bilou"
+	},
+	{
+		"id": "GIBBON_WHITE_BROWED",
+		"singularName": "white-browed gibbon",
+		"pluralName": "white-browed gibbons",
+		"adjectiveName": "white-browed gibbon"
+	},
+	{
+		"id": "GIBBON_BLACK_CRESTED",
+		"singularName": "black-crested gibbon",
+		"pluralName": "black-crested gibbons",
+		"adjectiveName": "black-crested gibbon"
+	},
+	{
+		"id": "CAMEL_1_HUMP",
+		"singularName": "one-humped camel",
+		"pluralName": "one-humped camels",
+		"adjectiveName": "one-humped camel"
+	},
+	{
+		"id": "CAMEL_1_HUMP_MAN",
+		"singularName": "one-humped camel man",
+		"pluralName": "one-humped camel men",
+		"adjectiveName": "one-humped camel man"
+	},
+	{
+		"id": "GIANT_CAMEL_1_HUMP",
+		"singularName": "giant one-humped camel",
+		"pluralName": "giant one-humped camels",
+		"adjectiveName": "giant one-humped camel"
+	},
+	{
+		"id": "CAMEL_2_HUMP",
+		"singularName": "two-humped camel",
+		"pluralName": "two-humped camels",
+		"adjectiveName": "two-humped camel"
+	},
+	{
+		"id": "CAMEL_2_HUMP_MAN",
+		"singularName": "two-humped camel man",
+		"pluralName": "two-humped camel men",
+		"adjectiveName": "two-humped camel man"
+	},
+	{
+		"id": "GIANT_CAMEL_2_HUMP",
+		"singularName": "giant two-humped camel",
+		"pluralName": "giant two-humped camels",
+		"adjectiveName": "giant two-humped camel"
+	},
+	{
+		"id": "CROCODILE_SALTWATER",
+		"singularName": "saltwater crocodile",
+		"pluralName": "saltwater crocodiles",
+		"adjectiveName": "saltwater crocodile"
+	},
+	{
+		"id": "CROCODILE_SALTWATER_MAN",
+		"singularName": "saltwater crocodile man",
+		"pluralName": "saltwater crocodile men",
+		"adjectiveName": "saltwater crocodile man"
+	},
+	{
+		"id": "GIANT_CROCODILE_SALTWATER",
+		"singularName": "giant saltwater crocodile",
+		"pluralName": "giant saltwater crocodiles",
+		"adjectiveName": "giant saltwater crocodile"
+	},
+	{
+		"id": "BIRD_VULTURE",
+		"singularName": "vulture",
+		"pluralName": "vultures",
+		"adjectiveName": "vulture"
+	},
+	{
+		"id": "VULTURE_MAN",
+		"singularName": "vulture man",
+		"pluralName": "vulture men",
+		"adjectiveName": "vulture man"
+	},
+	{
+		"id": "GIANT_VULTURE",
+		"singularName": "giant vulture",
+		"pluralName": "giant vultures",
+		"adjectiveName": "giant vulture"
+	},
+	{
+		"id": "RHINOCEROS",
+		"singularName": "rhinoceros",
+		"pluralName": "rhinoceroses",
+		"adjectiveName": "rhinoceros"
+	},
+	{
+		"id": "RHINOCEROS_MAN",
+		"singularName": "rhinoceros man",
+		"pluralName": "rhinoceros men",
+		"adjectiveName": "rhinoceros man"
+	},
+	{
+		"id": "GIANT_RHINOCEROS",
+		"singularName": "giant rhinoceros",
+		"pluralName": "giant rhinoceroses",
+		"adjectiveName": "giant rhinoceros"
+	},
+	{
+		"id": "GIRAFFE",
+		"singularName": "giraffe",
+		"pluralName": "giraffes",
+		"adjectiveName": "giraffe"
+	},
+	{
+		"id": "GIRAFFE_MAN",
+		"singularName": "giraffe man",
+		"pluralName": "giraffe men",
+		"adjectiveName": "giraffe man"
+	},
+	{
+		"id": "GIANT_GIRAFFE",
+		"singularName": "giant giraffe",
+		"pluralName": "giant giraffes",
+		"adjectiveName": "giant giraffe"
+	},
+	{
+		"id": "HONEY BADGER",
+		"singularName": "honey badger",
+		"pluralName": "honey badgers",
+		"adjectiveName": "honey badger"
+	},
+	{
+		"id": "HONEY BADGER MAN",
+		"singularName": "honey badger man",
+		"pluralName": "honey badger men",
+		"adjectiveName": "honey badger man"
+	},
+	{
+		"id": "HONEY BADGER, GIANT",
+		"singularName": "giant honey badger",
+		"pluralName": "giant honey badgers",
+		"adjectiveName": "giant honey badger"
+	},
+	{
+		"id": "GIANT TORTOISE",
+		"singularName": "giant tortoise",
+		"pluralName": "giant tortoises",
+		"adjectiveName": "giant tortoise"
+	},
+	{
+		"id": "GIANT TORTOISE MAN",
+		"singularName": "giant tortoise man",
+		"pluralName": "giant tortoise men",
+		"adjectiveName": "giant tortoise man"
+	},
+	{
+		"id": "GIGANTIC TORTOISE",
+		"singularName": "gigantic tortoise",
+		"pluralName": "gigantic tortoises",
+		"adjectiveName": "gigantic tortoise"
+	},
+	{
+		"id": "ARMADILLO",
+		"singularName": "armadillo",
+		"pluralName": "armadillos",
+		"adjectiveName": "armadillo"
+	},
+	{
+		"id": "ARMADILLO MAN",
+		"singularName": "armadillo man",
+		"pluralName": "armadillo men",
+		"adjectiveName": "armadillo man"
+	},
+	{
+		"id": "ARMADILLO, GIANT",
+		"singularName": "giant armadillo",
+		"pluralName": "giant armadillos",
+		"adjectiveName": "giant armadillo"
+	},
+	{
+		"id": "MUSKOX",
+		"singularName": "muskox",
+		"pluralName": "muskoxen",
+		"adjectiveName": "muskox"
+	},
+	{
+		"id": "MUSKOX_MAN",
+		"singularName": "muskox man",
+		"pluralName": "muskox men",
+		"adjectiveName": "muskox man"
+	},
+	{
+		"id": "GIANT_MUSKOX",
+		"singularName": "giant muskox",
+		"pluralName": "giant muskoxen",
+		"adjectiveName": "giant muskox"
+	},
+	{
+		"id": "ELK",
+		"singularName": "elk",
+		"pluralName": "elk",
+		"adjectiveName": "elk"
+	},
+	{
+		"id": "ELK_MAN",
+		"singularName": "elk man",
+		"pluralName": "elk men",
+		"adjectiveName": "elk man"
+	},
+	{
+		"id": "GIANT_ELK",
+		"singularName": "giant elk",
+		"pluralName": "giant elk",
+		"adjectiveName": "giant elk"
+	},
+	{
+		"id": "BEAR_POLAR",
+		"singularName": "polar bear",
+		"pluralName": "polar bears",
+		"adjectiveName": "polar bear"
+	},
+	{
+		"id": "BEAR_POLAR_MAN",
+		"singularName": "polar bear man",
+		"pluralName": "polar bear men",
+		"adjectiveName": "polar bear man"
+	},
+	{
+		"id": "GIANT_BEAR_POLAR",
+		"singularName": "giant polar bear",
+		"pluralName": "giant polar bears",
+		"adjectiveName": "giant polar bear"
+	},
+	{
+		"id": "WOLVERINE",
+		"singularName": "wolverine",
+		"pluralName": "wolverines",
+		"adjectiveName": "wolverine"
+	},
+	{
+		"id": "WOLVERINE_MAN",
+		"singularName": "wolverine man",
+		"pluralName": "wolverine men",
+		"adjectiveName": "wolverine man"
+	},
+	{
+		"id": "GIANT_WOLVERINE",
+		"singularName": "giant wolverine",
+		"pluralName": "giant wolverines",
+		"adjectiveName": "giant wolverine"
+	},
+	{
+		"id": "CHINCHILLA",
+		"singularName": "chinchilla",
+		"pluralName": "chinchillas",
+		"adjectiveName": "chinchilla"
+	},
+	{
+		"id": "CHINCHILLA_MAN",
+		"singularName": "chinchilla man",
+		"pluralName": "chinchilla men",
+		"adjectiveName": "chinchilla man"
+	},
+	{
+		"id": "GIANT_CHINCHILLA",
+		"singularName": "giant chinchilla",
+		"pluralName": "giant chinchillas",
+		"adjectiveName": "giant chinchilla"
+	},
+	{
+		"id": "FLOATING_GUTS",
+		"singularName": "floating guts",
+		"pluralName": "floating guts",
+		"adjectiveName": "floating guts"
+	},
+	{
+		"id": "DRUNIAN",
+		"singularName": "drunian",
+		"pluralName": "drunians",
+		"adjectiveName": "drunian"
+	},
+	{
+		"id": "CREEPING_EYE",
+		"singularName": "creeping eye",
+		"pluralName": "creeping eyes",
+		"adjectiveName": "creeping eye"
+	},
+	{
+		"id": "VORACIOUS_CAVE_CRAWLER",
+		"singularName": "voracious cave crawler",
+		"pluralName": "voracious cave crawlers",
+		"adjectiveName": "voracious cave crawler"
+	},
+	{
+		"id": "BLIND_CAVE_OGRE",
+		"singularName": "blind cave ogre",
+		"pluralName": "blind cave ogres",
+		"adjectiveName": "blind cave ogre"
+	},
+	{
+		"id": "CAP_HOPPER",
+		"singularName": "cap hopper",
+		"pluralName": "cap hoppers",
+		"adjectiveName": "cap hopper"
+	},
+	{
+		"id": "MAGMA_CRAB",
+		"singularName": "magma crab",
+		"pluralName": "magma crabs",
+		"adjectiveName": "magma crab"
+	},
+	{
+		"id": "CRUNDLE",
+		"singularName": "crundle",
+		"pluralName": "crundles",
+		"adjectiveName": "crundle"
+	},
+	{
+		"id": "HUNGRY_HEAD",
+		"singularName": "hungry head",
+		"pluralName": "hungry heads",
+		"adjectiveName": "hungry head"
+	},
+	{
+		"id": "FLESH_BALL",
+		"singularName": "flesh ball",
+		"pluralName": "flesh balls",
+		"adjectiveName": "flesh ball"
+	},
+	{
+		"id": "ELK_BIRD",
+		"singularName": "elk bird",
+		"pluralName": "elk birds",
+		"adjectiveName": "elk bird"
+	},
+	{
+		"id": "HELMET_SNAKE",
+		"singularName": "helmet snake",
+		"pluralName": "helmet snakes",
+		"adjectiveName": "helmet snake"
+	},
+	{
+		"id": "GREEN_DEVOURER",
+		"singularName": "green devourer",
+		"pluralName": "green devourers",
+		"adjectiveName": "green devourer"
+	},
+	{
+		"id": "RUTHERER",
+		"singularName": "rutherer",
+		"pluralName": "rutherers",
+		"adjectiveName": "rutherer"
+	},
+	{
+		"id": "CREEPY_CRAWLER",
+		"singularName": "creepy crawler",
+		"pluralName": "creepy crawlers",
+		"adjectiveName": "creepy crawler"
+	},
+	{
+		"id": "DRALTHA",
+		"singularName": "draltha",
+		"pluralName": "dralthas",
+		"adjectiveName": "draltha"
+	},
+	{
+		"id": "GIANT_EARTHWORM",
+		"singularName": "giant earthworm",
+		"pluralName": "giant earthworms",
+		"adjectiveName": "giant earthworm"
+	},
+	{
+		"id": "BLOOD_MAN",
+		"singularName": "blood man",
+		"pluralName": "blood men",
+		"adjectiveName": "blood man"
+	},
+	{
+		"id": "BUGBAT",
+		"singularName": "bugbat",
+		"pluralName": "bugbats",
+		"adjectiveName": "bugbat"
+	},
+	{
+		"id": "MANERA",
+		"singularName": "manera",
+		"pluralName": "maneras",
+		"adjectiveName": "manera"
+	},
+	{
+		"id": "MOLEMARIAN",
+		"singularName": "molemarian",
+		"pluralName": "molemarians",
+		"adjectiveName": "molemarian"
+	},
+	{
+		"id": "JABBERER",
+		"singularName": "jabberer",
+		"pluralName": "jabberers",
+		"adjectiveName": "jabberer"
+	},
+	{
+		"id": "POND_GRABBER",
+		"singularName": "pond grabber",
+		"pluralName": "pond grabbers",
+		"adjectiveName": "pond grabber"
+	},
+	{
+		"id": "BLIND_CAVE_BEAR",
+		"singularName": "blind cave bear",
+		"pluralName": "blind cave bears",
+		"adjectiveName": "blind cave bear"
+	},
+	{
+		"id": "CAVE_DRAGON",
+		"singularName": "cave dragon",
+		"pluralName": "cave dragons",
+		"adjectiveName": "cave draconic"
+	},
+	{
+		"id": "REACHER",
+		"singularName": "reacher",
+		"pluralName": "reachers",
+		"adjectiveName": "reacher"
+	},
+	{
+		"id": "ELEMENTMAN_GABBRO",
+		"singularName": "gabbro man",
+		"pluralName": "gabbro men",
+		"adjectiveName": "gabbro man"
+	},
+	{
+		"id": "GORLAK",
+		"singularName": "gorlak",
+		"pluralName": "gorlaks",
+		"adjectiveName": "gorlak"
+	},
+	{
+		"id": "CAVE_FLOATER",
+		"singularName": "cave floater",
+		"pluralName": "cave floaters",
+		"adjectiveName": "cave floater"
+	},
+	{
+		"id": "PLUMP_HELMET_MAN",
+		"singularName": "plump helmet man",
+		"pluralName": "plump helmet men",
+		"adjectiveName": "plump helmet man"
+	},
+	{
+		"id": "CAVE_BLOB",
+		"singularName": "cave blob",
+		"pluralName": "cave blobs",
+		"adjectiveName": "cave blob"
+	},
+	{
+		"id": "ELEMENTMAN_AMETHYST",
+		"singularName": "amethyst man",
+		"pluralName": "amethyst men",
+		"adjectiveName": "amethyst man"
+	},
+	{
+		"id": "OCTOPUS",
+		"singularName": "octopus",
+		"pluralName": "octopuses",
+		"adjectiveName": "octopus"
+	},
+	{
+		"id": "OCTOPUS_MAN",
+		"singularName": "octopus man",
+		"pluralName": "octopus men",
+		"adjectiveName": "octopus man"
+	},
+	{
+		"id": "GIANT_OCTOPUS",
+		"singularName": "giant octopus",
+		"pluralName": "giant octopuses",
+		"adjectiveName": "giant octopus"
+	},
+	{
+		"id": "CRAB",
+		"singularName": "crab",
+		"pluralName": "crabs",
+		"adjectiveName": "crab"
+	},
+	{
+		"id": "CRAB_MAN",
+		"singularName": "crab man",
+		"pluralName": "crab men",
+		"adjectiveName": "crab man"
+	},
+	{
+		"id": "GIANT_CRAB",
+		"singularName": "giant crab",
+		"pluralName": "giant crabs",
+		"adjectiveName": "giant crab"
+	},
+	{
+		"id": "LEOPARD_SEAL",
+		"singularName": "leopard seal",
+		"pluralName": "leopard seals",
+		"adjectiveName": "leopard seal"
+	},
+	{
+		"id": "LEOPARD_SEAL_MAN",
+		"singularName": "leopard seal man",
+		"pluralName": "leopard seal men",
+		"adjectiveName": "leopard seal man"
+	},
+	{
+		"id": "GIANT_LEOPARD_SEAL",
+		"singularName": "giant leopard seal",
+		"pluralName": "giant leopard seals",
+		"adjectiveName": "giant leopard seal"
+	},
+	{
+		"id": "CUTTLEFISH",
+		"singularName": "cuttlefish",
+		"pluralName": "cuttlefish",
+		"adjectiveName": "cuttlefish"
+	},
+	{
+		"id": "CUTTLEFISH_MAN",
+		"singularName": "cuttlefish man",
+		"pluralName": "cuttlefish men",
+		"adjectiveName": "cuttlefish man"
+	},
+	{
+		"id": "GIANT_CUTTLEFISH",
+		"singularName": "giant cuttlefish",
+		"pluralName": "giant cuttlefish",
+		"adjectiveName": "giant cuttlefish"
+	},
+	{
+		"id": "ORCA",
+		"singularName": "orca",
+		"pluralName": "orcas",
+		"adjectiveName": "orca"
+	},
+	{
+		"id": "ORCA_MAN",
+		"singularName": "orca man",
+		"pluralName": "orca men",
+		"adjectiveName": "orca man"
+	},
+	{
+		"id": "GIANT_ORCA",
+		"singularName": "giant orca",
+		"pluralName": "giant orcas",
+		"adjectiveName": "giant orca"
+	},
+	{
+		"id": "SPONGE",
+		"singularName": "sponge",
+		"pluralName": "sponges",
+		"adjectiveName": "sponge"
+	},
+	{
+		"id": "SPONGE_MAN",
+		"singularName": "sponge man",
+		"pluralName": "sponge men",
+		"adjectiveName": "sponge man"
+	},
+	{
+		"id": "GIANT_SPONGE",
+		"singularName": "giant sponge",
+		"pluralName": "giant sponges",
+		"adjectiveName": "giant sponge"
+	},
+	{
+		"id": "HORSESHOE_CRAB",
+		"singularName": "horseshoe crab",
+		"pluralName": "horseshoe crabs",
+		"adjectiveName": "horseshoe crab"
+	},
+	{
+		"id": "HORSESHOE_CRAB_MAN",
+		"singularName": "horseshoe crab man",
+		"pluralName": "horseshoe crab men",
+		"adjectiveName": "horseshoe crab man"
+	},
+	{
+		"id": "GIANT_HORSESHOE_CRAB",
+		"singularName": "giant horseshoe crab",
+		"pluralName": "giant horseshoe crabs",
+		"adjectiveName": "giant horseshoe crab"
+	},
+	{
+		"id": "SPERM_WHALE",
+		"singularName": "sperm whale",
+		"pluralName": "sperm whales",
+		"adjectiveName": "sperm whale"
+	},
+	{
+		"id": "SPERM_WHALE_MAN",
+		"singularName": "sperm whale man",
+		"pluralName": "sperm whale men",
+		"adjectiveName": "sperm whale man"
+	},
+	{
+		"id": "GIANT_SPERM_WHALE",
+		"singularName": "giant sperm whale",
+		"pluralName": "giant sperm whales",
+		"adjectiveName": "giant sperm whale"
+	},
+	{
+		"id": "ELEPHANT_SEAL",
+		"singularName": "elephant seal",
+		"pluralName": "elephant seals",
+		"adjectiveName": "elephant seal"
+	},
+	{
+		"id": "ELEPHANT_SEAL_MAN",
+		"singularName": "elephant seal man",
+		"pluralName": "elephant seal men",
+		"adjectiveName": "elephant seal man"
+	},
+	{
+		"id": "GIANT_ELEPHANT_SEAL",
+		"singularName": "giant elephant seal",
+		"pluralName": "giant elephant seals",
+		"adjectiveName": "giant elephant seal"
+	},
+	{
+		"id": "HARP_SEAL",
+		"singularName": "harp seal",
+		"pluralName": "harp seals",
+		"adjectiveName": "harp seal"
+	},
+	{
+		"id": "HARP_SEAL_MAN",
+		"singularName": "harp seal man",
+		"pluralName": "harp seal men",
+		"adjectiveName": "harp seal man"
+	},
+	{
+		"id": "GIANT_HARP_SEAL",
+		"singularName": "giant harp seal",
+		"pluralName": "giant harp seals",
+		"adjectiveName": "giant harp seal"
+	},
+	{
+		"id": "NAUTILUS",
+		"singularName": "nautilus",
+		"pluralName": "nautiluses",
+		"adjectiveName": "nautilus"
+	},
+	{
+		"id": "NAUTILUS_MAN",
+		"singularName": "nautilus man",
+		"pluralName": "nautilus men",
+		"adjectiveName": "nautilus man"
+	},
+	{
+		"id": "GIANT_NAUTILUS",
+		"singularName": "giant nautilus",
+		"pluralName": "giant nautiluses",
+		"adjectiveName": "giant nautilus"
+	},
+	{
+		"id": "FOXSQUIRREL",
+		"singularName": "fox squirrel",
+		"pluralName": "fox squirrels",
+		"adjectiveName": "fox squirrel"
+	},
+	{
+		"id": "MOGHOPPER",
+		"singularName": "moghopper",
+		"pluralName": "moghoppers",
+		"adjectiveName": "moghopper"
+	},
+	{
+		"id": "RAT_DEMON",
+		"singularName": "demon rat",
+		"pluralName": "demon rats",
+		"adjectiveName": "demon rat"
+	},
+	{
+		"id": "WAMBLER_FLUFFY",
+		"singularName": "fluffy wambler",
+		"pluralName": "fluffy wamblers",
+		"adjectiveName": "fluffy wambler"
+	},
+	{
+		"id": "LIZARD_RHINO_TWO_LEGGED",
+		"singularName": "two-legged rhino lizard",
+		"pluralName": "two-legged rhino lizards",
+		"adjectiveName": "two-legged rhino lizard"
+	},
+	{
+		"id": "WORM_KNUCKLE",
+		"singularName": "knuckle worm",
+		"pluralName": "knuckle worms",
+		"adjectiveName": "knuckle worm"
+	},
+	{
+		"id": "SPIDER_PHANTOM",
+		"singularName": "phantom spider",
+		"pluralName": "phantom spiders",
+		"adjectiveName": "phantom spider"
+	},
+	{
+		"id": "FLY_ACORN",
+		"singularName": "acorn fly",
+		"pluralName": "acorn flies",
+		"adjectiveName": "acorn fly"
+	},
+	{
+		"id": "GNAT_BLOOD",
+		"singularName": "blood gnat",
+		"pluralName": "blood gnats",
+		"adjectiveName": "blood gnat"
+	},
+	{
+		"id": "LIZARD",
+		"singularName": "lizard",
+		"pluralName": "lizards",
+		"adjectiveName": "lizard"
+	},
+	{
+		"id": "LIZARD_MAN",
+		"singularName": "lizard man",
+		"pluralName": "lizard men",
+		"adjectiveName": "lizard man"
+	},
+	{
+		"id": "GIANT_LIZARD",
+		"singularName": "giant lizard",
+		"pluralName": "giant lizards",
+		"adjectiveName": "giant lizard"
+	},
+	{
+		"id": "SKINK",
+		"singularName": "skink",
+		"pluralName": "skinks",
+		"adjectiveName": "skink"
+	},
+	{
+		"id": "SKINK_MAN",
+		"singularName": "skink man",
+		"pluralName": "skink men",
+		"adjectiveName": "skink man"
+	},
+	{
+		"id": "GIANT_SKINK",
+		"singularName": "giant skink",
+		"pluralName": "giant skinks",
+		"adjectiveName": "giant skink"
+	},
+	{
+		"id": "CHAMELEON",
+		"singularName": "chameleon",
+		"pluralName": "chameleons",
+		"adjectiveName": "chameleon"
+	},
+	{
+		"id": "CHAMELEON_MAN",
+		"singularName": "chameleon man",
+		"pluralName": "chameleon men",
+		"adjectiveName": "chameleon man"
+	},
+	{
+		"id": "GIANT_CHAMELEON",
+		"singularName": "giant chameleon",
+		"pluralName": "giant chameleons",
+		"adjectiveName": "giant chameleon"
+	},
+	{
+		"id": "ANOLE",
+		"singularName": "anole",
+		"pluralName": "anoles",
+		"adjectiveName": "anole"
+	},
+	{
+		"id": "ANOLE_MAN",
+		"singularName": "anole man",
+		"pluralName": "anole men",
+		"adjectiveName": "anole man"
+	},
+	{
+		"id": "GIANT_ANOLE",
+		"singularName": "giant anole",
+		"pluralName": "giant anoles",
+		"adjectiveName": "giant anole"
+	},
+	{
+		"id": "IGUANA",
+		"singularName": "iguana",
+		"pluralName": "iguanas",
+		"adjectiveName": "iguana"
+	},
+	{
+		"id": "IGUANA_MAN",
+		"singularName": "iguana man",
+		"pluralName": "iguana men",
+		"adjectiveName": "iguana man"
+	},
+	{
+		"id": "GIANT_IGUANA",
+		"singularName": "giant iguana",
+		"pluralName": "giant iguanas",
+		"adjectiveName": "giant iguana"
+	},
+	{
+		"id": "RIVER OTTER",
+		"singularName": "river otter",
+		"pluralName": "river otters",
+		"adjectiveName": "river otter"
+	},
+	{
+		"id": "SEA OTTER",
+		"singularName": "sea otter",
+		"pluralName": "sea otters",
+		"adjectiveName": "sea otter"
+	},
+	{
+		"id": "OTTER_MAN",
+		"singularName": "otter man",
+		"pluralName": "otter men",
+		"adjectiveName": "otter man"
+	},
+	{
+		"id": "GIANT_OTTER",
+		"singularName": "giant otter",
+		"pluralName": "giant otters",
+		"adjectiveName": "giant otter"
+	},
+	{
+		"id": "SNAPPING TURTLE",
+		"singularName": "common snapping turtle",
+		"pluralName": "common snapping turtles",
+		"adjectiveName": "common snapping turtle"
+	},
+	{
+		"id": "ALLIGATOR SNAPPING TURTLE",
+		"singularName": "alligator snapping turtle",
+		"pluralName": "alligator snapping turtles",
+		"adjectiveName": "alligator snapping turtle"
+	},
+	{
+		"id": "SNAPPING_TURTLE_MAN",
+		"singularName": "snapping turtle man",
+		"pluralName": "snapping turtle men",
+		"adjectiveName": "snapping turtle man"
+	},
+	{
+		"id": "GIANT_SNAPPING_TURTLE",
+		"singularName": "giant snapping turtle",
+		"pluralName": "giant snapping turtles",
+		"adjectiveName": "giant snapping turtle"
+	},
+	{
+		"id": "BEAVER",
+		"singularName": "beaver",
+		"pluralName": "beavers",
+		"adjectiveName": "beaver"
+	},
+	{
+		"id": "BEAVER_MAN",
+		"singularName": "beaver man",
+		"pluralName": "beaver men",
+		"adjectiveName": "beaver man"
+	},
+	{
+		"id": "GIANT_BEAVER",
+		"singularName": "giant beaver",
+		"pluralName": "giant beavers",
+		"adjectiveName": "giant beaver"
+	},
+	{
+		"id": "LEECH",
+		"singularName": "leech",
+		"pluralName": "leeches",
+		"adjectiveName": "leech"
+	},
+	{
+		"id": "LEECH_MAN",
+		"singularName": "leech man",
+		"pluralName": "leech men",
+		"adjectiveName": "leech man"
+	},
+	{
+		"id": "GIANT_LEECH",
+		"singularName": "giant leech",
+		"pluralName": "giant leeches",
+		"adjectiveName": "giant leech"
+	},
+	{
+		"id": "AXOLOTL",
+		"singularName": "axolotl",
+		"pluralName": "axolotls",
+		"adjectiveName": "axolotl"
+	},
+	{
+		"id": "AXOLOTL_MAN",
+		"singularName": "axolotl man",
+		"pluralName": "axolotl men",
+		"adjectiveName": "axolotl man"
+	},
+	{
+		"id": "GIANT_AXOLOTL",
+		"singularName": "giant axolotl",
+		"pluralName": "giant axolotls",
+		"adjectiveName": "giant axolotl"
+	},
+	{
+		"id": "MINK",
+		"singularName": "mink",
+		"pluralName": "minks",
+		"adjectiveName": "mink"
+	},
+	{
+		"id": "MINK_MAN",
+		"singularName": "mink man",
+		"pluralName": "mink men",
+		"adjectiveName": "mink man"
+	},
+	{
+		"id": "GIANT_MINK",
+		"singularName": "giant mink",
+		"pluralName": "giant minks",
+		"adjectiveName": "giant mink"
+	},
+	{
+		"id": "POND_TURTLE",
+		"singularName": "pond turtle",
+		"pluralName": "pond turtles",
+		"adjectiveName": "pond turtle"
+	},
+	{
+		"id": "POND_TURTLE_MAN",
+		"singularName": "pond turtle man",
+		"pluralName": "pond turtle men",
+		"adjectiveName": "pond turtle man"
+	},
+	{
+		"id": "GIANT_POND_TURTLE",
+		"singularName": "giant pond turtle",
+		"pluralName": "giant pond turtles",
+		"adjectiveName": "giant pond turtle"
+	},
+	{
+		"id": "HAMSTER",
+		"singularName": "hamster",
+		"pluralName": "hamsters",
+		"adjectiveName": "hamster"
+	},
+	{
+		"id": "HAMSTER_MAN",
+		"singularName": "hamster man",
+		"pluralName": "hamster men",
+		"adjectiveName": "hamster man"
+	},
+	{
+		"id": "GIANT_HAMSTER",
+		"singularName": "giant hamster",
+		"pluralName": "giant hamsters",
+		"adjectiveName": "giant hamster"
+	},
+	{
+		"id": "HEDGEHOG",
+		"singularName": "hedgehog",
+		"pluralName": "hedgehogs",
+		"adjectiveName": "hedgehog"
+	},
+	{
+		"id": "HEDGEHOG_MAN",
+		"singularName": "hedgehog man",
+		"pluralName": "hedgehog men",
+		"adjectiveName": "hedgehog man"
+	},
+	{
+		"id": "GIANT_HEDGEHOG",
+		"singularName": "giant hedgehog",
+		"pluralName": "giant hedgehogs",
+		"adjectiveName": "giant hedgehog"
+	},
+	{
+		"id": "SQUIRREL_FLYING",
+		"singularName": "flying squirrel",
+		"pluralName": "flying squirrels",
+		"adjectiveName": "flying squirrel"
+	},
+	{
+		"id": "FLYING_SQUIRREL_MAN",
+		"singularName": "flying squirrel man",
+		"pluralName": "flying squirrel men",
+		"adjectiveName": "flying squirrel man"
+	},
+	{
+		"id": "GIANT_FLYING_SQUIRREL",
+		"singularName": "giant flying squirrel",
+		"pluralName": "giant flying squirrels",
+		"adjectiveName": "giant flying squirrel"
+	},
+	{
+		"id": "RAT",
+		"singularName": "rat",
+		"pluralName": "rats",
+		"adjectiveName": "rat"
+	},
+	{
+		"id": "RAT_MAN",
+		"singularName": "rat man",
+		"pluralName": "rat men",
+		"adjectiveName": "rat man"
+	},
+	{
+		"id": "SQUIRREL_GRAY",
+		"singularName": "gray squirrel",
+		"pluralName": "gray squirrels",
+		"adjectiveName": "gray squirrel"
+	},
+	{
+		"id": "SQUIRREL_GRAY_MAN",
+		"singularName": "gray squirrel man",
+		"pluralName": "gray squirrel men",
+		"adjectiveName": "gray squirrel man"
+	},
+	{
+		"id": "GIANT_SQUIRREL_GRAY",
+		"singularName": "giant gray squirrel",
+		"pluralName": "giant gray squirrels",
+		"adjectiveName": "giant gray squirrel"
+	},
+	{
+		"id": "SQUIRREL_RED",
+		"singularName": "red squirrel",
+		"pluralName": "red squirrels",
+		"adjectiveName": "red squirrel"
+	},
+	{
+		"id": "SQUIRREL_RED_MAN",
+		"singularName": "red squirrel man",
+		"pluralName": "red squirrel men",
+		"adjectiveName": "red squirrel man"
+	},
+	{
+		"id": "GIANT_SQUIRREL_RED",
+		"singularName": "giant red squirrel",
+		"pluralName": "giant red squirrels",
+		"adjectiveName": "giant red squirrel"
+	},
+	{
+		"id": "CHIPMUNK",
+		"singularName": "chipmunk",
+		"pluralName": "chipmunks",
+		"adjectiveName": "chipmunk"
+	},
+	{
+		"id": "CHIPMUNK_MAN",
+		"singularName": "chipmunk man",
+		"pluralName": "chipmunk men",
+		"adjectiveName": "chipmunk man"
+	},
+	{
+		"id": "GIANT_CHIPMUNK",
+		"singularName": "giant chipmunk",
+		"pluralName": "giant chipmunks",
+		"adjectiveName": "giant chipmunk"
+	},
+	{
+		"id": "MUSSEL",
+		"singularName": "mussel",
+		"pluralName": "mussels",
+		"adjectiveName": "mussel"
+	},
+	{
+		"id": "OYSTER",
+		"singularName": "oyster",
+		"pluralName": "oysters",
+		"adjectiveName": "oyster"
+	},
+	{
+		"id": "FISH_SALMON",
+		"singularName": "salmon",
+		"pluralName": "salmon",
+		"adjectiveName": "salmon"
+	},
+	{
+		"id": "FISH_CLOWNFISH",
+		"singularName": "clownfish",
+		"pluralName": "clownfish",
+		"adjectiveName": "clownfish"
+	},
+	{
+		"id": "FISH_HAGFISH",
+		"singularName": "hagfish",
+		"pluralName": "hagfish",
+		"adjectiveName": "hagfish"
+	},
+	{
+		"id": "FISH_LAMPREY_BROOK",
+		"singularName": "brook lamprey",
+		"pluralName": "brook lampreys",
+		"adjectiveName": "brook lamprey"
+	},
+	{
+		"id": "FISH_RAY_BAT",
+		"singularName": "bat ray",
+		"pluralName": "bat rays",
+		"adjectiveName": "bat ray"
+	},
+	{
+		"id": "FISH_RAY_THORNBACK",
+		"singularName": "thornback ray",
+		"pluralName": "thornback rays",
+		"adjectiveName": "thornback ray"
+	},
+	{
+		"id": "FISH_RATFISH_SPOTTED",
+		"singularName": "spotted ratfish",
+		"pluralName": "spotted ratfish",
+		"adjectiveName": "spotted ratfish"
+	},
+	{
+		"id": "FISH_HERRING",
+		"singularName": "herring",
+		"pluralName": "herrings",
+		"adjectiveName": "herring"
+	},
+	{
+		"id": "FISH_SHAD",
+		"singularName": "shad",
+		"pluralName": "shads",
+		"adjectiveName": "shad"
+	},
+	{
+		"id": "FISH_ANCHOVY",
+		"singularName": "anchovy",
+		"pluralName": "anchovies",
+		"adjectiveName": "anchovy"
+	},
+	{
+		"id": "FISH_TROUT_STEELHEAD",
+		"singularName": "steelhead trout",
+		"pluralName": "steelhead trout",
+		"adjectiveName": "steelhead trout"
+	},
+	{
+		"id": "FISH_HAKE",
+		"singularName": "hake",
+		"pluralName": "hake",
+		"adjectiveName": "hake"
+	},
+	{
+		"id": "FISH_SEAHORSE",
+		"singularName": "seahorse",
+		"pluralName": "seahorses",
+		"adjectiveName": "seahorse"
+	},
+	{
+		"id": "FISH_GLASSEYE",
+		"singularName": "glasseye",
+		"pluralName": "glasseye",
+		"adjectiveName": "glasseye"
+	},
+	{
+		"id": "FISH_PUFFER_WHITE_SPOTTED",
+		"singularName": "white-spotted puffer",
+		"pluralName": "white-spotted puffers",
+		"adjectiveName": "white-spotted puffer"
+	},
+	{
+		"id": "FISH_SOLE",
+		"singularName": "sole",
+		"pluralName": "sole",
+		"adjectiveName": "sole"
+	},
+	{
+		"id": "FISH_FLOUNDER",
+		"singularName": "flounder",
+		"pluralName": "flounders",
+		"adjectiveName": "flounder"
+	},
+	{
+		"id": "FISH_MACKEREL",
+		"singularName": "mackerel",
+		"pluralName": "mackerel",
+		"adjectiveName": "mackerel"
+	},
+	{
+		"id": "JELLYFISH_SEA_NETTLE",
+		"singularName": "sea nettle jellyfish",
+		"pluralName": "sea nettle jellyfish",
+		"adjectiveName": "sea nettle jellyfish"
+	},
+	{
+		"id": "SQUID",
+		"singularName": "squid",
+		"pluralName": "squids",
+		"adjectiveName": "squid"
+	},
+	{
+		"id": "SQUID MAN",
+		"singularName": "squid man",
+		"pluralName": "squid men",
+		"adjectiveName": "squid man"
+	},
+	{
+		"id": "GIGANTIC SQUID",
+		"singularName": "gigantic squid",
+		"pluralName": "gigantic squids",
+		"adjectiveName": "gigantic squid"
+	},
+	{
+		"id": "FISH_LUNGFISH",
+		"singularName": "lungfish",
+		"pluralName": "lungfish",
+		"adjectiveName": "lungfish"
+	},
+	{
+		"id": "FISH_LOACH_CLOWN",
+		"singularName": "clown loach",
+		"pluralName": "clown loaches",
+		"adjectiveName": "clown loach"
+	},
+	{
+		"id": "FISH_BULLHEAD_BROWN",
+		"singularName": "brown bullhead",
+		"pluralName": "brown bullheads",
+		"adjectiveName": "brown bullhead"
+	},
+	{
+		"id": "FISH_BULLHEAD_YELLOW",
+		"singularName": "yellow bullhead",
+		"pluralName": "yellow bullheads",
+		"adjectiveName": "yellow bullhead"
+	},
+	{
+		"id": "FISH_BULLHEAD_BLACK",
+		"singularName": "black bullhead",
+		"pluralName": "black bullheads",
+		"adjectiveName": "black bullhead"
+	},
+	{
+		"id": "FISH_KNIFEFISH_BANDED",
+		"singularName": "banded knifefish",
+		"pluralName": "banded knifefish",
+		"adjectiveName": "banded knifefish"
+	},
+	{
+		"id": "FISH_CHAR",
+		"singularName": "char",
+		"pluralName": "char",
+		"adjectiveName": "char"
+	},
+	{
+		"id": "FISH_TROUT_RAINBOW",
+		"singularName": "rainbow trout",
+		"pluralName": "rainbow trout",
+		"adjectiveName": "rainbow trout"
+	},
+	{
+		"id": "FISH_MOLLY_SAILFIN",
+		"singularName": "sailfin molly",
+		"pluralName": "sailfin mollies",
+		"adjectiveName": "sailfin molly"
+	},
+	{
+		"id": "FISH_GUPPY",
+		"singularName": "guppy",
+		"pluralName": "guppies",
+		"adjectiveName": "guppy"
+	},
+	{
+		"id": "FISH_PERCH",
+		"singularName": "perch",
+		"pluralName": "perch",
+		"adjectiveName": "perch"
+	},
+	{
+		"id": "DWARF",
+		"singularName": "dwarf",
+		"pluralName": "dwarves",
+		"adjectiveName": "dwarven"
+	},
+	{
+		"id": "HUMAN",
+		"singularName": "human",
+		"pluralName": "humans",
+		"adjectiveName": "human"
+	},
+	{
+		"id": "ELF",
+		"singularName": "elf",
+		"pluralName": "elves",
+		"adjectiveName": "elven"
+	},
+	{
+		"id": "GOBLIN",
+		"singularName": "goblin",
+		"pluralName": "goblins",
+		"adjectiveName": "goblin"
+	},
+	{
+		"id": "KOBOLD",
+		"singularName": "kobold",
+		"pluralName": "kobolds",
+		"adjectiveName": "kobold"
+	},
+	{
+		"id": "GREMLIN",
+		"singularName": "gremlin",
+		"pluralName": "gremlins",
+		"adjectiveName": "gremlin"
+	},
+	{
+		"id": "TROLL",
+		"singularName": "troll",
+		"pluralName": "trolls",
+		"adjectiveName": "troll"
+	},
+	{
+		"id": "OGRE",
+		"singularName": "ogre",
+		"pluralName": "ogres",
+		"adjectiveName": "ogre"
+	},
+	{
+		"id": "UNICORN",
+		"singularName": "unicorn",
+		"pluralName": "unicorns",
+		"adjectiveName": "unicorn"
+	},
+	{
+		"id": "DRAGON",
+		"singularName": "dragon",
+		"pluralName": "dragons",
+		"adjectiveName": "draconic"
+	},
+	{
+		"id": "SATYR",
+		"singularName": "satyr",
+		"pluralName": "satyrs",
+		"adjectiveName": "satyr"
+	},
+	{
+		"id": "COLOSSUS_BRONZE",
+		"singularName": "bronze colossus",
+		"pluralName": "bronze colossuses",
+		"adjectiveName": "bronze colossus"
+	},
+	{
+		"id": "GIANT",
+		"singularName": "giant",
+		"pluralName": "giants",
+		"adjectiveName": "giant"
+	},
+	{
+		"id": "CYCLOPS",
+		"singularName": "cyclops",
+		"pluralName": "cyclopes",
+		"adjectiveName": "cyclops"
+	},
+	{
+		"id": "ETTIN",
+		"singularName": "ettin",
+		"pluralName": "ettins",
+		"adjectiveName": "ettin"
+	},
+	{
+		"id": "MINOTAUR",
+		"singularName": "minotaur",
+		"pluralName": "minotaurs",
+		"adjectiveName": "minotaur"
+	},
+	{
+		"id": "YETI",
+		"singularName": "yeti",
+		"pluralName": "yetis",
+		"adjectiveName": "yeti"
+	},
+	{
+		"id": "SASQUATCH",
+		"singularName": "sasquatch",
+		"pluralName": "sasquatches",
+		"adjectiveName": "sasquatch"
+	},
+	{
+		"id": "BLIZZARD_MAN",
+		"singularName": "blizzard man",
+		"pluralName": "blizzard men",
+		"adjectiveName": "blizzard man"
+	},
+	{
+		"id": "WOLF_ICE",
+		"singularName": "ice wolf",
+		"pluralName": "ice wolves",
+		"adjectiveName": "ice wolf"
+	},
+	{
+		"id": "FAIRY",
+		"singularName": "fairy",
+		"pluralName": "fairies",
+		"adjectiveName": "fairy"
+	},
+	{
+		"id": "PIXIE",
+		"singularName": "pixie",
+		"pluralName": "pixies",
+		"adjectiveName": "pixie"
+	},
+	{
+		"id": "BEAK_DOG",
+		"singularName": "beak dog",
+		"pluralName": "beak dogs",
+		"adjectiveName": "beak dog"
+	},
+	{
+		"id": "GRIMELING",
+		"singularName": "grimeling",
+		"pluralName": "grimelings",
+		"adjectiveName": "grimeling"
+	},
+	{
+		"id": "BLENDEC_FOUL",
+		"singularName": "foul blendec",
+		"pluralName": "foul blendecs",
+		"adjectiveName": "foul blendec"
+	},
+	{
+		"id": "STRANGLER",
+		"singularName": "strangler",
+		"pluralName": "stranglers",
+		"adjectiveName": "strangler"
+	},
+	{
+		"id": "NIGHTWING",
+		"singularName": "nightwing",
+		"pluralName": "nightwings",
+		"adjectiveName": "nightwing"
+	},
+	{
+		"id": "HARPY",
+		"singularName": "harpy",
+		"pluralName": "harpies",
+		"adjectiveName": "harpy"
+	},
+	{
+		"id": "HYDRA",
+		"singularName": "hydra",
+		"pluralName": "hydras",
+		"adjectiveName": "hydra"
+	},
+	{
+		"id": "MERPERSON",
+		"singularName": "merperson",
+		"pluralName": "merpeople",
+		"adjectiveName": "merperson"
+	},
+	{
+		"id": "SEA_SERPENT",
+		"singularName": "sea serpent",
+		"pluralName": "sea serpents",
+		"adjectiveName": "sea serpent"
+	},
+	{
+		"id": "SEA_MONSTER",
+		"singularName": "sea monster",
+		"pluralName": "sea monsters",
+		"adjectiveName": "sea monster"
+	},
+	{
+		"id": "BIRD_ROC",
+		"singularName": "roc",
+		"pluralName": "rocs",
+		"adjectiveName": "roc"
+	},
+	{
+		"id": "CROCODILE_CAVE",
+		"singularName": "cave crocodile",
+		"pluralName": "cave crocodiles",
+		"adjectiveName": "cave crocodile"
+	},
+	{
+		"id": "TOAD_GIANT_CAVE",
+		"singularName": "giant cave toad",
+		"pluralName": "giant cave toads",
+		"adjectiveName": "giant cave toad"
+	},
+	{
+		"id": "OLM_GIANT",
+		"singularName": "giant olm",
+		"pluralName": "giant olms",
+		"adjectiveName": "giant olm"
+	},
+	{
+		"id": "BAT_GIANT",
+		"singularName": "giant bat",
+		"pluralName": "giant bats",
+		"adjectiveName": "giant bat"
+	},
+	{
+		"id": "RAT_GIANT",
+		"singularName": "giant rat",
+		"pluralName": "giant rats",
+		"adjectiveName": "giant rat"
+	},
+	{
+		"id": "RAT_LARGE",
+		"singularName": "large rat",
+		"pluralName": "large rats",
+		"adjectiveName": "large rat"
+	},
+	{
+		"id": "MOLE_DOG_NAKED",
+		"singularName": "naked mole dog",
+		"pluralName": "naked mole dogs",
+		"adjectiveName": "naked mole dog"
+	},
+	{
+		"id": "TROGLODYTE",
+		"singularName": "troglodyte",
+		"pluralName": "troglodytes",
+		"adjectiveName": "troglodyte"
+	},
+	{
+		"id": "MOLE_GIANT",
+		"singularName": "giant mole",
+		"pluralName": "giant moles",
+		"adjectiveName": "giant mole"
+	},
+	{
+		"id": "IMP_FIRE",
+		"singularName": "fire imp",
+		"pluralName": "fire imps",
+		"adjectiveName": "fire imp"
+	},
+	{
+		"id": "SPIDER_CAVE_GIANT",
+		"singularName": "giant cave spider",
+		"pluralName": "giant cave spiders",
+		"adjectiveName": "giant cave spider"
+	},
+	{
+		"id": "SPIDER_CAVE",
+		"singularName": "cave spider",
+		"pluralName": "cave spiders",
+		"adjectiveName": "cave spider"
+	},
+	{
+		"id": "FISH_CAVE",
+		"singularName": "cave fish",
+		"pluralName": "cave fish",
+		"adjectiveName": "cave fish"
+	},
+	{
+		"id": "CAVE_FISH_MAN",
+		"singularName": "cave fish man",
+		"pluralName": "cave fish men",
+		"adjectiveName": "cave fish man"
+	},
+	{
+		"id": "LOBSTER_CAVE",
+		"singularName": "cave lobster",
+		"pluralName": "cave lobsters",
+		"adjectiveName": "cave lobster"
+	},
+	{
+		"id": "SNAKE_FIRE",
+		"singularName": "fire snake",
+		"pluralName": "fire snakes",
+		"adjectiveName": "fire snake"
+	},
+	{
+		"id": "OLM",
+		"singularName": "olm",
+		"pluralName": "olms",
+		"adjectiveName": "olm"
+	},
+	{
+		"id": "OLM_MAN",
+		"singularName": "olm man",
+		"pluralName": "olm men",
+		"adjectiveName": "olm man"
+	},
+	{
+		"id": "BAT",
+		"singularName": "bat",
+		"pluralName": "bats",
+		"adjectiveName": "bat"
+	},
+	{
+		"id": "BAT_MAN",
+		"singularName": "bat man",
+		"pluralName": "bat men",
+		"adjectiveName": "bat man"
+	},
+	{
+		"id": "MAGGOT_PURRING",
+		"singularName": "purring maggot",
+		"pluralName": "purring maggots",
+		"adjectiveName": "purring maggot"
+	},
+	{
+		"id": "ELEMENTMAN_FIRE",
+		"singularName": "fire man",
+		"pluralName": "fire men",
+		"adjectiveName": "fire man"
+	},
+	{
+		"id": "ELEMENTMAN_MAGMA",
+		"singularName": "magma man",
+		"pluralName": "magma men",
+		"adjectiveName": "magma man"
+	},
+	{
+		"id": "ELEMENTMAN_IRON",
+		"singularName": "iron man",
+		"pluralName": "iron men",
+		"adjectiveName": "iron man"
+	},
+	{
+		"id": "ELEMENTMAN_MUD",
+		"singularName": "mud man",
+		"pluralName": "mud men",
+		"adjectiveName": "mud man"
+	},
+	{
+		"id": "BIRD_SWALLOW_CAVE",
+		"singularName": "cave swallow",
+		"pluralName": "cave swallows",
+		"adjectiveName": "cave swallow"
+	},
+	{
+		"id": "CAVE_SWALLOW_MAN",
+		"singularName": "cave swallow man",
+		"pluralName": "cave swallow men",
+		"adjectiveName": "cave swallow man"
+	},
+	{
+		"id": "BIRD_SWALLOW_CAVE_GIANT",
+		"singularName": "giant cave swallow",
+		"pluralName": "giant cave swallows",
+		"adjectiveName": "giant cave swallow"
+	},
+	{
+		"id": "AMPHIBIAN_MAN",
+		"singularName": "amphibian man",
+		"pluralName": "amphibian men",
+		"adjectiveName": "amphibian man"
+	},
+	{
+		"id": "REPTILE_MAN",
+		"singularName": "reptile man",
+		"pluralName": "reptile men",
+		"adjectiveName": "reptile man"
+	},
+	{
+		"id": "SERPENT_MAN",
+		"singularName": "serpent man",
+		"pluralName": "serpent men",
+		"adjectiveName": "serpent man"
+	},
+	{
+		"id": "ANT_MAN",
+		"singularName": "antman",
+		"pluralName": "antmen",
+		"adjectiveName": "antman"
+	},
+	{
+		"id": "RODENT MAN",
+		"singularName": "rodent man",
+		"pluralName": "rodent men",
+		"adjectiveName": "rodent man"
+	},
+	{
+		"id": "WILD_BOAR",
+		"singularName": "wild boar",
+		"pluralName": "wild boars",
+		"adjectiveName": "wild boar"
+	},
+	{
+		"id": "WILD_BOAR_MAN",
+		"singularName": "wild boar man",
+		"pluralName": "wild boar men",
+		"adjectiveName": "wild boar man"
+	},
+	{
+		"id": "GIANT_WILD_BOAR",
+		"singularName": "giant wild boar",
+		"pluralName": "giant wild boars",
+		"adjectiveName": "giant wild boar"
+	},
+	{
+		"id": "COYOTE",
+		"singularName": "coyote",
+		"pluralName": "coyotes",
+		"adjectiveName": "coyote"
+	},
+	{
+		"id": "COYOTE_MAN",
+		"singularName": "coyote man",
+		"pluralName": "coyote men",
+		"adjectiveName": "coyote man"
+	},
+	{
+		"id": "GIANT_COYOTE",
+		"singularName": "giant coyote",
+		"pluralName": "giant coyotes",
+		"adjectiveName": "giant coyote"
+	},
+	{
+		"id": "KANGAROO",
+		"singularName": "kangaroo",
+		"pluralName": "kangaroos",
+		"adjectiveName": "kangaroo"
+	},
+	{
+		"id": "KANGAROO_MAN",
+		"singularName": "kangaroo man",
+		"pluralName": "kangaroo men",
+		"adjectiveName": "kangaroo man"
+	},
+	{
+		"id": "GIANT_KANGAROO",
+		"singularName": "giant kangaroo",
+		"pluralName": "giant kangaroos",
+		"adjectiveName": "giant kangaroo"
+	},
+	{
+		"id": "KOALA",
+		"singularName": "koala",
+		"pluralName": "koalas",
+		"adjectiveName": "koala"
+	},
+	{
+		"id": "KOALA_MAN",
+		"singularName": "koala man",
+		"pluralName": "koala men",
+		"adjectiveName": "koala man"
+	},
+	{
+		"id": "GIANT_KOALA",
+		"singularName": "giant koala",
+		"pluralName": "giant koalas",
+		"adjectiveName": "giant koala"
+	},
+	{
+		"id": "ADDER",
+		"singularName": "adder",
+		"pluralName": "adders",
+		"adjectiveName": "adder"
+	},
+	{
+		"id": "ADDER_MAN",
+		"singularName": "adder man",
+		"pluralName": "adder men",
+		"adjectiveName": "adder man"
+	},
+	{
+		"id": "GIANT_ADDER",
+		"singularName": "giant adder",
+		"pluralName": "giant adders",
+		"adjectiveName": "giant adder"
+	},
+	{
+		"id": "ECHIDNA",
+		"singularName": "echidna",
+		"pluralName": "echidnas",
+		"adjectiveName": "echidna"
+	},
+	{
+		"id": "ECHIDNA_MAN",
+		"singularName": "echidna man",
+		"pluralName": "echidna men",
+		"adjectiveName": "echidna man"
+	},
+	{
+		"id": "GIANT_ECHIDNA",
+		"singularName": "giant echidna",
+		"pluralName": "giant echidnas",
+		"adjectiveName": "giant echidna"
+	},
+	{
+		"id": "PORCUPINE",
+		"singularName": "porcupine",
+		"pluralName": "porcupines",
+		"adjectiveName": "porcupine"
+	},
+	{
+		"id": "PORCUPINE_MAN",
+		"singularName": "porcupine man",
+		"pluralName": "porcupine men",
+		"adjectiveName": "porcupine man"
+	},
+	{
+		"id": "GIANT_PORCUPINE",
+		"singularName": "giant porcupine",
+		"pluralName": "giant porcupines",
+		"adjectiveName": "giant porcupine"
+	},
+	{
+		"id": "KINGSNAKE",
+		"singularName": "kingsnake",
+		"pluralName": "kingsnakes",
+		"adjectiveName": "kingsnake"
+	},
+	{
+		"id": "KINGSNAKE_MAN",
+		"singularName": "kingsnake man",
+		"pluralName": "kingsnake men",
+		"adjectiveName": "kingsnake man"
+	},
+	{
+		"id": "GIANT_KINGSNAKE",
+		"singularName": "giant kingsnake",
+		"pluralName": "giant kingsnakes",
+		"adjectiveName": "giant kingsnake"
+	},
+	{
+		"id": "GRAY_LANGUR",
+		"singularName": "gray langur",
+		"pluralName": "gray langurs",
+		"adjectiveName": "gray langur"
+	},
+	{
+		"id": "GRAY_LANGUR_MAN",
+		"singularName": "gray langur man",
+		"pluralName": "gray langur men",
+		"adjectiveName": "gray langur man"
+	},
+	{
+		"id": "GIANT_GRAY_LANGUR",
+		"singularName": "giant gray langur",
+		"pluralName": "giant gray langurs",
+		"adjectiveName": "giant gray langur"
+	},
+	{
+		"id": "BOBCAT",
+		"singularName": "bobcat",
+		"pluralName": "bobcats",
+		"adjectiveName": "bobcat"
+	},
+	{
+		"id": "BOBCAT_MAN",
+		"singularName": "bobcat man",
+		"pluralName": "bobcat men",
+		"adjectiveName": "bobcat man"
+	},
+	{
+		"id": "GIANT_BOBCAT",
+		"singularName": "giant bobcat",
+		"pluralName": "giant bobcats",
+		"adjectiveName": "giant bobcat"
+	},
+	{
+		"id": "SKUNK",
+		"singularName": "skunk",
+		"pluralName": "skunks",
+		"adjectiveName": "skunk"
+	},
+	{
+		"id": "SKUNK_MAN",
+		"singularName": "skunk man",
+		"pluralName": "skunk men",
+		"adjectiveName": "skunk man"
+	},
+	{
+		"id": "GIANT_SKUNK",
+		"singularName": "giant skunk",
+		"pluralName": "giant skunks",
+		"adjectiveName": "giant skunk"
+	},
+	{
+		"id": "GREEN_TREE_FROG",
+		"singularName": "green tree frog",
+		"pluralName": "green tree frogs",
+		"adjectiveName": "green tree frog"
+	},
+	{
+		"id": "GREEN_TREE_FROG_MAN",
+		"singularName": "green tree frog man",
+		"pluralName": "green tree frog men",
+		"adjectiveName": "green tree frog man"
+	},
+	{
+		"id": "GIANT_GREEN_TREE_FROG",
+		"singularName": "giant green tree frog",
+		"pluralName": "giant green tree frogs",
+		"adjectiveName": "giant green tree frog"
+	},
+	{
+		"id": "HARE",
+		"singularName": "hare",
+		"pluralName": "hares",
+		"adjectiveName": "hare"
+	},
+	{
+		"id": "HARE_MAN",
+		"singularName": "hare man",
+		"pluralName": "hare men",
+		"adjectiveName": "hare man"
+	},
+	{
+		"id": "GIANT_HARE",
+		"singularName": "giant hare",
+		"pluralName": "giant hares",
+		"adjectiveName": "giant hare"
+	},
+	{
+		"id": "RATTLESNAKE",
+		"singularName": "rattlesnake",
+		"pluralName": "rattlesnakes",
+		"adjectiveName": "rattlesnake"
+	},
+	{
+		"id": "RATTLESNAKE_MAN",
+		"singularName": "rattlesnake man",
+		"pluralName": "rattlesnake men",
+		"adjectiveName": "rattlesnake man"
+	},
+	{
+		"id": "GIANT_RATTLESNAKE",
+		"singularName": "giant rattlesnake",
+		"pluralName": "giant rattlesnakes",
+		"adjectiveName": "giant rattlesnake"
+	},
+	{
+		"id": "WEASEL",
+		"singularName": "weasel",
+		"pluralName": "weasels",
+		"adjectiveName": "weasel"
+	},
+	{
+		"id": "WEASEL_MAN",
+		"singularName": "weasel man",
+		"pluralName": "weasel men",
+		"adjectiveName": "weasel man"
+	},
+	{
+		"id": "GIANT_WEASEL",
+		"singularName": "giant weasel",
+		"pluralName": "giant weasels",
+		"adjectiveName": "giant weasel"
+	},
+	{
+		"id": "COPPERHEAD_SNAKE",
+		"singularName": "copperhead snake",
+		"pluralName": "copperhead snakes",
+		"adjectiveName": "copperhead snake"
+	},
+	{
+		"id": "COPPERHEAD_SNAKE_MAN",
+		"singularName": "copperhead snake man",
+		"pluralName": "copperhead snake men",
+		"adjectiveName": "copperhead snake man"
+	},
+	{
+		"id": "GIANT_COPPERHEAD_SNAKE",
+		"singularName": "giant copperhead snake",
+		"pluralName": "giant copperhead snakes",
+		"adjectiveName": "giant copperhead snake"
+	},
+	{
+		"id": "IBEX",
+		"singularName": "ibex",
+		"pluralName": "ibexes",
+		"adjectiveName": "ibex"
+	},
+	{
+		"id": "IBEX_MAN",
+		"singularName": "ibex man",
+		"pluralName": "ibex men",
+		"adjectiveName": "ibex man"
+	},
+	{
+		"id": "GIANT_IBEX",
+		"singularName": "giant ibex",
+		"pluralName": "giant ibexes",
+		"adjectiveName": "giant ibex"
+	},
+	{
+		"id": "WOMBAT",
+		"singularName": "wombat",
+		"pluralName": "wombats",
+		"adjectiveName": "wombat"
+	},
+	{
+		"id": "WOMBAT_MAN",
+		"singularName": "wombat man",
+		"pluralName": "wombat men",
+		"adjectiveName": "wombat man"
+	},
+	{
+		"id": "GIANT_WOMBAT",
+		"singularName": "giant wombat",
+		"pluralName": "giant wombats",
+		"adjectiveName": "giant wombat"
+	},
+	{
+		"id": "DINGO",
+		"singularName": "dingo",
+		"pluralName": "dingoes",
+		"adjectiveName": "dingo"
+	},
+	{
+		"id": "DINGO_MAN",
+		"singularName": "dingo man",
+		"pluralName": "dingo men",
+		"adjectiveName": "dingo man"
+	},
+	{
+		"id": "GIANT_DINGO",
+		"singularName": "giant dingo",
+		"pluralName": "giant dingoes",
+		"adjectiveName": "giant dingo"
+	},
+	{
+		"id": "COATI",
+		"singularName": "coati",
+		"pluralName": "coatis",
+		"adjectiveName": "coati"
+	},
+	{
+		"id": "COATI_MAN",
+		"singularName": "coati man",
+		"pluralName": "coati men",
+		"adjectiveName": "coati man"
+	},
+	{
+		"id": "GIANT_COATI",
+		"singularName": "giant coati",
+		"pluralName": "giant coatis",
+		"adjectiveName": "giant coati"
+	},
+	{
+		"id": "OPOSSUM",
+		"singularName": "opossum",
+		"pluralName": "opossums",
+		"adjectiveName": "opossum"
+	},
+	{
+		"id": "OPOSSUM_MAN",
+		"singularName": "opossum man",
+		"pluralName": "opossum men",
+		"adjectiveName": "opossum man"
+	},
+	{
+		"id": "GIANT_OPOSSUM",
+		"singularName": "giant opossum",
+		"pluralName": "giant opossums",
+		"adjectiveName": "giant opossum"
+	},
+	{
+		"id": "MONGOOSE",
+		"singularName": "mongoose",
+		"pluralName": "mongooses",
+		"adjectiveName": "mongoose"
+	},
+	{
+		"id": "MONGOOSE_MAN",
+		"singularName": "mongoose man",
+		"pluralName": "mongoose men",
+		"adjectiveName": "mongoose man"
+	},
+	{
+		"id": "GIANT_MONGOOSE",
+		"singularName": "giant mongoose",
+		"pluralName": "giant mongooses",
+		"adjectiveName": "giant mongoose"
+	},
+	{
+		"id": "HYENA",
+		"singularName": "hyena",
+		"pluralName": "hyenas",
+		"adjectiveName": "hyena"
+	},
+	{
+		"id": "HYENA_MAN",
+		"singularName": "hyena man",
+		"pluralName": "hyena men",
+		"adjectiveName": "hyena man"
+	},
+	{
+		"id": "GIANT_HYENA",
+		"singularName": "giant hyena",
+		"pluralName": "giant hyenas",
+		"adjectiveName": "giant hyena"
+	},
+	{
+		"id": "ANACONDA",
+		"singularName": "anaconda",
+		"pluralName": "anacondas",
+		"adjectiveName": "anaconda"
+	},
+	{
+		"id": "ANACONDA_MAN",
+		"singularName": "anaconda man",
+		"pluralName": "anaconda men",
+		"adjectiveName": "anaconda man"
+	},
+	{
+		"id": "GIANT_ANACONDA",
+		"singularName": "giant anaconda",
+		"pluralName": "giant anacondas",
+		"adjectiveName": "giant anaconda"
+	},
+	{
+		"id": "MONITOR_LIZARD",
+		"singularName": "monitor lizard",
+		"pluralName": "monitor lizards",
+		"adjectiveName": "monitor lizard"
+	},
+	{
+		"id": "MONITOR_LIZARD_MAN",
+		"singularName": "monitor lizard man",
+		"pluralName": "monitor lizard men",
+		"adjectiveName": "monitor lizard man"
+	},
+	{
+		"id": "GIANT_MONITOR_LIZARD",
+		"singularName": "giant monitor lizard",
+		"pluralName": "giant monitor lizards",
+		"adjectiveName": "giant monitor lizard"
+	},
+	{
+		"id": "KING_COBRA",
+		"singularName": "king cobra",
+		"pluralName": "king cobras",
+		"adjectiveName": "king cobra"
+	},
+	{
+		"id": "KING_COBRA_MAN",
+		"singularName": "king cobra man",
+		"pluralName": "king cobra men",
+		"adjectiveName": "king cobra man"
+	},
+	{
+		"id": "GIANT_KING_COBRA",
+		"singularName": "giant king cobra",
+		"pluralName": "giant king cobras",
+		"adjectiveName": "giant king cobra"
+	},
+	{
+		"id": "OCELOT",
+		"singularName": "ocelot",
+		"pluralName": "ocelots",
+		"adjectiveName": "ocelot"
+	},
+	{
+		"id": "OCELOT_MAN",
+		"singularName": "ocelot man",
+		"pluralName": "ocelot men",
+		"adjectiveName": "ocelot man"
+	},
+	{
+		"id": "GIANT_OCELOT",
+		"singularName": "giant ocelot",
+		"pluralName": "giant ocelots",
+		"adjectiveName": "giant ocelot"
+	},
+	{
+		"id": "JACKAL",
+		"singularName": "jackal",
+		"pluralName": "jackals",
+		"adjectiveName": "jackal"
+	},
+	{
+		"id": "JACKAL_MAN",
+		"singularName": "jackal man",
+		"pluralName": "jackal men",
+		"adjectiveName": "jackal man"
+	},
+	{
+		"id": "GIANT_JACKAL",
+		"singularName": "giant jackal",
+		"pluralName": "giant jackals",
+		"adjectiveName": "giant jackal"
+	},
+	{
+		"id": "CAPUCHIN",
+		"singularName": "capuchin",
+		"pluralName": "capuchins",
+		"adjectiveName": "capuchin"
+	},
+	{
+		"id": "CAPUCHIN_MAN",
+		"singularName": "capuchin man",
+		"pluralName": "capuchin men",
+		"adjectiveName": "capuchin man"
+	},
+	{
+		"id": "GIANT_CAPUCHIN",
+		"singularName": "giant capuchin",
+		"pluralName": "giant capuchins",
+		"adjectiveName": "giant capuchin"
+	},
+	{
+		"id": "SLOTH",
+		"singularName": "sloth",
+		"pluralName": "sloths",
+		"adjectiveName": "sloth"
+	},
+	{
+		"id": "SLOTH_MAN",
+		"singularName": "sloth man",
+		"pluralName": "sloth men",
+		"adjectiveName": "sloth man"
+	},
+	{
+		"id": "GIANT_SLOTH",
+		"singularName": "giant sloth",
+		"pluralName": "giant sloths",
+		"adjectiveName": "giant sloth"
+	},
+	{
+		"id": "SPIDER_MONKEY",
+		"singularName": "spider monkey",
+		"pluralName": "spider monkeys",
+		"adjectiveName": "spider monkey"
+	},
+	{
+		"id": "SPIDER_MONKEY_MAN",
+		"singularName": "spider monkey man",
+		"pluralName": "spider monkey men",
+		"adjectiveName": "spider monkey man"
+	},
+	{
+		"id": "GIANT_SPIDER_MONKEY",
+		"singularName": "giant spider monkey",
+		"pluralName": "giant spider monkeys",
+		"adjectiveName": "giant spider monkey"
+	},
+	{
+		"id": "PANGOLIN",
+		"singularName": "pangolin",
+		"pluralName": "pangolins",
+		"adjectiveName": "pangolin"
+	},
+	{
+		"id": "PANGOLIN_MAN",
+		"singularName": "pangolin man",
+		"pluralName": "pangolin men",
+		"adjectiveName": "pangolin man"
+	},
+	{
+		"id": "GIANT_PANGOLIN",
+		"singularName": "giant pangolin",
+		"pluralName": "giant pangolins",
+		"adjectiveName": "giant pangolin"
+	},
+	{
+		"id": "BLACK_MAMBA",
+		"singularName": "black mamba",
+		"pluralName": "black mambas",
+		"adjectiveName": "black mamba"
+	},
+	{
+		"id": "BLACK_MAMBA_MAN",
+		"singularName": "black mamba man",
+		"pluralName": "black mamba men",
+		"adjectiveName": "black mamba man"
+	},
+	{
+		"id": "GIANT_BLACK_MAMBA",
+		"singularName": "giant black mamba",
+		"pluralName": "giant black mambas",
+		"adjectiveName": "giant black mamba"
+	},
+	{
+		"id": "BEAR_SLOTH",
+		"singularName": "sloth bear",
+		"pluralName": "sloth bears",
+		"adjectiveName": "sloth bear"
+	},
+	{
+		"id": "SLOTH_BEAR_MAN",
+		"singularName": "sloth bear man",
+		"pluralName": "sloth bear men",
+		"adjectiveName": "sloth bear man"
+	},
+	{
+		"id": "GIANT_SLOTH_BEAR",
+		"singularName": "giant sloth bear",
+		"pluralName": "giant sloth bears",
+		"adjectiveName": "giant sloth bear"
+	},
+	{
+		"id": "AYE-AYE",
+		"singularName": "aye-aye",
+		"pluralName": "aye-ayes",
+		"adjectiveName": "aye-aye"
+	},
+	{
+		"id": "AYE-AYE_MAN",
+		"singularName": "aye-aye man",
+		"pluralName": "aye-aye men",
+		"adjectiveName": "aye-aye man"
+	},
+	{
+		"id": "GIANT_AYE-AYE",
+		"singularName": "giant aye-aye",
+		"pluralName": "giant aye-ayes",
+		"adjectiveName": "giant aye-aye"
+	},
+	{
+		"id": "BUSHMASTER",
+		"singularName": "bushmaster",
+		"pluralName": "bushmasters",
+		"adjectiveName": "bushmaster"
+	},
+	{
+		"id": "BUSHMASTER_MAN",
+		"singularName": "bushmaster man",
+		"pluralName": "bushmaster men",
+		"adjectiveName": "bushmaster man"
+	},
+	{
+		"id": "GIANT_BUSHMASTER",
+		"singularName": "giant bushmaster",
+		"pluralName": "giant bushmasters",
+		"adjectiveName": "giant bushmaster"
+	},
+	{
+		"id": "PYTHON",
+		"singularName": "python",
+		"pluralName": "pythons",
+		"adjectiveName": "python"
+	},
+	{
+		"id": "PYTHON_MAN",
+		"singularName": "python man",
+		"pluralName": "python men",
+		"adjectiveName": "python man"
+	},
+	{
+		"id": "GIANT_PYTHON",
+		"singularName": "giant python",
+		"pluralName": "giant pythons",
+		"adjectiveName": "giant python"
+	},
+	{
+		"id": "TAPIR",
+		"singularName": "tapir",
+		"pluralName": "tapirs",
+		"adjectiveName": "tapir"
+	},
+	{
+		"id": "TAPIR_MAN",
+		"singularName": "tapir man",
+		"pluralName": "tapir men",
+		"adjectiveName": "tapir man"
+	},
+	{
+		"id": "GIANT_TAPIR",
+		"singularName": "giant tapir",
+		"pluralName": "giant tapirs",
+		"adjectiveName": "giant tapir"
+	},
+	{
+		"id": "IMPALA",
+		"singularName": "impala",
+		"pluralName": "impalas",
+		"adjectiveName": "impala"
+	},
+	{
+		"id": "IMPALA_MAN",
+		"singularName": "impala man",
+		"pluralName": "impala men",
+		"adjectiveName": "impala man"
+	},
+	{
+		"id": "GIANT_IMPALA",
+		"singularName": "giant impala",
+		"pluralName": "giant impalas",
+		"adjectiveName": "giant impala"
+	},
+	{
+		"id": "AARDVARK",
+		"singularName": "aardvark",
+		"pluralName": "aardvarks",
+		"adjectiveName": "aardvark"
+	},
+	{
+		"id": "AARDVARK_MAN",
+		"singularName": "aardvark man",
+		"pluralName": "aardvark men",
+		"adjectiveName": "aardvark man"
+	},
+	{
+		"id": "GIANT_AARDVARK",
+		"singularName": "giant aardvark",
+		"pluralName": "giant aardvarks",
+		"adjectiveName": "giant aardvark"
+	},
+	{
+		"id": "LION_TAMARIN",
+		"singularName": "lion tamarin",
+		"pluralName": "lion tamarins",
+		"adjectiveName": "lion tamarin"
+	},
+	{
+		"id": "LION_TAMARIN_MAN",
+		"singularName": "lion tamarin man",
+		"pluralName": "lion tamarin men",
+		"adjectiveName": "lion tamarin man"
+	},
+	{
+		"id": "GIANT_LION_TAMARIN",
+		"singularName": "giant lion tamarin",
+		"pluralName": "giant lion tamarins",
+		"adjectiveName": "giant lion tamarin"
+	},
+	{
+		"id": "STOAT",
+		"singularName": "stoat",
+		"pluralName": "stoats",
+		"adjectiveName": "stoat"
+	},
+	{
+		"id": "STOAT_MAN",
+		"singularName": "stoat man",
+		"pluralName": "stoat men",
+		"adjectiveName": "stoat man"
+	},
+	{
+		"id": "GIANT_STOAT",
+		"singularName": "giant stoat",
+		"pluralName": "giant stoats",
+		"adjectiveName": "giant stoat"
+	},
+	{
+		"id": "LYNX",
+		"singularName": "lynx",
+		"pluralName": "lynx",
+		"adjectiveName": "lynx"
+	},
+	{
+		"id": "LYNX_MAN",
+		"singularName": "lynx man",
+		"pluralName": "lynx men",
+		"adjectiveName": "lynx man"
+	},
+	{
+		"id": "GIANT_LYNX",
+		"singularName": "giant lynx",
+		"pluralName": "giant lynx",
+		"adjectiveName": "giant lynx"
+	}
+]

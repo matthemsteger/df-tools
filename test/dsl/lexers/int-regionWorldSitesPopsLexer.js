@@ -10,8 +10,8 @@ import RegionWorldSitesPopsLexer from './../../../src/dsl/lexers/regionWorldSite
 Promise.promisifyAll(fs);
 const debug = _debug('df:test:dsl:int-regionWorldSitesPopsLexer');
 
-describe.skip('RegionWorldSitesPopsLexer integration tests', function() {
-	it('should lex properly a region world sites pops file', async function() {
+describe.skip('RegionWorldSitesPopsLexer integration tests', function () {
+	it('should lex properly a region world sites pops file', async function () {
 		const fakeRegionBuffer = await fs.readFileAsync(
 			path.resolve(__dirname, './../data/world_sites_and_pops_test.txt')
 		);
@@ -32,7 +32,7 @@ describe.skip('RegionWorldSitesPopsLexer integration tests', function() {
 			.with.lengthOf(0);
 	});
 
-	it('should lex properly a region world sites pops file small', async function() {
+	it('should lex properly a region world sites pops file small', async function () {
 		const fakeRegionBuffer = await fs.readFileAsync(
 			path.resolve(
 				__dirname,

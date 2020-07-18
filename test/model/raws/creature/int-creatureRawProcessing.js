@@ -10,8 +10,8 @@ import {modelCreatureRawFile} from './../../../../src/model/raws/creature/creatu
 Promise.promisifyAll(fs);
 const debug = _debug('df:test:model:raws:creature:int-creatureRawProcessing');
 
-describe('creature raw processing integration tests', function() {
-	it('should parse a raw creature file and return creature objects', async function() {
+describe('creature raw processing integration tests', function () {
+	it('should parse a raw creature file and return creature objects', async function () {
 		const rawtext = await fs.readFileAsync(
 			path.resolve(
 				__dirname,
@@ -25,9 +25,7 @@ describe('creature raw processing integration tests', function() {
 		const result = modelCreatureRawFile(rawFile);
 		debug('parseCreatureRawFile result is %O', result);
 
-		expect(result)
-			.to.be.an('array')
-			.that.has.lengthOf(2);
+		expect(result).to.be.an('array').that.has.lengthOf(2);
 		expect(result[0]).to.have.property('singularName', 'chimera');
 	});
 });

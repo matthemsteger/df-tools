@@ -106,7 +106,14 @@ const castDefinition = [
 	['DIURNAL'],
 	['DIVE_HUNTS_VERMIN'],
 	['EQUIPS'],
-	['EXTRA_BUTCHER_OBJECT', 2, [['EBO_ITEM', 3], ['EBO_SHAPE', 1]]],
+	[
+		'EXTRA_BUTCHER_OBJECT',
+		2,
+		[
+			['EBO_ITEM', 3],
+			['EBO_SHAPE', 1]
+		]
+	],
 	['EXTRACT', 2],
 	['EXTRAVISION'],
 	['FEATURE_ATTACK_GROUP'],
@@ -151,7 +158,11 @@ const castDefinition = [
 	[
 		'LAYS_EGGS',
 		0,
-		[['EGG_MATERIAL', 3], ['EGG_SIZE', 1], ['CLUTCH_SIZE', 2]]
+		[
+			['EGG_MATERIAL', 3],
+			['EGG_SIZE', 1],
+			['CLUTCH_SIZE', 2]
+		]
 	],
 	['LAYS_UNUSUAL_EGGS', 2],
 	['LIGAMENTS', 3],

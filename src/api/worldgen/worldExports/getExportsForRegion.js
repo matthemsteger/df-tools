@@ -21,10 +21,7 @@ function determineFileType(name, ext) {
 	debug('determineFileType for name: %s ext:%s', name, ext);
 	return R.find(
 		R.both(
-			R.compose(
-				R.endsWith(R.__, name),
-				R.prop('endsWith')
-			),
+			R.compose(R.endsWith(R.__, name), R.prop('endsWith')),
 			R.propEq('ext', ext)
 		),
 		fileTypes

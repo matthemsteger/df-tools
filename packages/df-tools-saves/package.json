@@ -1,0 +1,43 @@
+{
+	"name": "@df-tools/df-tools-saves",
+	"version": "0.0.1",
+	"description": "Dwarf Fortress tools for saved games and regions",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "npm run mocha",
+		"test:coverage": "nyc --cache npm run mocha && nyc report --reporter=lcov",
+		"mocha": "mocha --recursive -r ../../babel.register.js \"test/**/*.spec.js\"",
+		"mocha:watch": "mocha --recursive --reporter min -r ../../babel.register.js --watch \"test/**/*.spec.js\"",
+		"lint": "eslint \"**/*.js\" && echo Lint passed.",
+		"build": "babel --root-mode upward src -d dist",
+		"dev": "babel --root-mode upward src --watch -d dist",
+		"prepublishOnly": "npm run build",
+		"test:integration": "mocha --recursive -r ../../babel.register.js \"test/**/*.int.js\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/matthemsteger/df-tools.git"
+	},
+	"keywords": [
+		"dwarf fortress"
+	],
+	"author": "Matt Hemsteger",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/matthemsteger/df-tools/issues"
+	},
+	"homepage": "https://github.com/matthemsteger/df-tools#readme",
+	"engines": {
+		"node": ">= 12.4.0"
+	},
+	"devDependencies": {},
+	"dependencies": {
+		"@matthemsteger/utils-fn-fs": "^2.0.0",
+		"@matthemsteger/utils-fn-futures": "^2.0.0",
+		"@matthemsteger/utils-fn-numbers": "^2.0.0",
+		"debug": "^4.1.1",
+		"fluture": "^12.3.1",
+		"folktale": "^2.3.2",
+		"ramda": "^0.27.0"
+	}
+}

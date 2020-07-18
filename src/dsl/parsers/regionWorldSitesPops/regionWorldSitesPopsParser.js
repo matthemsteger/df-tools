@@ -14,10 +14,7 @@ const debug = _debug(
 );
 
 const findById = R.curry((id, list) => R.find(R.propEq('id', id), list));
-const makeRegexOr = R.compose(
-	R.join('|'),
-	R.sort(R.descend)
-);
+const makeRegexOr = R.compose(R.join('|'), R.sort(R.descend));
 
 // ideally these are not hardcoded and come out of the raws
 const civilizedCreatures = ['DWARF', 'HUMAN', 'ELF', 'GOBLIN', 'KOBOLD'];
@@ -48,10 +45,7 @@ const forgottenBeastCreature = {
 };
 const makeOtherWorldlyCreature = (generatedName) => ({
 	creature: {
-		id: `GENERATED_${R.compose(
-			R.toUpper,
-			_.snakeCase
-		)(generatedName)}`,
+		id: `GENERATED_${R.compose(R.toUpper, _.snakeCase)(generatedName)}`,
 		isGenerated: true,
 		generatedName
 	}
@@ -341,11 +335,10 @@ export default function createRegionWorldSitesParser(creatures) {
 		},
 		creaturePopulation() {
 			return P.seqMap(
-				P.regexp(/\t(\d+|Unnumbered) /, 1).map(
-					(popNumber) =>
-						popNumber === 'Unnumbered'
-							? Number.NaN
-							: Number.parseInt(popNumber, 10)
+				P.regexp(/\t(\d+|Unnumbered) /, 1).map((popNumber) =>
+					popNumber === 'Unnumbered'
+						? Number.NaN
+						: Number.parseInt(popNumber, 10)
 				),
 				P.alt(
 					exactCreature(),

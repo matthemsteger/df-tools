@@ -39,17 +39,9 @@ export const typeToFilePrefixMap = {
 const makeFilesFunction = R.curry((prefix, rawFileType, installPath) =>
 	R.compose(
 		R.map(R.map(R.merge(R.objOf('rawFileType')))),
-		R.chain(
-			R.compose(
-				parallel(Number.POSITIVE_INFINITY),
-				R.map(fileMeta)
-			)
-		),
+		R.chain(R.compose(parallel(Number.POSITIVE_INFINITY), R.map(fileMeta))),
 		glob(`${prefix}_*.txt`),
-		R.compose(
-			R.merge({nodir: true, absolute: true}),
-			R.objOf('cwd')
-		),
+		R.compose(R.merge({nodir: true, absolute: true}), R.objOf('cwd')),
 		(p) => path.resolve(p, 'raw/objects')
 	)(installPath)
 );

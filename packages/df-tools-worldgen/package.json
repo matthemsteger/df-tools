@@ -1,0 +1,49 @@
+{
+	"name": "@df-tools/df-tools-worldgen",
+	"version": "0.0.1",
+	"description": "Dwarf Fortress tools for world generation and reading, writing world generation files",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "npm run mocha",
+		"test:coverage": "nyc --cache npm run mocha && nyc report --reporter=lcov",
+		"mocha": "mocha --recursive -r ../../babel.register.js \"test/**/*.spec.js\"",
+		"mocha:watch": "mocha --recursive --reporter min -r ../../babel.register.js --watch \"test/**/*.spec.js\"",
+		"lint": "eslint \"**/*.js\" && echo Lint passed.",
+		"build": "babel --root-mode upward src -d dist",
+		"dev": "babel src --watch -d dist",
+		"prepublishOnly": "npm run build",
+		"test:integration": "mocha --recursive -r babel-register \"test/**/*.int.js\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/matthemsteger/df-tools.git"
+	},
+	"keywords": [
+		"dwarf fortress"
+	],
+	"author": "Matt Hemsteger",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/matthemsteger/df-tools/issues"
+	},
+	"homepage": "https://github.com/matthemsteger/df-tools#readme",
+	"engines": {
+		"node": ">= 12.4.0"
+	},
+	"devDependencies": {
+		"yargs": "^15.4.0"
+	},
+	"dependencies": {
+		"@df-tools/df-tools-gamelog": "^0.0.1",
+		"@df-tools/df-tools-saves": "^0.0.1",
+		"@matthemsteger/utils-fn-fs": "^2.0.0",
+		"@matthemsteger/utils-fn-futures": "^2.0.0",
+		"debug": "^4.1.1",
+		"fluture": "^12.3.1",
+		"folktale": "^2.3.2",
+		"fs-tail-stream": "^1.1.0",
+		"iconv-lite": "^0.6.1",
+		"parsimmon": "^1.13.0",
+		"ramda": "^0.27.0"
+	}
+}

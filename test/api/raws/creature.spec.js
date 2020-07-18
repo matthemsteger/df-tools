@@ -34,7 +34,7 @@ const {
 	parseCreatureRaws
 } = creatureRawsModule;
 
-describe('api/raws/creature', function() {
+describe('api/raws/creature', function () {
 	const ensureFunction = ensureModuleFunctionExport(creatureRawsModule);
 	[
 		'parseCreatureRawText',
@@ -49,25 +49,25 @@ describe('api/raws/creature', function() {
 	const rawFileContents = '[BLAH:1]';
 	const parseResult = {something: 3};
 
-	beforeEach(function() {
+	beforeEach(function () {
 		rawFilesCreatureStub.returns(futureOf(creatureRawFilePaths));
 		readFileFutureStub.returns(futureOf(rawFileContents));
 		creatureFileParseStub.returns(parseResult);
 	});
 
-	afterEach(function() {
+	afterEach(function () {
 		sandbox.reset();
 	});
 
-	describe('parseCreatureRawText', function() {
-		it('should return the result of parsing', function() {
+	describe('parseCreatureRawText', function () {
+		it('should return the result of parsing', function () {
 			const result = parseCreatureRawText(rawFileContents);
 			expect(result).to.equal(parseResult);
 		});
 	});
 
-	describe('parseCreatureRawFile', function() {
-		it('should take a path and return the result of parsing', function(done) {
+	describe('parseCreatureRawFile', function () {
+		it('should take a path and return the result of parsing', function (done) {
 			parseCreatureRawFile(creatureRawFilePaths[0]).fork(
 				done,
 				(result) => {
@@ -80,8 +80,8 @@ describe('api/raws/creature', function() {
 		});
 	});
 
-	describe('parseCreatureRaws', function() {
-		it('should take a dwarf fortress root path and parse all creature files', function(done) {
+	describe('parseCreatureRaws', function () {
+		it('should take a dwarf fortress root path and parse all creature files', function (done) {
 			parseCreatureRaws('c:/df').fork(done, (result) => {
 				const resultLength = creatureRawFilePaths.length;
 				expect(result)

@@ -6,8 +6,8 @@ import worldGenSettingsParser from './../../../../src/dsl/parsers/settings/world
 
 const debug = _debug('df:test:dsl:parsers:settings:worldGen');
 
-describe('integration:dsl/parsers/settings/worldGen', function() {
-	it('should parse a world gen settings file', function(done) {
+describe('integration:dsl/parsers/settings/worldGen', function () {
+	it('should parse a world gen settings file', function (done) {
 		const testDataPath = path.resolve(
 			__dirname,
 			'./../../data/world_gen.txt'
@@ -23,13 +23,9 @@ describe('integration:dsl/parsers/settings/worldGen', function() {
 			.fork(done, (result) => {
 				expect(result).to.be.an('object');
 				expect(result).to.have.property('status', true);
-				expect(result)
-					.to.have.property('value')
-					.that.is.an('object');
+				expect(result).to.have.property('value').that.is.an('object');
 				const {settings} = result.value;
-				expect(settings)
-					.to.be.an('array')
-					.with.lengthOf(2);
+				expect(settings).to.be.an('array').with.lengthOf(2);
 				expect(settings[0])
 					.to.have.property('children')
 					.that.is.an('array')

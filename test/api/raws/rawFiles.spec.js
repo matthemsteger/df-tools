@@ -21,12 +21,12 @@ const rawFilesModule = proxyquire('./../../../src/api/raws/rawFiles', {
 
 const {typeToFilePrefixMap, default: rawFiles} = rawFilesModule;
 
-describe('api/raws/rawFiles', function() {
-	it('should export an object as typeToFilePrefixMap', function() {
+describe('api/raws/rawFiles', function () {
+	it('should export an object as typeToFilePrefixMap', function () {
 		expect(typeToFilePrefixMap).to.be.an('object');
 	});
 
-	it('should export an object as default', function() {
+	it('should export an object as default', function () {
 		expect(rawFiles).to.be.an('object');
 	});
 
@@ -62,9 +62,9 @@ describe('api/raws/rawFiles', function() {
 		'tissueTemplate'
 	];
 
-	describe('typeToFilePrefixMap', function() {
+	describe('typeToFilePrefixMap', function () {
 		expectedPrefixes.forEach((prefix) => {
-			it(`should have a key ${prefix}`, function() {
+			it(`should have a key ${prefix}`, function () {
 				expect(typeToFilePrefixMap)
 					.to.have.property(prefix)
 					.that.is.a('string');
@@ -72,16 +72,14 @@ describe('api/raws/rawFiles', function() {
 		});
 	});
 
-	describe('rawFiles', function() {
+	describe('rawFiles', function () {
 		const installPath = 'c:/df';
 		expectedPrefixes.forEach((prefix) => {
-			it(`should have a function ${prefix}`, function() {
-				expect(rawFiles)
-					.to.have.property(prefix)
-					.that.is.a('function');
+			it(`should have a function ${prefix}`, function () {
+				expect(rawFiles).to.have.property(prefix).that.is.a('function');
 			});
 
-			it(`should have function ${prefix} produce a future of file meta`, function(done) {
+			it(`should have function ${prefix} produce a future of file meta`, function (done) {
 				const fakeGlobResult = [`/tmp/fake/${prefix}.txt`];
 				const fakeFileMetaResult = {
 					hash: prefix,

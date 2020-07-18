@@ -38,24 +38,24 @@ const worldSitesAndPopsModule = proxyquire(
 
 const {default: parseWorldSitesAndPops} = worldSitesAndPopsModule;
 
-describe('api/worldgen/worldExports/worldSitesAndPops', function() {
-	beforeEach(function() {
+describe('api/worldgen/worldExports/worldSitesAndPops', function () {
+	beforeEach(function () {
 		createParserStub.returns(fakeParser);
 	});
 
-	afterEach(function() {
+	afterEach(function () {
 		sandbox.reset();
 	});
 
 	ensureModuleFunctionExport(worldSitesAndPopsModule, 'default');
 
-	describe('parseWorldSitesAndPops', function() {
+	describe('parseWorldSitesAndPops', function () {
 		const fakeBuffer = {};
 		const contents = 'blah';
 		const filePath = 'c:/df/whatever';
 		const creatures = {};
 
-		it('should return the value of the parse', function(done) {
+		it('should return the value of the parse', function (done) {
 			const value = {blah: 'yes'};
 			const parseResult = {status: true, value};
 			readFileFutureStub.returns(futureOf(fakeBuffer));
@@ -71,7 +71,7 @@ describe('api/worldgen/worldExports/worldSitesAndPops', function() {
 			);
 		});
 
-		it('should reject the future if status was false for parse', function(done) {
+		it('should reject the future if status was false for parse', function (done) {
 			const badParseResult = {status: false};
 			readFileFutureStub.returns(futureOf(fakeBuffer));
 			decodeStub.returns(contents);

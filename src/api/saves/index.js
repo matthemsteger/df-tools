@@ -14,11 +14,7 @@ export const getAllSaveRegions = R.compose(
 		R.compose(
 			R.sort(R.subtract),
 			R.map(
-				R.compose(
-					parseInteger(10),
-					R.nth(1),
-					R.match(/^region(\d+)$/)
-				)
+				R.compose(parseInteger(10), R.nth(1), R.match(/^region(\d+)$/))
 			),
 			R.filter(R.startsWith('region'))
 		)

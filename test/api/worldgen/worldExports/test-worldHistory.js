@@ -32,23 +32,23 @@ const worldHistoryModule = proxyquire(
 
 const {default: parseWorldHistory} = worldHistoryModule;
 
-describe('api/worldgen/worldExports/worldHistory', function() {
+describe('api/worldgen/worldExports/worldHistory', function () {
 	let fakeLineReader;
 
-	beforeEach(function() {
+	beforeEach(function () {
 		fakeLineReader = new EventEmitter();
 	});
 
-	afterEach(function() {
+	afterEach(function () {
 		sandbox.reset();
 	});
 
 	ensureModuleFunctionExport(worldHistoryModule, 'default');
 
-	describe('parseWorldHistory', function() {
+	describe('parseWorldHistory', function () {
 		const filePath = 'c:/df/whatever';
 
-		it('should parse the world history for the worldName and friendlyWorldName', function(done) {
+		it('should parse the world history for the worldName and friendlyWorldName', function (done) {
 			const worldName = 'weird world name';
 			const friendlyWorldName = 'the world name';
 			createReadStreamStub.returns(streamStub);

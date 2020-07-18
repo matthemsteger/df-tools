@@ -1,0 +1,29 @@
+export function createStreamStub(sandbox) {
+	return {
+		pipe: sandbox.stub().returnsThis(),
+		collect: sandbox.stub().returnsThis()
+	};
+}
+
+export function createFsStubModule(sandbox) {
+	const stream = createStreamStub(sandbox);
+	return {
+		createReadStream: sandbox.stub().returns(stream),
+		Stream: stream
+	};
+}
+
+export function createFnFsStubModule(sandbox) {
+	const maybeDirHasFile = sandbox.stub();
+	const glob = sandbox.stub();
+	const fs = {
+		readFileFuture: sandbox.stub(),
+		readdirFuture: sandbox.stub()
+	};
+
+	return {
+		fs,
+		maybeDirHasFile,
+		glob
+	};
+}

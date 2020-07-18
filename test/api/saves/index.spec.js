@@ -28,8 +28,8 @@ const savesIndexModule = proxyquire('./../../../src/api/saves', {
 
 const {getAllSaveRegions, getAllSaves} = savesIndexModule;
 
-describe('api/saves/index', function() {
-	afterEach(function() {
+describe('api/saves/index', function () {
+	afterEach(function () {
 		sandbox.reset();
 	});
 
@@ -37,7 +37,7 @@ describe('api/saves/index', function() {
 	ensureFuncExport('getAllSaveRegions');
 	ensureFuncExport('getAllSaves');
 
-	describe('getAllSaveRegions', function() {
+	describe('getAllSaveRegions', function () {
 		const dfRootPath = 'c:/df';
 		const regionNumbers = [4, 1, 5, 22, 7, 6];
 		const regionFiles = R.compose(
@@ -45,7 +45,7 @@ describe('api/saves/index', function() {
 			R.map((n) => `region${n}`)
 		)(regionNumbers);
 
-		it('should get the numbered regions from the directory', function(done) {
+		it('should get the numbered regions from the directory', function (done) {
 			readdirFutureStub.returns(futureOf(regionFiles));
 			getAllSaveRegions({dfRootPath}).fork(done, (regions) => {
 				expect(regions).to.have.ordered.members([1, 4, 5, 6, 7, 22]);
@@ -54,8 +54,8 @@ describe('api/saves/index', function() {
 		});
 	});
 
-	describe('getAllSaves', function() {
-		it('should return an empty array', function(done) {
+	describe('getAllSaves', function () {
+		it('should return an empty array', function (done) {
 			getAllSaves().fork(done, (allSaves) => {
 				expect(allSaves).to.be.an('array').that.is.empty;
 				done();

@@ -231,9 +231,6 @@ export default class RegionWorldSitesPopsLexer extends Lexer {
 		const def = createLexerDefinition();
 		super(def, {debug: true});
 
-		this.allTokens = _.chain(def.modes)
-			.flatMap()
-			.uniq()
-			.value();
+		this.allTokens = _.chain(def.modes).flatMap().uniq().value();
 	}
 }
