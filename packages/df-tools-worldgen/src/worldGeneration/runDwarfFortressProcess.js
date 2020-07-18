@@ -21,7 +21,11 @@ export default function runDwarfFortressProcess(
 
 		return () => {
 			if (dfProcess && !dfProcess.killed) {
-				dfProcess.kill();
+				/**
+				 * DF does not seem to respond to SIGTERM, so
+				 * use SIGKILL
+				 */
+				dfProcess.kill(9);
 			}
 		};
 	});

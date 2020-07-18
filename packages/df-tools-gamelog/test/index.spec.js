@@ -13,17 +13,24 @@ const {decodeStream: decodeStreamStub} = sandbox.stub(iconvModule);
 const fsModule = createFsStubModule(sandbox);
 const {createReadStream: createReadStreamStub, Stream: streamStub} = fsModule;
 const {collect: collectStub} = streamStub;
+const pathModule = {resolve: noop};
+const {resolve: resolveStub} = sandbox.stub(pathModule);
 
 const gamelogModule = proxyquire('./../src', {
 	fs: fsModule,
-	'iconv-lite': iconvModule
+	'iconv-lite': iconvModule,
+	path: pathModule
 });
 
-const {default: readGameLogFromPosition} = gamelogModule;
+const {default: readGameLogFromPosition, getGamelogPath} = gamelogModule;
 
 describe('src/index', () => {
 	it('should export a function as default', () => {
 		expect(readGameLogFromPosition).to.be.a('function').with.lengthOf(2);
+	});
+
+	it('should export a function getGamelogPath', () => {
+		expect(getGamelogPath).to.be.a('function').with.lengthOf(1);
 	});
 
 	describe('readGameLogFromPosition', () => {
@@ -62,6 +69,16 @@ describe('src/index', () => {
 				createReadStreamStub
 			).to.have.been.calledWithMatch(gamelogPath, {start});
 			expect(decodeStreamStub).to.have.been.calledWithExactly('cp437');
+		});
+	});
+
+	describe('getGamelogPath', () => {
+		it('should get the gamelog path', () => {
+			const fakePath = '~/df/gamelog.txt';
+			resolveStub.returns(fakePath);
+
+			const gamelogPath = getGamelogPath('~/df');
+			expect(gamelogPath).to.equal(fakePath);
 		});
 	});
 });

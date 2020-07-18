@@ -9,7 +9,7 @@
 		"mocha": "mocha --recursive -r ../../babel.register.js \"test/**/*.spec.js\"",
 		"mocha:watch": "mocha --recursive --reporter min -r ../../babel.register.js --watch \"test/**/*.spec.js\"",
 		"lint": "eslint \"**/*.js\" && echo Lint passed.",
-		"build": "babel src -d dist",
+		"build": "babel --root-mode upward src -d dist",
 		"dev": "babel src --watch -d dist",
 		"prepublishOnly": "npm run build",
 		"test:integration": "mocha --recursive -r babel-register \"test/**/*.int.js\""
@@ -41,6 +41,7 @@
 		"debug": "^4.1.1",
 		"fluture": "^12.3.1",
 		"folktale": "^2.3.2",
+		"fs-tail-stream": "^1.1.0",
 		"iconv-lite": "^0.6.1",
 		"parsimmon": "^1.13.0",
 		"ramda": "^0.27.0"

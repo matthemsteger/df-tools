@@ -15,6 +15,7 @@ export function createFsStubModule(sandbox) {
 
 export function createFnFsStubModule(sandbox) {
 	const maybeDirHasFile = sandbox.stub();
+	const glob = sandbox.stub();
 	const fs = {
 		readFileFuture: sandbox.stub(),
 		readdirFuture: sandbox.stub()
@@ -22,6 +23,7 @@ export function createFnFsStubModule(sandbox) {
 
 	return {
 		fs,
-		maybeDirHasFile
+		maybeDirHasFile,
+		glob
 	};
 }

@@ -1,22 +1,24 @@
 import {resolve} from 'path';
 import {fs} from '@matthemsteger/utils-fn-fs';
 import {parseBase10Int} from '@matthemsteger/utils-fn-numbers';
-import {map, filter, startsWith, compose, nth, match, prop} from 'ramda';
+import {map, filter, compose, nth, match, prop} from 'ramda';
 
 const {readdirFuture} = fs;
+
+const REGION_REGEX = /^region(\d+)$/;
 
 export function getSavePath(dfRootPath) {
 	return resolve(dfRootPath, 'data/save');
 }
 
 const onlyRegions = filter(
-	(dirent) => dirent.isDirectory() && startsWith('region', dirent.name)
+	(dirent) => dirent.isDirectory() && REGION_REGEX.test(dirent.name)
 );
 
 const extractRegionNumber = compose(
 	parseBase10Int,
 	nth(1),
-	match(/^region(\d+)$/),
+	match(REGION_REGEX),
 	prop('name')
 );
 

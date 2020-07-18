@@ -4,3 +4,4 @@ export {
 	REGION_EXPORT_TYPES
 } from './getExportsForRegion';
 export {default as parseWorldHistory} from './worldHistory';
+export {default as generateWorld} from './worldGeneration';

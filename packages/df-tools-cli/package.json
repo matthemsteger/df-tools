@@ -12,7 +12,7 @@
 		"mocha": "mocha --recursive -r ../../babel.register.js \"test/**/*.spec.js\"",
 		"mocha:watch": "mocha --recursive --reporter min -r ../../babel.register.js --watch \"test/**/*.spec.js\"",
 		"lint": "eslint \"**/*.js\" && echo Lint passed.",
-		"build": "babel src -d dist",
+		"build": "babel --root-mode upward src -d dist",
 		"dev": "babel src --watch -d dist",
 		"prepublishOnly": "npm run build"
 	},
@@ -32,8 +32,8 @@
 	"engines": {
 		"node": ">= 12.4.0"
 	},
-	"devDependencies": {},
 	"dependencies": {
+		"@df-tools/df-tools-worldgen": "^0.0.1",
 		"debug": "^4.0.1",
 		"fluture": "^12.3.1",
 		"ramda": "^0.27.0",

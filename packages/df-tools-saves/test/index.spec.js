@@ -49,10 +49,18 @@ describe('src/index', () => {
 			name: `region${n}`
 		});
 
+		const makeFakeAutoSaveDirEnt = (n) => ({
+			isDirectory: () => true,
+			name: `region${n}-00200-01-15`
+		});
+
 		it('should get all save regions', async () => {
 			pathModule.resolve.returns(`${fakePath}/data/save`);
 			fsModule.fs.readdirFuture.returns(
-				resolve(times(makeFakeDirEnt, 10))
+				resolve([
+					...times(makeFakeDirEnt, 10),
+					...times(makeFakeAutoSaveDirEnt, 10)
+				])
 			);
 
 			const result = await promise(

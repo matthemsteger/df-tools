@@ -27,5 +27,14 @@
 		"nonblock-statement-body-position": 0,
 		"operator-linebreak": 0,
 		"no-confusing-arrow": 0
-	}
+	},
+  "overrides": [
+    {
+      "files": ["*.int.js","*.spec.js"],
+      "rules": {
+        "no-unused-expressions": 0,
+        "import/no-extraneous-dependencies": 0
+      }
+    }
+  ]
 }

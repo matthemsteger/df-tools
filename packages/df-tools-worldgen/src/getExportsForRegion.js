@@ -2,8 +2,8 @@ import {
 	find,
 	compose,
 	prop,
-	endsWith,
 	__,
+	endsWith,
 	curry,
 	both,
 	propEq,
@@ -62,7 +62,7 @@ const fileTypes = [
 ];
 
 const fileTypeEndsWith = curry((name, fileType) =>
-	compose(endsWith(__), prop('endsWith'))(fileType)
+	compose(endsWith(__, name), prop('endsWith'))(fileType)
 );
 
 const matchNameExtToFileType = curry((name, ext) =>

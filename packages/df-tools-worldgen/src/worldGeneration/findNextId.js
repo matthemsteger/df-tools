@@ -7,5 +7,8 @@ export default function findNextId({dfRootPath, existingRegions}) {
 		? resolve(existingRegions)
 		: getAllSaveRegions({dfRootPath});
 
-	return map((regions) => Math.max(regions) + 1, existingRegionNumbersFuture);
+	return map(
+		(regions) => Math.max(...regions) + 1,
+		existingRegionNumbersFuture
+	);
 }

@@ -4,6 +4,7 @@ import yargs from 'yargs';
 import process from 'process';
 import {promisify} from 'util';
 import {readFile} from 'fs';
+import {fork} from 'fluture';
 import {
 	outputDefinitions,
 	outputTokenNames
@@ -11,29 +12,22 @@ import {
 import createRawFileParser from './parsers/raws/rawFile';
 
 const readFileAsync = promisify(readFile);
+const handleError = (e) => {
+	process.stderr.write(e);
+	process.exit(1);
+};
+
+const handleSuccess = (output) => {
+	process.stdout.write(output);
+	process.exit(0);
+};
 
 function generateDefinitions({glob}) {
-	outputDefinitions({
-		fileGlob: glob
-	}).fork(
-		() => process.exit(1),
-		(output) => {
-			process.stdout.write(output);
-			process.exit(0);
-		}
-	);
+	fork(handleError, handleSuccess, outputDefinitions({fileGlob: glob}));
 }
 
 function generateTokenNames({glob}) {
-	outputTokenNames({
-		fileGlob: glob
-	}).fork(
-		() => process.exit(1),
-		(output) => {
-			process.stdout.write(output);
-			process.exit(0);
-		}
-	);
+	fork(handleError, handleSuccess, outputTokenNames({fileGlob: glob}));
 }
 
 async function outputRawFileParse({file}) {
